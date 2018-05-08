@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC755ECE20A1899B00AE8EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC755ECD20A1899B00AE8EAE /* AppDelegate.swift */; };
+		EC755ED020A1899B00AE8EAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC755ECF20A1899B00AE8EAE /* ViewController.swift */; };
+		EC755ED320A1899B00AE8EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC755ED120A1899B00AE8EAE /* Main.storyboard */; };
+		EC755ED520A1899B00AE8EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC755ED420A1899B00AE8EAE /* Assets.xcassets */; };
+		EC755ED820A1899B00AE8EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC755ED620A1899B00AE8EAE /* LaunchScreen.storyboard */; };
+		EC755EED20A1AB3C00AE8EAE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE220A190BD00AE8EAE /* Alamofire.framework */; };
+		EC755EEE20A1AB3C00AE8EAE /* DotstudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */; };
+		EC755EEF20A1AB3C00AE8EAE /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
+		EC755EF720A1B03600AE8EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC755EF620A1B03600AE8EAE /* AppDelegate.swift */; };
+		EC755EF920A1B03600AE8EAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC755EF820A1B03600AE8EAE /* ViewController.swift */; };
+		EC755EFC20A1B03600AE8EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC755EFA20A1B03600AE8EAE /* Main.storyboard */; };
+		EC755EFE20A1B03600AE8EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC755EFD20A1B03600AE8EAE /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC755ECA20A1899B00AE8EAE /* DotstudioSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotstudioSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC755ECD20A1899B00AE8EAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC755ECF20A1899B00AE8EAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC755ED220A1899B00AE8EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC755ED420A1899B00AE8EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC755ED720A1899B00AE8EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC755ED920A1899B00AE8EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DotstudioUI.framework; path = Carthage/Build/iOS/DotstudioUI.framework; sourceTree = "<group>"; };
+		EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DotstudioAPI.framework; path = Carthage/Build/iOS/DotstudioAPI.framework; sourceTree = "<group>"; };
+		EC755EE220A190BD00AE8EAE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		EC755EF420A1B03600AE8EAE /* DotstudioSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotstudioSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC755EF620A1B03600AE8EAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC755EF820A1B03600AE8EAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC755EFB20A1B03600AE8EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC755EFD20A1B03600AE8EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC755EFF20A1B03600AE8EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC755EC720A1899B00AE8EAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC755EED20A1AB3C00AE8EAE /* Alamofire.framework in Frameworks */,
+				EC755EEE20A1AB3C00AE8EAE /* DotstudioAPI.framework in Frameworks */,
+				EC755EEF20A1AB3C00AE8EAE /* DotstudioUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC755EF120A1B03600AE8EAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC755EC120A1899B00AE8EAE = {
+			isa = PBXGroup;
+			children = (
+				EC755F0520A1B40300AE8EAE /* Soruce */,
+				EC755ECC20A1899B00AE8EAE /* DotstudioSampleApp-iOS */,
+				EC755EF520A1B03600AE8EAE /* DotstudioSampleApp-tvOS */,
+				EC755ECB20A1899B00AE8EAE /* Products */,
+				EC755EDF20A190BC00AE8EAE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC755ECB20A1899B00AE8EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC755ECA20A1899B00AE8EAE /* DotstudioSampleApp.app */,
+				EC755EF420A1B03600AE8EAE /* DotstudioSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC755ECC20A1899B00AE8EAE /* DotstudioSampleApp-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EC755ECD20A1899B00AE8EAE /* AppDelegate.swift */,
+				EC755ECF20A1899B00AE8EAE /* ViewController.swift */,
+				EC755F0320A1B3D300AE8EAE /* Storyboards */,
+				EC755ED420A1899B00AE8EAE /* Assets.xcassets */,
+				EC755ED620A1899B00AE8EAE /* LaunchScreen.storyboard */,
+				EC755ED920A1899B00AE8EAE /* Info.plist */,
+			);
+			path = "DotstudioSampleApp-iOS";
+			sourceTree = "<group>";
+		};
+		EC755EDF20A190BC00AE8EAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC755EE220A190BD00AE8EAE /* Alamofire.framework */,
+				EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */,
+				EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC755EF520A1B03600AE8EAE /* DotstudioSampleApp-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				EC755EF620A1B03600AE8EAE /* AppDelegate.swift */,
+				EC755EF820A1B03600AE8EAE /* ViewController.swift */,
+				EC755F0420A1B3E100AE8EAE /* Storyboards */,
+				EC755EFD20A1B03600AE8EAE /* Assets.xcassets */,
+				EC755EFF20A1B03600AE8EAE /* Info.plist */,
+			);
+			path = "DotstudioSampleApp-tvOS";
+			sourceTree = "<group>";
+		};
+		EC755F0320A1B3D300AE8EAE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EC755ED120A1899B00AE8EAE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EC755F0420A1B3E100AE8EAE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EC755EFA20A1B03600AE8EAE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EC755F0520A1B40300AE8EAE /* Soruce */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Soruce;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC755EC920A1899B00AE8EAE /* DotstudioSampleApp-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC755EDC20A1899B00AE8EAE /* Build configuration list for PBXNativeTarget "DotstudioSampleApp-iOS" */;
+			buildPhases = (
+				EC755EC620A1899B00AE8EAE /* Sources */,
+				EC755EC720A1899B00AE8EAE /* Frameworks */,
+				EC755EC820A1899B00AE8EAE /* Resources */,
+				EC755EE620A190D400AE8EAE /* Carthage copy-frameworks Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DotstudioSampleApp-iOS";
+			productName = "DotstudioSampleApp-Swift";
+			productReference = EC755ECA20A1899B00AE8EAE /* DotstudioSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC755EF320A1B03600AE8EAE /* DotstudioSampleApp-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC755F0020A1B03600AE8EAE /* Build configuration list for PBXNativeTarget "DotstudioSampleApp-tvOS" */;
+			buildPhases = (
+				EC755EF020A1B03600AE8EAE /* Sources */,
+				EC755EF120A1B03600AE8EAE /* Frameworks */,
+				EC755EF220A1B03600AE8EAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DotstudioSampleApp-tvOS";
+			productName = "DotstudioSampleApp-tvOS";
+			productReference = EC755EF420A1B03600AE8EAE /* DotstudioSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC755EC220A1899B00AE8EAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Dotstudioz;
+				TargetAttributes = {
+					EC755EC920A1899B00AE8EAE = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					EC755EF320A1B03600AE8EAE = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EC755EC520A1899B00AE8EAE /* Build configuration list for PBXProject "DotstudioSampleApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC755EC120A1899B00AE8EAE;
+			productRefGroup = EC755ECB20A1899B00AE8EAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC755EC920A1899B00AE8EAE /* DotstudioSampleApp-iOS */,
+				EC755EF320A1B03600AE8EAE /* DotstudioSampleApp-tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC755EC820A1899B00AE8EAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC755ED820A1899B00AE8EAE /* LaunchScreen.storyboard in Resources */,
+				EC755ED520A1899B00AE8EAE /* Assets.xcassets in Resources */,
+				EC755ED320A1899B00AE8EAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC755EF220A1B03600AE8EAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC755EFE20A1B03600AE8EAE /* Assets.xcassets in Resources */,
+				EC755EFC20A1B03600AE8EAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EC755EE620A190D400AE8EAE /* Carthage copy-frameworks Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DotstudioAPI.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DotstudioUI.framework",
+			);
+			name = "Carthage copy-frameworks Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC755EC620A1899B00AE8EAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC755ED020A1899B00AE8EAE /* ViewController.swift in Sources */,
+				EC755ECE20A1899B00AE8EAE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC755EF020A1B03600AE8EAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC755EF920A1B03600AE8EAE /* ViewController.swift in Sources */,
+				EC755EF720A1B03600AE8EAE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC755ED120A1899B00AE8EAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC755ED220A1899B00AE8EAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC755ED620A1899B00AE8EAE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC755ED720A1899B00AE8EAE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EC755EFA20A1B03600AE8EAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC755EFB20A1B03600AE8EAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC755EDA20A1899B00AE8EAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC755EDB20A1899B00AE8EAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC755EDD20A1899B00AE8EAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63G3T8C3T9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "DotstudioSampleApp-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dotstudioz.UI.DotstudioSampleApp;
+				PRODUCT_NAME = DotstudioSampleApp;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC755EDE20A1899B00AE8EAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63G3T8C3T9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "DotstudioSampleApp-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dotstudioz.UI.DotstudioSampleApp;
+				PRODUCT_NAME = DotstudioSampleApp;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC755F0120A1B03600AE8EAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63G3T8C3T9;
+				INFOPLIST_FILE = "DotstudioSampleApp-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dotstudioz.UI.DotstudioSampleApp;
+				PRODUCT_NAME = DotstudioSampleApp;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		EC755F0220A1B03600AE8EAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63G3T8C3T9;
+				INFOPLIST_FILE = "DotstudioSampleApp-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dotstudioz.UI.DotstudioSampleApp;
+				PRODUCT_NAME = DotstudioSampleApp;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC755EC520A1899B00AE8EAE /* Build configuration list for PBXProject "DotstudioSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC755EDA20A1899B00AE8EAE /* Debug */,
+				EC755EDB20A1899B00AE8EAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC755EDC20A1899B00AE8EAE /* Build configuration list for PBXNativeTarget "DotstudioSampleApp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC755EDD20A1899B00AE8EAE /* Debug */,
+				EC755EDE20A1899B00AE8EAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC755F0020A1B03600AE8EAE /* Build configuration list for PBXNativeTarget "DotstudioSampleApp-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC755F0120A1B03600AE8EAE /* Debug */,
+				EC755F0220A1B03600AE8EAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC755EC220A1899B00AE8EAE /* Project object */;
+}
