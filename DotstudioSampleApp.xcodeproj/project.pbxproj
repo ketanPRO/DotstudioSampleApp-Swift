@@ -12,13 +12,33 @@
 		EC755ED320A1899B00AE8EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC755ED120A1899B00AE8EAE /* Main.storyboard */; };
 		EC755ED520A1899B00AE8EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC755ED420A1899B00AE8EAE /* Assets.xcassets */; };
 		EC755ED820A1899B00AE8EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC755ED620A1899B00AE8EAE /* LaunchScreen.storyboard */; };
-		EC755EED20A1AB3C00AE8EAE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE220A190BD00AE8EAE /* Alamofire.framework */; };
-		EC755EEE20A1AB3C00AE8EAE /* DotstudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */; };
-		EC755EEF20A1AB3C00AE8EAE /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
 		EC755EF720A1B03600AE8EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC755EF620A1B03600AE8EAE /* AppDelegate.swift */; };
 		EC755EF920A1B03600AE8EAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC755EF820A1B03600AE8EAE /* ViewController.swift */; };
 		EC755EFC20A1B03600AE8EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC755EFA20A1B03600AE8EAE /* Main.storyboard */; };
 		EC755EFE20A1B03600AE8EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC755EFD20A1B03600AE8EAE /* Assets.xcassets */; };
+		EC755F3A20A1EAB100AE8EAE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE220A190BD00AE8EAE /* Alamofire.framework */; };
+		EC755F3B20A1EAB100AE8EAE /* DotstudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */; };
+		EC755F3C20A1EAB100AE8EAE /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
+		EC755F4720A1EAB200AE8EAE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3D20A1EAB100AE8EAE /* FBSDKLoginKit.framework */; };
+		EC755F4820A1EAB200AE8EAE /* FBSDKPlacesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3E20A1EAB100AE8EAE /* FBSDKPlacesKit.framework */; };
+		EC755F4920A1EAB200AE8EAE /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3F20A1EAB100AE8EAE /* FacebookLogin.framework */; };
+		EC755F4A20A1EAB200AE8EAE /* FacebookShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4020A1EAB100AE8EAE /* FacebookShare.framework */; };
+		EC755F4B20A1EAB200AE8EAE /* SimpleKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4120A1EAB200AE8EAE /* SimpleKeychain.framework */; };
+		EC755F4C20A1EAB200AE8EAE /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4220A1EAB200AE8EAE /* FacebookCore.framework */; };
+		EC755F4D20A1EAB200AE8EAE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4320A1EAB200AE8EAE /* Bolts.framework */; };
+		EC755F4E20A1EAB200AE8EAE /* Auth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4420A1EAB200AE8EAE /* Auth0.framework */; };
+		EC755F4F20A1EAB200AE8EAE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4520A1EAB200AE8EAE /* FBSDKCoreKit.framework */; };
+		EC755F5020A1EAB200AE8EAE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4620A1EAB200AE8EAE /* FBSDKShareKit.framework */; };
+		EC755F5B20A1EAC900AE8EAE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5120A1EAC800AE8EAE /* Alamofire.framework */; };
+		EC755F5C20A1EAC900AE8EAE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5220A1EAC900AE8EAE /* FBSDKShareKit.framework */; };
+		EC755F5D20A1EAC900AE8EAE /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5320A1EAC900AE8EAE /* DotstudioUI.framework */; };
+		EC755F5E20A1EAC900AE8EAE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5420A1EAC900AE8EAE /* FBSDKCoreKit.framework */; };
+		EC755F5F20A1EAC900AE8EAE /* SimpleKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5520A1EAC900AE8EAE /* SimpleKeychain.framework */; };
+		EC755F6020A1EAC900AE8EAE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5620A1EAC900AE8EAE /* FBSDKLoginKit.framework */; };
+		EC755F6120A1EAC900AE8EAE /* DotstudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5720A1EAC900AE8EAE /* DotstudioAPI.framework */; };
+		EC755F6220A1EAC900AE8EAE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5820A1EAC900AE8EAE /* Bolts.framework */; };
+		EC755F6320A1EAC900AE8EAE /* FBSDKTVOSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5920A1EAC900AE8EAE /* FBSDKTVOSKit.framework */; };
+		EC755F6420A1EAC900AE8EAE /* Auth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5A20A1EAC900AE8EAE /* Auth0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +58,26 @@
 		EC755EFB20A1B03600AE8EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC755EFD20A1B03600AE8EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC755EFF20A1B03600AE8EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC755F3D20A1EAB100AE8EAE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		EC755F3E20A1EAB100AE8EAE /* FBSDKPlacesKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKPlacesKit.framework; path = Carthage/Build/iOS/FBSDKPlacesKit.framework; sourceTree = "<group>"; };
+		EC755F3F20A1EAB100AE8EAE /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = Carthage/Build/iOS/FacebookLogin.framework; sourceTree = "<group>"; };
+		EC755F4020A1EAB100AE8EAE /* FacebookShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookShare.framework; path = Carthage/Build/iOS/FacebookShare.framework; sourceTree = "<group>"; };
+		EC755F4120A1EAB200AE8EAE /* SimpleKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleKeychain.framework; path = Carthage/Build/iOS/SimpleKeychain.framework; sourceTree = "<group>"; };
+		EC755F4220A1EAB200AE8EAE /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
+		EC755F4320A1EAB200AE8EAE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
+		EC755F4420A1EAB200AE8EAE /* Auth0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Auth0.framework; path = Carthage/Build/iOS/Auth0.framework; sourceTree = "<group>"; };
+		EC755F4520A1EAB200AE8EAE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		EC755F4620A1EAB200AE8EAE /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Carthage/Build/iOS/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		EC755F5120A1EAC800AE8EAE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		EC755F5220A1EAC900AE8EAE /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Carthage/Build/tvOS/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		EC755F5320A1EAC900AE8EAE /* DotstudioUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DotstudioUI.framework; path = Carthage/Build/tvOS/DotstudioUI.framework; sourceTree = "<group>"; };
+		EC755F5420A1EAC900AE8EAE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/tvOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		EC755F5520A1EAC900AE8EAE /* SimpleKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleKeychain.framework; path = Carthage/Build/tvOS/SimpleKeychain.framework; sourceTree = "<group>"; };
+		EC755F5620A1EAC900AE8EAE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/tvOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		EC755F5720A1EAC900AE8EAE /* DotstudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DotstudioAPI.framework; path = Carthage/Build/tvOS/DotstudioAPI.framework; sourceTree = "<group>"; };
+		EC755F5820A1EAC900AE8EAE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/tvOS/Bolts.framework; sourceTree = "<group>"; };
+		EC755F5920A1EAC900AE8EAE /* FBSDKTVOSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKTVOSKit.framework; path = Carthage/Build/tvOS/FBSDKTVOSKit.framework; sourceTree = "<group>"; };
+		EC755F5A20A1EAC900AE8EAE /* Auth0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Auth0.framework; path = Carthage/Build/tvOS/Auth0.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +85,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC755EED20A1AB3C00AE8EAE /* Alamofire.framework in Frameworks */,
-				EC755EEE20A1AB3C00AE8EAE /* DotstudioAPI.framework in Frameworks */,
-				EC755EEF20A1AB3C00AE8EAE /* DotstudioUI.framework in Frameworks */,
+				EC755F4720A1EAB200AE8EAE /* FBSDKLoginKit.framework in Frameworks */,
+				EC755F4820A1EAB200AE8EAE /* FBSDKPlacesKit.framework in Frameworks */,
+				EC755F4920A1EAB200AE8EAE /* FacebookLogin.framework in Frameworks */,
+				EC755F4A20A1EAB200AE8EAE /* FacebookShare.framework in Frameworks */,
+				EC755F4B20A1EAB200AE8EAE /* SimpleKeychain.framework in Frameworks */,
+				EC755F4C20A1EAB200AE8EAE /* FacebookCore.framework in Frameworks */,
+				EC755F4D20A1EAB200AE8EAE /* Bolts.framework in Frameworks */,
+				EC755F4E20A1EAB200AE8EAE /* Auth0.framework in Frameworks */,
+				EC755F4F20A1EAB200AE8EAE /* FBSDKCoreKit.framework in Frameworks */,
+				EC755F5020A1EAB200AE8EAE /* FBSDKShareKit.framework in Frameworks */,
+				EC755F3A20A1EAB100AE8EAE /* Alamofire.framework in Frameworks */,
+				EC755F3B20A1EAB100AE8EAE /* DotstudioAPI.framework in Frameworks */,
+				EC755F3C20A1EAB100AE8EAE /* DotstudioUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +105,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC755F5B20A1EAC900AE8EAE /* Alamofire.framework in Frameworks */,
+				EC755F5C20A1EAC900AE8EAE /* FBSDKShareKit.framework in Frameworks */,
+				EC755F5D20A1EAC900AE8EAE /* DotstudioUI.framework in Frameworks */,
+				EC755F5E20A1EAC900AE8EAE /* FBSDKCoreKit.framework in Frameworks */,
+				EC755F5F20A1EAC900AE8EAE /* SimpleKeychain.framework in Frameworks */,
+				EC755F6020A1EAC900AE8EAE /* FBSDKLoginKit.framework in Frameworks */,
+				EC755F6120A1EAC900AE8EAE /* DotstudioAPI.framework in Frameworks */,
+				EC755F6220A1EAC900AE8EAE /* Bolts.framework in Frameworks */,
+				EC755F6320A1EAC900AE8EAE /* FBSDKTVOSKit.framework in Frameworks */,
+				EC755F6420A1EAC900AE8EAE /* Auth0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +157,26 @@
 		EC755EDF20A190BC00AE8EAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC755F4420A1EAB200AE8EAE /* Auth0.framework */,
+				EC755F5A20A1EAC900AE8EAE /* Auth0.framework */,
+				EC755F4320A1EAB200AE8EAE /* Bolts.framework */,
+				EC755F5120A1EAC800AE8EAE /* Alamofire.framework */,
+				EC755F5820A1EAC900AE8EAE /* Bolts.framework */,
+				EC755F5720A1EAC900AE8EAE /* DotstudioAPI.framework */,
+				EC755F5320A1EAC900AE8EAE /* DotstudioUI.framework */,
+				EC755F5420A1EAC900AE8EAE /* FBSDKCoreKit.framework */,
+				EC755F5620A1EAC900AE8EAE /* FBSDKLoginKit.framework */,
+				EC755F5220A1EAC900AE8EAE /* FBSDKShareKit.framework */,
+				EC755F5920A1EAC900AE8EAE /* FBSDKTVOSKit.framework */,
+				EC755F5520A1EAC900AE8EAE /* SimpleKeychain.framework */,
+				EC755F4220A1EAB200AE8EAE /* FacebookCore.framework */,
+				EC755F3F20A1EAB100AE8EAE /* FacebookLogin.framework */,
+				EC755F4020A1EAB100AE8EAE /* FacebookShare.framework */,
+				EC755F4520A1EAB200AE8EAE /* FBSDKCoreKit.framework */,
+				EC755F3D20A1EAB100AE8EAE /* FBSDKLoginKit.framework */,
+				EC755F3E20A1EAB100AE8EAE /* FBSDKPlacesKit.framework */,
+				EC755F4620A1EAB200AE8EAE /* FBSDKShareKit.framework */,
+				EC755F4120A1EAB200AE8EAE /* SimpleKeychain.framework */,
 				EC755EE220A190BD00AE8EAE /* Alamofire.framework */,
 				EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */,
 				EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */,
@@ -459,6 +539,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63G3T8C3T9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "DotstudioSampleApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dotstudioz.UI.DotstudioSampleApp;
@@ -477,6 +561,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63G3T8C3T9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "DotstudioSampleApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dotstudioz.UI.DotstudioSampleApp;
