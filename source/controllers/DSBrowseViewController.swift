@@ -38,7 +38,7 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let dsHorizontalBaseTVC = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalBaseTVC") as? DSHorizontalBaseTVC {
-            let category = self.categoriesBrowse[indexPath.row]
+            let category = self.categoriesBrowse[indexPath.section]
             dsHorizontalBaseTVC.setCellData(category)
             return dsHorizontalBaseTVC
             
