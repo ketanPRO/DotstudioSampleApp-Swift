@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lay-lD-1Ci">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="8d5-20-UA2">
+            <objects>
+                <viewController id="Lay-lD-1Ci" customClass="DSSplashViewController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jIf-p5-K2W"/>
+                        <viewControllerLayoutGuide type="bottom" id="XIW-Jv-ORz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5I4-gO-ld4">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YKr-Q0-1va">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YKr-Q0-1va" firstAttribute="leading" secondItem="5I4-gO-ld4" secondAttribute="leading" id="UHS-uR-tz9"/>
+                            <constraint firstAttribute="bottom" secondItem="YKr-Q0-1va" secondAttribute="bottom" id="aGW-02-IjU"/>
+                            <constraint firstAttribute="trailing" secondItem="YKr-Q0-1va" secondAttribute="trailing" id="dBC-yg-uH1"/>
+                            <constraint firstItem="YKr-Q0-1va" firstAttribute="top" secondItem="5I4-gO-ld4" secondAttribute="top" id="riF-9W-kYv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bej-Cd-rZk"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="YKr-Q0-1va" id="e1U-ig-RRE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8P-0Q-osX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510" y="109"/>
+        </scene>
+    </scenes>
+</document>
