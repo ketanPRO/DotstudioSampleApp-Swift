@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nDS-4Q-Pfo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="eSD-Re-ni7">
+            <objects>
+                <viewController storyboardIdentifier="DSSplashViewController" id="nDS-4Q-Pfo" customClass="DSSplashViewController" customModule="DotstudioSampleApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jWR-NP-7e0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-cY-FfZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VhL-cY-FfZ" firstAttribute="trailing" secondItem="kOW-9h-BQi" secondAttribute="trailing" id="2Gs-nu-nFn"/>
+                            <constraint firstItem="VhL-cY-FfZ" firstAttribute="top" secondItem="jWR-NP-7e0" secondAttribute="top" id="G6h-KT-0Qe"/>
+                            <constraint firstItem="VhL-cY-FfZ" firstAttribute="bottom" secondItem="kOW-9h-BQi" secondAttribute="bottom" id="kc3-AP-oo8"/>
+                            <constraint firstItem="VhL-cY-FfZ" firstAttribute="leading" secondItem="kOW-9h-BQi" secondAttribute="leading" id="zuS-kP-XHw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kOW-9h-BQi"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isVideoSplash" value="NO"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="autoTimeOutDuration">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="imageView" destination="VhL-cY-FfZ" id="E4N-1x-aMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34n-XD-Z1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="163.26836581709148"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash-bg" width="540" height="960"/>
+    </resources>
+</document>

@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+//        if let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate {
+//            let splashStoryboard = UIStoryboard(name: "splash", bundle: nil)
+//            if let dsSplashViewController = splashStoryboard.instantiateViewController(withIdentifier: "DSSplashViewController") as? DSSplashViewController {
+//                appDelegate.window?.rootViewController = dsSplashViewController
+//            }
+//        }
+        
         return true
     }
 

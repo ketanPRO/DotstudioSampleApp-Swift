@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Categories View Controller-->
+        <scene sceneID="JWF-b4-X1b">
+            <objects>
+                <viewController storyboardIdentifier="SPLTCategoriesViewController" id="54G-wI-cLA" customClass="SPLTCategoriesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rre-vV-HWc"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZC9-e0-LHd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c6H-qq-cnf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qew-d6-EIF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="211" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a2p-hf-GLK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SPLTCategoriesTableViewCell" id="OQt-DT-6wq" customClass="SPLTCategoriesTableViewCell" customModule="DotstudioSampleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="211"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OQt-DT-6wq" id="wzs-Cc-yE4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pGL-fw-jdl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="pGL-fw-jdl" secondAttribute="height" multiplier="16:9" id="Aez-rS-zjt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtf-nO-GcA" customClass="EZYGradientView" customModule="DotstudioSampleApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="161" width="375" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qF-JE-zZq">
+                                                            <rect key="frame" x="20" y="10.5" width="74.5" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="J8m-Re-s5U">
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                                        </constraint>
+                                                        <constraint firstItem="3qF-JE-zZq" firstAttribute="leading" secondItem="Gtf-nO-GcA" secondAttribute="leading" constant="20" id="Vzq-ew-dMX"/>
+                                                        <constraint firstItem="3qF-JE-zZq" firstAttribute="centerY" secondItem="Gtf-nO-GcA" secondAttribute="centerY" id="cY2-cP-B79"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                            <color key="value" white="0.0" alpha="0.70295994719999999" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fadeIntensity">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="colorRatio">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Gtf-nO-GcA" firstAttribute="leading" secondItem="wzs-Cc-yE4" secondAttribute="leading" id="ENh-3x-va2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gtf-nO-GcA" secondAttribute="trailing" id="SQq-oI-BIS"/>
+                                                <constraint firstItem="pGL-fw-jdl" firstAttribute="top" secondItem="wzs-Cc-yE4" secondAttribute="top" id="T5L-bz-1kc"/>
+                                                <constraint firstItem="pGL-fw-jdl" firstAttribute="width" secondItem="wzs-Cc-yE4" secondAttribute="width" id="Wpv-Pl-5Ic"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gtf-nO-GcA" secondAttribute="bottom" id="guW-e3-UPz"/>
+                                                <constraint firstAttribute="trailing" secondItem="pGL-fw-jdl" secondAttribute="trailing" id="l85-Tc-Y6C"/>
+                                                <constraint firstItem="pGL-fw-jdl" firstAttribute="leading" secondItem="wzs-Cc-yE4" secondAttribute="leading" id="zik-vC-anZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a2p-hf-GLK" firstAttribute="leading" secondItem="c6H-qq-cnf" secondAttribute="leading" id="2BU-Kw-Ahr"/>
+                            <constraint firstAttribute="trailing" secondItem="Qew-d6-EIF" secondAttribute="trailing" id="5f4-Zw-4VO"/>
+                            <constraint firstItem="Qew-d6-EIF" firstAttribute="leading" secondItem="c6H-qq-cnf" secondAttribute="leading" id="Blf-GU-3tk"/>
+                            <constraint firstItem="Qew-d6-EIF" firstAttribute="top" secondItem="Rre-vV-HWc" secondAttribute="bottom" id="RRo-PY-5xC"/>
+                            <constraint firstItem="a2p-hf-GLK" firstAttribute="top" secondItem="Rre-vV-HWc" secondAttribute="bottom" constant="-20" id="Vhk-bb-Qj9"/>
+                            <constraint firstItem="ZC9-e0-LHd" firstAttribute="top" secondItem="a2p-hf-GLK" secondAttribute="bottom" id="cqb-80-O9D"/>
+                            <constraint firstItem="ZC9-e0-LHd" firstAttribute="top" secondItem="Qew-d6-EIF" secondAttribute="bottom" id="f2T-g9-7O9"/>
+                            <constraint firstAttribute="trailing" secondItem="a2p-hf-GLK" secondAttribute="trailing" id="pry-CP-vta"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mTa-Vi-Kn9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCu-jC-Ffs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="270.31484257871068"/>
+        </scene>
+    </scenes>
+</document>
