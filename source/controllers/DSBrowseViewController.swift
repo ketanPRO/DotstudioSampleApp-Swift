@@ -26,32 +26,27 @@ open class DSBrowseViewController: SPLTBrowseViewController {
         super.viewDidLoad()
     }
     
-    
-    open override func sequenceAndSetCategories(categories: [SPLTCategory]) {
-        super.sequenceAndSetCategories(categories: categories)
-    }
-    
-    open override func numberOfSections(in tableView: UITableView) -> Int {
-        let i = super.numberOfSections(in: tableView)
-        return i
-    }
-    
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let dsHorizontalBaseTVC = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalBaseTVC") as? DSHorizontalBaseTVC {
             let category = self.categoriesBrowse[indexPath.section]
-            dsHorizontalBaseTVC.setCellData(category)
+            let size = self.getCollectionViewItemSize()
+            dsHorizontalBaseTVC.setCellData(category, sizeCollectionViewItem: size)
             return dsHorizontalBaseTVC
 
         }
-
-        
-        
-        
         return UITableViewCell() //tableView.dequeueReusableCell(withIdentifier: "cell")!
-        
-        
-        
+    }
+
+    
+    func reloadCategory(category: SPLTCategory) {
+        if let index = self.categoriesBrowse.index(of: category) {
+            self.reloadSectionAtIndex(index: index)
+        }
     }
     
-    
 }
+
+
+
+
+

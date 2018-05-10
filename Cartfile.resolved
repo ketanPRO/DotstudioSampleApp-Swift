@@ -1,3 +1,3 @@
-github "Alamofire/Alamofire" "4.7.2"
-github "dotstudiopro/DotstudioAPI_iOS" "5f5bf5283448b549b86f7808ce9f919bc3f8968a"
-github "ketanPRO/DotstudioUI-swift" "d11c050c457c660f94528b40f37015f8cff1d269"
+github "Haneke/HanekeSwift" "v0.11.1"
+github "dotstudiopro/DotstudioAPI_iOS" "0610b75b2c8cadfdddd5db6b1ee40f2e4333c62c"
+github "ketanPRO/DotstudioUI-swift" "a043760c3c76d610255a4be6cca267a459704711"
