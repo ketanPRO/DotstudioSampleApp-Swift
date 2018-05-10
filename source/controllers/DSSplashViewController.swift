@@ -14,6 +14,14 @@ import UIKit
 @IBDesignable
 open class DSSplashViewController: SPLTSplashViewController {
     
+    @IBOutlet weak open override var imageView: UIImageView? {
+        get {
+            return super.imageView
+        }
+        set {
+            super.imageView = newValue
+        }
+    }
 
 //    @IBInspectable override open var isVideoSplash: Bool {
 //        get {
@@ -36,7 +44,6 @@ open class DSSplashViewController: SPLTSplashViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        SPLTRouter.API_KEY = "176908bf2a39eef53edf72b60e99e339da45a9ca"
         SPLTTokenAPI().getToken { (accessToken) in
             print(accessToken)
         }
@@ -47,10 +54,10 @@ open class DSSplashViewController: SPLTSplashViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override open func checkSessionAndLogin() {
-        super.checkSessionAndLogin()
-        self.loadMainViewController()
-    }
+//    override open func checkSessionAndLogin() {
+//        super.checkSessionAndLogin()
+//        self.loadMainViewController()
+//    }
     override open func loadMainViewController() {
         let spltHomeTabBarController = self.getViewControllerFromStoryboardName("tabbar", strViewControllerIdentifier: "SPLTHomeTabBarController")
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {

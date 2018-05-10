@@ -41,10 +41,9 @@ open class DSBrowseViewController: SPLTBrowseViewController {
             let category = self.categoriesBrowse[indexPath.section]
             dsHorizontalBaseTVC.setCellData(category)
             return dsHorizontalBaseTVC
-            
+
         }
-        //        }
-        
+
         
         
         

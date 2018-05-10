@@ -33,7 +33,6 @@ class ViewController: SPLTSplashViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        SPLTRouter.API_KEY = "cf72565d2a62067e4e33e16d9e81e366ad08dd54"
          SPLTTokenAPI().getToken { (accessToken) in
             print(accessToken)
         }

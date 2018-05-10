@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DotstudioAPI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
+        SPLTRouter.API_KEY = "cf72565d2a62067e4e33e16d9e81e366ad08dd54" // wonder science
+        SPLTRouter.API_KEY = "176908bf2a39eef53edf72b60e99e339da45a9ca" // Spot Network
+
 //        if let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate {
 //            let splashStoryboard = UIStoryboard(name: "splash", bundle: nil)
 //            if let dsSplashViewController = splashStoryboard.instantiateViewController(withIdentifier: "DSSplashViewController") as? DSSplashViewController {
