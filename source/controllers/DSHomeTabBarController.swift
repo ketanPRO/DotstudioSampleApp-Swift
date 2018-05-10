@@ -31,5 +31,10 @@ open class DSHomeTabBarController: SPLTHomeTabBarController {
     
 }
 
+extension DSHomeTabBarController {
+    open override func didUpdateCategoryChannelsForCategory(_ category: SPLTCategory) {
+        //self.updateUI()
+    }
+}
 
 

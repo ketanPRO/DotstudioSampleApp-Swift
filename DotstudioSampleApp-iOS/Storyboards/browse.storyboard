@@ -194,7 +194,7 @@
                                                         <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="de9-zt-UxI">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DSHorizontalBaseCollectionViewCell" id="de9-zt-UxI" customClass="DSHorizontalBaseCollectionViewCell" customModule="DotstudioSampleApp" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="45.5" width="320" height="169.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -245,6 +245,7 @@
                                                                     </label>
                                                                 </subviews>
                                                             </view>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="pdB-wb-I7q" firstAttribute="trailing" secondItem="nrL-28-CRe" secondAttribute="trailing" id="1DQ-gH-3dr"/>
                                                                 <constraint firstItem="XwR-17-hKp" firstAttribute="top" secondItem="de9-zt-UxI" secondAttribute="top" id="Mye-rv-urR"/>
@@ -257,8 +258,17 @@
                                                                 <constraint firstItem="pdB-wb-I7q" firstAttribute="top" secondItem="nrL-28-CRe" secondAttribute="bottom" constant="-0.5" id="rpr-rr-1Y6"/>
                                                                 <constraint firstItem="XwR-17-hKp" firstAttribute="trailing" secondItem="pdB-wb-I7q" secondAttribute="trailing" constant="10" id="xtu-j3-zg8"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="imageViewCell" destination="7dZ-zD-aJb" id="RwE-9z-fYp"/>
+                                                                <outlet property="labelPrimaryTitle" destination="nrL-28-CRe" id="sYq-SJ-uXe"/>
+                                                                <outlet property="labelSecondaryTitle" destination="pdB-wb-I7q" id="jUq-0H-zIf"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="faE-Ur-M5b" id="7Tq-Vj-Ln1"/>
+                                                        <outlet property="delegate" destination="faE-Ur-M5b" id="tCR-cl-InP"/>
+                                                    </connections>
                                                 </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGg-Qi-XcB">
                                                     <rect key="frame" x="10" y="10" width="30.5" height="30"/>

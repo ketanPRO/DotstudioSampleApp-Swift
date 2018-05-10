@@ -15,6 +15,7 @@
 		6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62D63720A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift */; };
 		6C62D64320A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62D64220A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift */; };
 		6C62D64420A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62D64220A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift */; };
+		6C62D65220A47E4E008C06E3 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C62D65120A47E4E008C06E3 /* Haneke.framework */; };
 		6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7E120C20A34CBF00A7BE1C /* splash.storyboard */; };
 		6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */; };
 		EAAAFEF720A450E20071ADD4 /* tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */; };
@@ -67,6 +68,7 @@
 		6C62D63420A3728F008C06E3 /* DSBrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSBrowseViewController.swift; sourceTree = "<group>"; };
 		6C62D63720A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTabBarBaseNavigationViewController.swift; sourceTree = "<group>"; };
 		6C62D64220A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalBaseTableViewCell.swift; sourceTree = "<group>"; };
+		6C62D65120A47E4E008C06E3 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/iOS/Haneke.framework; sourceTree = "<group>"; };
 		6C7E120C20A34CBF00A7BE1C /* splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
 		6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSplashViewController.swift; sourceTree = "<group>"; };
 		EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tabbar.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C62D65220A47E4E008C06E3 /* Haneke.framework in Frameworks */,
 				EC755F4720A1EAB200AE8EAE /* FBSDKLoginKit.framework in Frameworks */,
 				EC755F4820A1EAB200AE8EAE /* FBSDKPlacesKit.framework in Frameworks */,
 				EC755F4920A1EAB200AE8EAE /* FacebookLogin.framework in Frameworks */,
@@ -224,6 +227,7 @@
 		EC755EDF20A190BC00AE8EAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C62D65120A47E4E008C06E3 /* Haneke.framework */,
 				EC755F4420A1EAB200AE8EAE /* Auth0.framework */,
 				EC755F5A20A1EAC900AE8EAE /* Auth0.framework */,
 				EC755F4320A1EAB200AE8EAE /* Bolts.framework */,
@@ -439,6 +443,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SimpleKeychain.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Auth0.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Haneke.framework",
 			);
 			name = "Carthage copy-frameworks Script";
 			outputPaths = (
