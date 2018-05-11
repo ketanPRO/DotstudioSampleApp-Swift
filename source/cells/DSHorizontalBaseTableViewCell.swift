@@ -17,7 +17,7 @@ open class DSHorizontalBaseCollectionViewCell: SPLTHorizontalBaseCollectionViewC
 //    @IBOutlet weak open var labelPrimaryTitle: UILabel?
 //    @IBOutlet weak open var labelSecondaryTitle: UILabel?
     
-    @IBOutlet weak open override var imageViewCell: SPLTBaseImageView? {
+    @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
         get {
             return super.imageViewCell
         }
@@ -41,30 +41,30 @@ open class DSHorizontalBaseCollectionViewCell: SPLTHorizontalBaseCollectionViewC
             super.labelSecondaryTitle = newValue
         }
     }
-    open override func setDspChannel(dspChannel: SPLTChannel) {
-        self.dspChannel = dspChannel
-        var strImageUrl = "" //"https://f9q4g5j6.ssl.hwcdn.net/5a5816cd97f8156c1988d889"
-        if let strPosterUrl = dspChannel.poster {
-            strImageUrl = strPosterUrl
-//            self.imageViewCell?.image = UIImage(contentsOfFile: strImageUrl)
-            if let url = URL(string: strImageUrl) {
-                self.imageViewCell?.hnk_setImageFromURL(url)
-            }
+//    open override func setDspChannel(dspChannel: SPLTChannel) {
+//        self.dspChannel = dspChannel
+//        var strImageUrl = "" //"https://f9q4g5j6.ssl.hwcdn.net/5a5816cd97f8156c1988d889"
+//        if let strPosterUrl = dspChannel.poster {
+//            strImageUrl = strPosterUrl
+////            self.imageViewCell?.image = UIImage(contentsOfFile: strImageUrl)
+////            if let url = URL(string: strImageUrl) {
+////                self.imageViewCell?.hnk_setImageFromURL(url)
+////            }
 //            self.imageViewCell?.splt_setImageFromStrImagePath(strImageUrl)
-        }
-        if let strTitle = dspChannel.strTitle {
-            self.labelPrimaryTitle?.text = strTitle
-        }
-        self.labelSecondaryTitle?.text = ""
-    }
+//        }
+//        if let strTitle = dspChannel.strTitle {
+//            self.labelPrimaryTitle?.text = strTitle
+//        }
+//        self.labelSecondaryTitle?.text = ""
+//    }
     open override func setDspVideo(dspVideo: SPLTVideo) {
         self.dspVideo = dspVideo
         if let strThumbUrl = dspVideo.thumb {
 //            self.imageViewCell?.image = UIImage(contentsOfFile: strThumbUrl)
-            if let url = URL(string: strThumbUrl) {
-                self.imageViewCell?.hnk_setImageFromURL(url)
-            }
-//            self.imageViewCell?.splt_setImageFromStrImagePath(strThumbUrl)
+//            if let url = URL(string: strThumbUrl) {
+//                self.imageViewCell?.hnk_setImageFromURL(url)
+//            }
+            self.imageViewCell?.splt_setImageFromStrImagePath(strThumbUrl)
         }
         if let strTitle = dspVideo.strTitle {
             self.labelPrimaryTitle?.text = strTitle
@@ -77,14 +77,14 @@ open class DSHorizontalBaseCollectionViewCell: SPLTHorizontalBaseCollectionViewC
 //MARK:-
 //MARK:-
 //MARK:- TableView Cells
-//protocol SPLTHorizontalBaseTVCDelegate {
-//    open func spltHorizontalBaseTVC(_ spltHorizontalBaseTVC: SPLTHorizontalBaseTVC, didSelectChannel dspChannel: SPLTChannel, atIndex index: Int)
-//    open func spltHorizontalBaseTVC(_ spltHorizontalBaseTVC: SPLTHorizontalBaseTVC, didSelectVideo dspVideo: SPLTVideo, inChannel dspChannel: SPLTChannel?, atIndex index: Int)
+//protocol SPLTHorizontalBaseTableViewCellDelegate {
+//    open func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectChannel dspChannel: SPLTChannel, atIndex index: Int)
+//    open func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectVideo dspVideo: SPLTVideo, inChannel dspChannel: SPLTChannel?, atIndex index: Int)
 //}
 
 
-open class DSHorizontalBaseTVC: SPLTHorizontalBaseTVC {
-//    open var delegate: SPLTHorizontalBaseTVCDelegate?
+open class DSHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell {
+//    open var delegate: SPLTHorizontalBaseTableViewCellDelegate?
 //    open var dspCategory: SPLTCategory?
     @IBOutlet weak open override var labelTitle: UILabel? {
         get {
@@ -105,7 +105,7 @@ open class DSHorizontalBaseTVC: SPLTHorizontalBaseTVC {
     
 
     open override func setCellData(_ dspCategory: SPLTCategory, sizeCollectionViewItem: CGSize) {
-//        self.resetCollectionViewSize(sizeCollectionViewItem)
+        self.resetCollectionViewSize(sizeCollectionViewItem)
         self.dspCategory = dspCategory
         self.dspCategory?.delegate = self
         if let strTitle = dspCategory.strName {
@@ -125,11 +125,15 @@ open class DSHorizontalBaseTVC: SPLTHorizontalBaseTVC {
         }
     }
     
+//    func resetCollectionViewSize(_ sizeCollectionViewItem: CGSize) {
+//        super.resetCollectionViewSize(sizeCollectionViewItem)
+//    }
+    
 }
 
 ///MARK: -
 //MARK: - extension UICollectionViewDataSource
-extension DSHorizontalBaseTVC {
+extension DSHorizontalBaseTableViewCell {
     
     open override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let dspCategory = self.dspCategory {
@@ -171,7 +175,7 @@ extension DSHorizontalBaseTVC {
 
 //MARK: -
 //MARK: - extension UICollectionViewDelegateFlowLayout
-extension DSHorizontalBaseTVC {
+extension DSHorizontalBaseTableViewCell {
 }
 
 
