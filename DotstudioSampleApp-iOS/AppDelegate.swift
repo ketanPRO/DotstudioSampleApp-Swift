@@ -18,16 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        SPLTRouter.API_KEY = "cf72565d2a62067e4e33e16d9e81e366ad08dd54" // wonder science
-        SPLTRouter.API_KEY = "84b1403831a8f9ea1763d40d187246765417e8c5" //114194a80a92fd5c3048f4c95cc32cc882e22ef6" // Decentric Network
-
-//        if let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate {
-//            let splashStoryboard = UIStoryboard(name: "splash", bundle: nil)
-//            if let dsSplashViewController = splashStoryboard.instantiateViewController(withIdentifier: "DSSplashViewController") as? DSSplashViewController {
-//                appDelegate.window?.rootViewController = dsSplashViewController
-//            }
-//        }
-        
+        SPLTRouter.API_KEY = ""
         return true
     }
 
