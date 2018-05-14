@@ -12,80 +12,13 @@ import DotstudioAPI
 import DotstudioUI
 import Haneke
 
-open class DSHorizontalBaseCollectionViewCell: SPLTHorizontalBaseCollectionViewCell  {
-//    @IBOutlet weak open var imageViewCell: SPLTBaseImageView?
-//    @IBOutlet weak open var labelPrimaryTitle: UILabel?
-//    @IBOutlet weak open var labelSecondaryTitle: UILabel?
-    
-    @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
-        get {
-            return super.imageViewCell
-        }
-        set {
-            super.imageViewCell = newValue
-        }
-    }
-    @IBOutlet weak open override var labelPrimaryTitle: UILabel? {
-        get {
-            return super.labelPrimaryTitle
-        }
-        set {
-            super.labelPrimaryTitle = newValue
-        }
-    }
-    @IBOutlet weak open override var labelSecondaryTitle: UILabel? {
-        get {
-            return super.labelSecondaryTitle
-        }
-        set {
-            super.labelSecondaryTitle = newValue
-        }
-    }
-//    open override func setDspChannel(dspChannel: SPLTChannel) {
-//        self.dspChannel = dspChannel
-//        var strImageUrl = "" //"https://f9q4g5j6.ssl.hwcdn.net/5a5816cd97f8156c1988d889"
-//        if let strPosterUrl = dspChannel.poster {
-//            strImageUrl = strPosterUrl
-////            self.imageViewCell?.image = UIImage(contentsOfFile: strImageUrl)
-////            if let url = URL(string: strImageUrl) {
-////                self.imageViewCell?.hnk_setImageFromURL(url)
-////            }
-//            self.imageViewCell?.splt_setImageFromStrImagePath(strImageUrl)
-//        }
-//        if let strTitle = dspChannel.strTitle {
-//            self.labelPrimaryTitle?.text = strTitle
-//        }
-//        self.labelSecondaryTitle?.text = ""
-//    }
-    open override func setDspVideo(dspVideo: SPLTVideo) {
-        self.dspVideo = dspVideo
-        if let strThumbUrl = dspVideo.thumb {
-//            self.imageViewCell?.image = UIImage(contentsOfFile: strThumbUrl)
-//            if let url = URL(string: strThumbUrl) {
-//                self.imageViewCell?.hnk_setImageFromURL(url)
-//            }
-            self.imageViewCell?.splt_setImageFromStrImagePath(strThumbUrl)
-        }
-        if let strTitle = dspVideo.strTitle {
-            self.labelPrimaryTitle?.text = strTitle
-        }
-        self.labelSecondaryTitle?.text = ""
-    }
-}
-
-
-//MARK:-
-//MARK:-
-//MARK:- TableView Cells
-//protocol SPLTHorizontalBaseTableViewCellDelegate {
-//    open func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectChannel dspChannel: SPLTChannel, atIndex index: Int)
-//    open func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectVideo dspVideo: SPLTVideo, inChannel dspChannel: SPLTChannel?, atIndex index: Int)
-//}
-
-
 open class DSHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell {
-//    open var delegate: SPLTHorizontalBaseTableViewCellDelegate?
-//    open var dspCategory: SPLTCategory?
+    
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        self.collectionView?.register(UINib(nibName: "DSHorizontalBaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSHorizontalBaseCollectionViewCell")
+    }
+    
     @IBOutlet weak open override var labelTitle: UILabel? {
         get {
             return super.labelTitle
@@ -103,7 +36,7 @@ open class DSHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell {
         }
     }
     
-
+    
     open override func setCellData(_ dspCategory: SPLTCategory, sizeCollectionViewItem: CGSize) {
         self.resetCollectionViewSize(sizeCollectionViewItem)
         self.dspCategory = dspCategory
@@ -124,10 +57,6 @@ open class DSHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell {
             }
         }
     }
-    
-//    func resetCollectionViewSize(_ sizeCollectionViewItem: CGSize) {
-//        super.resetCollectionViewSize(sizeCollectionViewItem)
-//    }
     
 }
 
@@ -172,12 +101,5 @@ extension DSHorizontalBaseTableViewCell {
         return UICollectionViewCell()
     }
 }
-
-//MARK: -
-//MARK: - extension UICollectionViewDelegateFlowLayout
-extension DSHorizontalBaseTableViewCell {
-}
-
-
 
 

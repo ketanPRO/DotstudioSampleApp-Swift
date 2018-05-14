@@ -22,28 +22,32 @@ open class DSBrowseViewController: SPLTBrowseViewController {
             super.tableView = newValue
         }
     }
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    
+    @IBInspectable override open var tableViewHeight: CGFloat {
+        get {
+            return super.tableViewHeight
+        }
+        set {
+            super.tableViewHeight = newValue
+        }
     }
     
-//    open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let tableViewWidth = tableView.frame.width
-//
-//        if indexPath.section == 0 {
-//            return (tableViewWidth * 9.0 / 16.0) + 30
-//        }
-//        if indexPath.section < self.categoriesBrowse.count {
-//            let category = self.categoriesBrowse[indexPath.section]
-//            if category.channels.count > 1 {
-//                return self.getTableViewHeight()
-//            } else {
-//                return self.getTableViewHeight()
-//            }
-//        }
-//
-//        return self.getTableViewHeight()
-//    }
+    @IBInspectable override open var collectionViewItemSize: CGSize {
+        get {
+            return super.collectionViewItemSize
+        }
+        set {
+            super.collectionViewItemSize = newValue
+        }
+    }
+    
+    
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView?.register(UINib(nibName: "DSHorizontalBaseTableViewCell", bundle: nil), forCellReuseIdentifier: "DSHorizontalBaseTableViewCell")
+    }
+    
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
@@ -65,8 +69,12 @@ open class DSBrowseViewController: SPLTBrowseViewController {
             }
         }
         
-        return UITableViewCell() //tableView.dequeueReusableCell(withIdentifier: "cell")!
+        return UITableViewCell()
     }
+    
+    /*open override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }*/
 
     
     func reloadCategory(category: SPLTCategory) {

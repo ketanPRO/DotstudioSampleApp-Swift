@@ -19,6 +19,11 @@
 		6C62D65220A47E4E008C06E3 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C62D65120A47E4E008C06E3 /* Haneke.framework */; };
 		6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7E120C20A34CBF00A7BE1C /* splash.storyboard */; };
 		6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */; };
+		EA22B71120A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */; };
+		EA22B71220A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71020A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib */; };
+		EA22B71320A9CB59000A35CF /* DSHorizontalBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */; };
+		EA22B71720A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71620A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib */; };
+		EA62255A20A96E9D00D4CC10 /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
 		EAA9370820A4992C0031BB9B /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA9370720A4992B0031BB9B /* Haneke.framework */; };
 		EAAAFEF720A450E20071ADD4 /* tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */; };
 		EAAAFEF920A4555C0071ADD4 /* browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF820A4555C0071ADD4 /* browse.storyboard */; };
@@ -39,7 +44,6 @@
 		EC755EFE20A1B03600AE8EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC755EFD20A1B03600AE8EAE /* Assets.xcassets */; };
 		EC755F3A20A1EAB100AE8EAE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE220A190BD00AE8EAE /* Alamofire.framework */; };
 		EC755F3B20A1EAB100AE8EAE /* DotstudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */; };
-		EC755F3C20A1EAB100AE8EAE /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
 		EC755F4720A1EAB200AE8EAE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3D20A1EAB100AE8EAE /* FBSDKLoginKit.framework */; };
 		EC755F4820A1EAB200AE8EAE /* FBSDKPlacesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3E20A1EAB100AE8EAE /* FBSDKPlacesKit.framework */; };
 		EC755F4920A1EAB200AE8EAE /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3F20A1EAB100AE8EAE /* FacebookLogin.framework */; };
@@ -74,6 +78,9 @@
 		6C62D65120A47E4E008C06E3 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/iOS/Haneke.framework; sourceTree = "<group>"; };
 		6C7E120C20A34CBF00A7BE1C /* splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
 		6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSplashViewController.swift; sourceTree = "<group>"; };
+		EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalBaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA22B71020A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalBaseCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA22B71620A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHorizontalBaseTableViewCell.xib; sourceTree = "<group>"; };
 		EAA9370720A4992B0031BB9B /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/tvOS/Haneke.framework; sourceTree = "<group>"; };
 		EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tabbar.storyboard; sourceTree = "<group>"; };
 		EAAAFEF820A4555C0071ADD4 /* browse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = browse.storyboard; sourceTree = "<group>"; };
@@ -135,7 +142,7 @@
 				EC755F5020A1EAB200AE8EAE /* FBSDKShareKit.framework in Frameworks */,
 				EC755F3A20A1EAB100AE8EAE /* Alamofire.framework in Frameworks */,
 				EC755F3B20A1EAB100AE8EAE /* DotstudioAPI.framework in Frameworks */,
-				EC755F3C20A1EAB100AE8EAE /* DotstudioUI.framework in Frameworks */,
+				EA62255A20A96E9D00D4CC10 /* DotstudioUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +180,7 @@
 			children = (
 				6C62D64220A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift */,
 				6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */,
+				EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -195,6 +203,15 @@
 				6C62D63420A3728F008C06E3 /* DSBrowseViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		EA22B71820A9DC69000A35CF /* CellXibs */ = {
+			isa = PBXGroup;
+			children = (
+				EA22B71620A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib */,
+				EA22B71020A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib */,
+			);
+			path = CellXibs;
 			sourceTree = "<group>";
 		};
 		EC755EC120A1899B00AE8EAE = {
@@ -277,6 +294,7 @@
 		EC755F0320A1B3D300AE8EAE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				EA22B71820A9DC69000A35CF /* CellXibs */,
 				EC755ED120A1899B00AE8EAE /* Main.storyboard */,
 				6C7E120C20A34CBF00A7BE1C /* splash.storyboard */,
 				6C62D62C20A36919008C06E3 /* tabbar.storyboard */,
@@ -383,9 +401,11 @@
 			files = (
 				6C62D62D20A36919008C06E3 /* tabbar.storyboard in Resources */,
 				EC755ED820A1899B00AE8EAE /* LaunchScreen.storyboard in Resources */,
+				EA22B71220A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib in Resources */,
 				EC755ED520A1899B00AE8EAE /* Assets.xcassets in Resources */,
 				6C62D63120A36DBE008C06E3 /* categories.storyboard in Resources */,
 				EC755ED320A1899B00AE8EAE /* Main.storyboard in Resources */,
+				EA22B71720A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib in Resources */,
 				6C62D62F20A36DB1008C06E3 /* browse.storyboard in Resources */,
 				6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */,
 			);
@@ -468,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC755ED020A1899B00AE8EAE /* ViewController.swift in Sources */,
+				EA22B71120A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift in Sources */,
 				6C62D63520A3728F008C06E3 /* DSBrowseViewController.swift in Sources */,
 				6C62D64320A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift in Sources */,
 				6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */,
@@ -488,6 +509,7 @@
 				6C62D64420A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift in Sources */,
 				EC755EF720A1B03600AE8EAE /* AppDelegate.swift in Sources */,
 				EAAAFEFD20A45D1B0071ADD4 /* DSHomeTabBarController.swift in Sources */,
+				EA22B71320A9CB59000A35CF /* DSHorizontalBaseCollectionViewCell.swift in Sources */,
 				EAAAFEFF20A45D270071ADD4 /* DSTabBarBaseNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
