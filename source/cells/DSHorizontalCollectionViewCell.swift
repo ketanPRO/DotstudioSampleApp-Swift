@@ -11,7 +11,7 @@ import DotstudioAPI
 import DotstudioUI
 import Haneke
 
-open class DSHorizontalBaseCollectionViewCell: SPLTHorizontalBaseCollectionViewCell  {
+open class DSHorizontalCollectionViewCell: SPLTHorizontalBaseCollectionViewCell  {
     @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
         get {
             return super.imageViewCell

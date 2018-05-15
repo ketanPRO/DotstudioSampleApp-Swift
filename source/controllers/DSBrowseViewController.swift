@@ -45,27 +45,25 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView?.register(UINib(nibName: "DSHorizontalBaseTableViewCell", bundle: nil), forCellReuseIdentifier: "DSHorizontalBaseTableViewCell")
+        self.tableView?.register(UINib(nibName: "DSFeaturedHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSFeaturedHorizontalTableViewCell")
+        self.tableView?.register(UINib(nibName: "DSHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSHorizontalTableViewCell")
     }
     
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            if let spltFeaturedHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SPLTFeaturedHorizontalTableViewCell") as? SPLTFeaturedHorizontalTableViewCell {
+            if let dsFeaturedHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSFeaturedHorizontalTableViewCell") as? DSFeaturedHorizontalTableViewCell {
                 let category = self.categoriesBrowse[indexPath.section]
                 let size = self.getCollectionViewItemSize()
-                spltFeaturedHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: size)
-                return spltFeaturedHorizontalTableViewCell
-                
+                dsFeaturedHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: size)
+                return dsFeaturedHorizontalTableViewCell
             }
-            
         } else {
-            if let dsHorizontalBaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalBaseTableViewCell") as? DSHorizontalBaseTableViewCell {
+            if let dsHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalTableViewCell") as? DSHorizontalTableViewCell {
                 let category = self.categoriesBrowse[indexPath.section]
                 let size = self.getCollectionViewItemSize()
-                dsHorizontalBaseTableViewCell.setCellData(category, sizeCollectionViewItem: size)
-                return dsHorizontalBaseTableViewCell
-                
+                dsHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: size)
+                return dsHorizontalTableViewCell
             }
         }
         
