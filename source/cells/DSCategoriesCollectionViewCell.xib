@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DSCategoriesCollectionViewCell" id="gTV-IL-0wX" customClass="DSCategoriesCollectionViewCell" customModule="DotstudioSampleApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-fI-QRc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwH-gm-QeR" customClass="EZYGradientView" customModule="DotstudioSampleApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="160" width="375" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZs-6i-CV4">
+                                <rect key="frame" x="20" y="10.5" width="74.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="J3l-Bc-fVJ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                            </constraint>
+                            <constraint firstItem="pZs-6i-CV4" firstAttribute="leading" secondItem="bwH-gm-QeR" secondAttribute="leading" constant="20" id="RA2-WK-qvc"/>
+                            <constraint firstItem="pZs-6i-CV4" firstAttribute="centerY" secondItem="bwH-gm-QeR" secondAttribute="centerY" id="SBD-AM-2b6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" white="0.0" alpha="0.70295994719999999" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fadeIntensity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="colorRatio">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="L1n-fI-QRc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Th-xJ-Myt"/>
+                <constraint firstItem="L1n-fI-QRc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AMZ-X3-8Hs"/>
+                <constraint firstItem="L1n-fI-QRc" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="25:14" id="C6p-G1-toU"/>
+                <constraint firstAttribute="bottom" secondItem="bwH-gm-QeR" secondAttribute="bottom" id="FR7-Qi-5YE"/>
+                <constraint firstAttribute="bottom" secondItem="L1n-fI-QRc" secondAttribute="bottom" id="Ldr-RY-C2Z"/>
+                <constraint firstAttribute="trailing" secondItem="bwH-gm-QeR" secondAttribute="trailing" id="sRT-5B-Q6T"/>
+                <constraint firstAttribute="trailing" secondItem="L1n-fI-QRc" secondAttribute="trailing" id="v8e-xt-fv5"/>
+                <constraint firstItem="bwH-gm-QeR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xTd-en-PG5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <point key="canvasLocation" x="25.5" y="52"/>
+        </collectionViewCell>
+    </objects>
+</document>

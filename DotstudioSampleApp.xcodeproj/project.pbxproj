@@ -23,6 +23,8 @@
 		EA22B71220A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71020A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib */; };
 		EA22B71320A9CB59000A35CF /* DSHorizontalBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */; };
 		EA22B71720A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71620A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib */; };
+		EA22B71B20AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B71920AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift */; };
+		EA22B71C20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */; };
 		EA62255A20A96E9D00D4CC10 /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
 		EAA9370820A4992C0031BB9B /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA9370720A4992B0031BB9B /* Haneke.framework */; };
 		EAAAFEF720A450E20071ADD4 /* tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */; };
@@ -81,6 +83,8 @@
 		EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA22B71020A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalBaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA22B71620A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHorizontalBaseTableViewCell.xib; sourceTree = "<group>"; };
+		EA22B71920AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		EAA9370720A4992B0031BB9B /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/tvOS/Haneke.framework; sourceTree = "<group>"; };
 		EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tabbar.storyboard; sourceTree = "<group>"; };
 		EAAAFEF820A4555C0071ADD4 /* browse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = browse.storyboard; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				6C62D64220A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift */,
 				6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */,
 				EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */,
+				EA22B71920AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift */,
+				EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 		6C7E120E20A34D5000A7BE1C /* source */ = {
 			isa = PBXGroup;
 			children = (
+				EA22B72020AAC12A000A35CF /* Configuration */,
 				6C62D64120A3FD93008C06E3 /* cells */,
 				6C62D63620A3E27C008C06E3 /* navigation-controllers */,
 				6C7E120F20A34D5000A7BE1C /* controllers */,
@@ -212,6 +219,13 @@
 				EA22B71020A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib */,
 			);
 			path = CellXibs;
+			sourceTree = "<group>";
+		};
+		EA22B72020AAC12A000A35CF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		EC755EC120A1899B00AE8EAE = {
@@ -406,6 +420,7 @@
 				6C62D63120A36DBE008C06E3 /* categories.storyboard in Resources */,
 				EC755ED320A1899B00AE8EAE /* Main.storyboard in Resources */,
 				EA22B71720A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib in Resources */,
+				EA22B71C20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib in Resources */,
 				6C62D62F20A36DB1008C06E3 /* browse.storyboard in Resources */,
 				6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */,
 			);
@@ -492,6 +507,7 @@
 				6C62D63520A3728F008C06E3 /* DSBrowseViewController.swift in Sources */,
 				6C62D64320A3FDA0008C06E3 /* DSHorizontalBaseTableViewCell.swift in Sources */,
 				6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */,
+				EA22B71B20AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift in Sources */,
 				EC755ECE20A1899B00AE8EAE /* AppDelegate.swift in Sources */,
 				6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */,
 				6C48D68E20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift in Sources */,
