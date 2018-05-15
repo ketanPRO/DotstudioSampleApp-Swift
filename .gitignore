@@ -65,3 +65,11 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+
+# Ignore commiting Project API keys & config on Github...
+source/config/DSConfig.swift
+
+
+
+
