@@ -37,8 +37,9 @@ open class DSHorizontalCollectionViewCell: SPLTHorizontalBaseCollectionViewCell 
         }
     }
     
-    open override func setDspVideo(dspVideo: SPLTVideo) {
+    open override func setDspVideo(dspVideo: SPLTVideo, collectionViewImageSize: CGSize) {
         self.dspVideo = dspVideo
+        self.collectionViewImageSize = collectionViewImageSize
         if let strThumbUrl = dspVideo.thumb {
             //            self.imageViewCell?.image = UIImage(contentsOfFile: strThumbUrl)
             //            if let url = URL(string: strThumbUrl) {

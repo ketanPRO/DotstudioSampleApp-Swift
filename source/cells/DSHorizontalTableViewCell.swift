@@ -36,9 +36,9 @@ open class DSHorizontalTableViewCell: SPLTHorizontalBaseTableViewCell {
         }
     }
     
-    
-    open override func setCellData(_ dspCategory: SPLTCategory, sizeCollectionViewItem: CGSize) {
-        self.resetCollectionViewSize(sizeCollectionViewItem)
+    open override func setCellData(_ dspCategory: SPLTCategory, collectionViewItemSize: CGSize, collectionViewImageSize: CGSize) {
+        self.resetCollectionViewSize(collectionViewItemSize)
+        self.collectionViewImageSize = collectionViewImageSize
         self.dspCategory = dspCategory
         self.dspCategory?.delegate = self
         if let strTitle = dspCategory.strName {
@@ -84,13 +84,13 @@ extension DSHorizontalTableViewCell {
                 if dspCategory.channels.count > 1 {
                     if indexPath.section < dspCategory.channels.count {
                         let channel = dspCategory.channels[indexPath.row]
-                        dsHorizontalCollectionViewCell.setDspChannel(dspChannel: channel)
+                        dsHorizontalCollectionViewCell.setDspChannel(dspChannel: channel, collectionViewImageSize: self.collectionViewImageSize)
                     }
                 } else if dspCategory.channels.count == 1 {
                     if let dspPlaylistChannel = dspCategory.channels[0] as? SPLTPlaylistChannel {
                         if indexPath.section < dspPlaylistChannel.playlistVideos.count {
                             let video = dspPlaylistChannel.playlistVideos[indexPath.row]
-                            dsHorizontalCollectionViewCell.setDspVideo(dspVideo: video)
+                            dsHorizontalCollectionViewCell.setDspVideo(dspVideo: video, collectionViewImageSize: self.collectionViewImageSize)
                         }
                     }
                 }

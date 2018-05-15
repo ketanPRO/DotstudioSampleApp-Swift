@@ -78,8 +78,9 @@ open class DSBrowseViewController: SPLTBrowseViewController {
         
         if let dsHorizontalTableViewCell = dsHorizontalTableViewCell_ {
             let category = self.categoriesBrowse[indexPath.section]
-            let size = self.getCollectionViewItemSizeAtIndexPath(indexPath)
-            dsHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: size)
+            let collectionViewItemSize = self.getCollectionViewItemSizeAtIndexPath(indexPath)
+            let collectionViewImageSize = self.getCollectionViewImageSizeAtIndexPath(indexPath)
+            dsHorizontalTableViewCell.setCellData(category, collectionViewItemSize: collectionViewItemSize, collectionViewImageSize: collectionViewImageSize)
             return dsHorizontalTableViewCell
         }
         return UITableViewCell()
