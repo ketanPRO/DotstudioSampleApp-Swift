@@ -11,8 +11,11 @@ import DotstudioAPI
 
 class DSConfig {
 
+    public static var strGoogleAnalyticsKey: String? = nil
+    
     class func setup() {
-        SPLTRouter.API_KEY = "a12878949f4ea52703ab6a07c662b31895886cea"
+        SPLTRouter.API_KEY = ""
+        DSConfig.strGoogleAnalyticsKey = nil
     }
     
 }
