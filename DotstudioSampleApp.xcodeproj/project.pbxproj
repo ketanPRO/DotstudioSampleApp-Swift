@@ -24,18 +24,15 @@
 		6C62D65220A47E4E008C06E3 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C62D65120A47E4E008C06E3 /* Haneke.framework */; };
 		6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7E120C20A34CBF00A7BE1C /* splash.storyboard */; };
 		6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */; };
-		EA22B71120A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */; };
-		EA22B71220A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71020A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib */; };
-		EA22B71320A9CB59000A35CF /* DSHorizontalBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */; };
-		EA22B71720A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71620A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib */; };
-		EA22B71B20AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B71920AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift */; };
-		EA22B71C20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */; };
 		6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CB8FC4720A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		EA22B71120A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
 		EA22B71220A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */; };
 		EA22B71320A9CB59000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
 		EA22B71720A9D9DD000A35CF /* DSHorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71620A9D9DD000A35CF /* DSHorizontalTableViewCell.xib */; };
+		EA22B71B20AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B71920AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift */; };
+		EA22B71C20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */; };
+		EA2D4AE120AADEBF0018A025 /* DSCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4AE020AADEBF0018A025 /* DSCategoriesViewController.swift */; };
 		EA62255A20A96E9D00D4CC10 /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
 		EAA9370820A4992C0031BB9B /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA9370720A4992B0031BB9B /* Haneke.framework */; };
 		EAAAFEF720A450E20071ADD4 /* tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */; };
@@ -94,15 +91,13 @@
 		6C62D65120A47E4E008C06E3 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/iOS/Haneke.framework; sourceTree = "<group>"; };
 		6C7E120C20A34CBF00A7BE1C /* splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
 		6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSplashViewController.swift; sourceTree = "<group>"; };
-		EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalBaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		EA22B71020A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalBaseCollectionViewCell.xib; sourceTree = "<group>"; };
-		EA22B71620A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHorizontalBaseTableViewCell.xib; sourceTree = "<group>"; };
-		EA22B71920AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
-		EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		6CB8FC4520A9E776009A70B5 /* DSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConfig.swift; sourceTree = "<group>"; };
 		EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA22B71620A9D9DD000A35CF /* DSHorizontalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHorizontalTableViewCell.xib; sourceTree = "<group>"; };
+		EA22B71920AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSCategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA2D4AE020AADEBF0018A025 /* DSCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCategoriesViewController.swift; sourceTree = "<group>"; };
 		EAA9370720A4992B0031BB9B /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/tvOS/Haneke.framework; sourceTree = "<group>"; };
 		EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tabbar.storyboard; sourceTree = "<group>"; };
 		EAAAFEF820A4555C0071ADD4 /* browse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = browse.storyboard; sourceTree = "<group>"; };
@@ -201,11 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				6C62D64220A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift */,
-				EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */,
 				6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */,
-				EA22B70F20A9CADE000A35CF /* DSHorizontalBaseCollectionViewCell.swift */,
+				EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */,
 				EA22B71920AABA6D000A35CF /* DSCategoriesCollectionViewCell.swift */,
-				EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */,
 				6C4C1A0020AA8DAD002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.swift */,
 			);
 			path = cells;
@@ -228,6 +221,7 @@
 				6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */,
 				6C62D63220A37061008C06E3 /* DSHomeTabBarController.swift */,
 				6C62D63420A3728F008C06E3 /* DSBrowseViewController.swift */,
+				EA2D4AE020AADEBF0018A025 /* DSCategoriesViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -243,19 +237,13 @@
 		EA22B71820A9DC69000A35CF /* CellXibs */ = {
 			isa = PBXGroup;
 			children = (
+				EA22B71A20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib */,
 				6C4C19FC20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib */,
 				6C4C19FD20AA8B5A002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.xib */,
 				EA22B71620A9D9DD000A35CF /* DSHorizontalTableViewCell.xib */,
 				EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */,
 			);
 			path = CellXibs;
-			sourceTree = "<group>";
-		};
-		EA22B72020AAC12A000A35CF /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Configuration;
 			sourceTree = "<group>";
 		};
 		EC755EC120A1899B00AE8EAE = {
@@ -450,7 +438,7 @@
 				EC755ED520A1899B00AE8EAE /* Assets.xcassets in Resources */,
 				6C62D63120A36DBE008C06E3 /* categories.storyboard in Resources */,
 				EC755ED320A1899B00AE8EAE /* Main.storyboard in Resources */,
-				EA22B71720A9D9DD000A35CF /* DSHorizontalBaseTableViewCell.xib in Resources */,
+				EA22B71720A9D9DD000A35CF /* DSHorizontalTableViewCell.xib in Resources */,
 				EA22B71C20AABA6D000A35CF /* DSCategoriesCollectionViewCell.xib in Resources */,
 				EA22B71720A9D9DD000A35CF /* DSHorizontalTableViewCell.xib in Resources */,
 				6C62D62F20A36DB1008C06E3 /* browse.storyboard in Resources */,
@@ -545,6 +533,7 @@
 				EC755ECE20A1899B00AE8EAE /* AppDelegate.swift in Sources */,
 				6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */,
 				6C4C1A0120AA8DAD002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.swift in Sources */,
+				EA2D4AE120AADEBF0018A025 /* DSCategoriesViewController.swift in Sources */,
 				6C48D68E20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift in Sources */,
 				6C62D63320A37061008C06E3 /* DSHomeTabBarController.swift in Sources */,
 			);

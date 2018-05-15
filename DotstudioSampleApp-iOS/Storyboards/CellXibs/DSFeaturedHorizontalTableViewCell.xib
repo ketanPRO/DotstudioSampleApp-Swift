@@ -58,7 +58,7 @@
             <connections>
                 <outlet property="collectionView" destination="PTy-AC-Gtc" id="ilb-pa-1YF"/>
             </connections>
-            <point key="canvasLocation" x="274" y="8"/>
+            <point key="canvasLocation" x="53" y="-31"/>
         </tableViewCell>
     </objects>
 </document>

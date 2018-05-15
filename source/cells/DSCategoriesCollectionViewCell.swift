@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import DotstudioUI
 
-open class DSCategoriesCollectionViewCell: SPLTCategoriesTableViewCell {
+class DSCategoriesCollectionViewCell: SPLTCategoriesCollectionViewCell {
     @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
         get {
             return super.imageViewCell
@@ -25,7 +26,15 @@ open class DSCategoriesCollectionViewCell: SPLTCategoriesTableViewCell {
             super.labelPrimaryTitle = newValue
         }
     }
-    open override func awakeFromNib() {
+    
+    override open func prepareForReuse() {
+        super.prepareForReuse()
+        self.category = nil
+        self.imageViewCell?.image = nil
+        self.labelPrimaryTitle?.text = ""
+    }
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

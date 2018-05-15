@@ -45,6 +45,7 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+
         self.tableView?.register(UINib(nibName: "DSFeaturedHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSFeaturedHorizontalTableViewCell")
         self.tableView?.register(UINib(nibName: "DSHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSHorizontalTableViewCell")
     }
@@ -72,18 +73,6 @@ open class DSBrowseViewController: SPLTBrowseViewController {
         }
         return UITableViewCell()
     }
-    
-    /*open override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
-    }*/
-
-    
-//    func reloadCategory(category: SPLTCategory) {
-//        if let index = self.categoriesBrowse.index(of: category) {
-//            self.reloadSectionAtIndex(index: index)
-//        }
-//    }
-    
 }
 
 

@@ -6,23 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Montserrat-Bold.ttf">
-            <string>Montserrat-Bold</string>
-        </array>
-        <array key="Montserrat-Regular.ttf">
-            <string>Montserrat-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="PWT-cd-wQB">
             <objects>
-                <viewController storyboardIdentifier="DSBrowseViewController" id="ktI-Po-hDT" customClass="DSBrowseViewController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DSBrowseViewController" title="Home" id="ktI-Po-hDT" customClass="DSBrowseViewController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fyL-Y7-roV"/>
                         <viewControllerLayoutGuide type="bottom" id="OgB-7B-Osy"/>
@@ -37,159 +28,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dGL-dX-bei">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DSFeaturedHorizontalTableViewCell" rowHeight="260" id="Ndi-cX-hNU" customClass="DSFeaturedHorizontalTableViewCell" customModule="DotstudioSampleApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="260"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ndi-cX-hNU" id="Vyy-4z-d08">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cD3-C9-put">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="cD3-C9-put" secondAttribute="height" multiplier="16:9" id="PVv-3j-ZnG"/>
-                                                    </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Oey-4r-vGu">
-                                                        <size key="itemSize" width="375" height="210"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DSFeaturedHorizontalBaseCollectionViewCell" id="qwW-ZF-aPn" customClass="DSFeaturedHorizontalBaseCollectionViewCell" customModule="DotstudioSampleApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.5" width="375" height="210"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-yS-7iR">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
-                                                                    </imageView>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBv-TN-gdi" userLabel="Gradient view" customClass="EZYGradientView" customModule="DotstudioSampleApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="160" width="375" height="50"/>
-                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="XkZ-Qp-d3V">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="75"/>
-                                                                            </constraint>
-                                                                        </constraints>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.79855303700000002" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="fadeIntensity">
-                                                                                <real key="value" value="1"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="colorRatio">
-                                                                                <real key="value" value="0.5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Man Jam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8T5-uc-dm4">
-                                                                        <rect key="frame" x="10" y="177" width="50" height="14"/>
-                                                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="12"/>
-                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
-                                                                        </variation>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN9-RC-Zc8" customClass="K10BaseLabel" customModule="DotstudioSampleApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="10" y="191" width="30" height="12"/>
-                                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                                                        </variation>
-                                                                    </label>
-                                                                </subviews>
-                                                            </view>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="Qw1-yS-7iR" secondAttribute="trailing" id="8TS-wH-YHG"/>
-                                                                <constraint firstItem="KN9-RC-Zc8" firstAttribute="top" secondItem="8T5-uc-dm4" secondAttribute="bottom" id="CEb-bv-X3I"/>
-                                                                <constraint firstItem="Qw1-yS-7iR" firstAttribute="top" secondItem="qwW-ZF-aPn" secondAttribute="top" id="Dch-dj-EDp"/>
-                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KN9-RC-Zc8" secondAttribute="trailing" constant="10" id="DvJ-HU-gpI"/>
-                                                                <constraint firstItem="Qw1-yS-7iR" firstAttribute="bottom" secondItem="KN9-RC-Zc8" secondAttribute="bottom" constant="7" id="KFj-WX-ZCu"/>
-                                                                <constraint firstItem="SBv-TN-gdi" firstAttribute="leading" secondItem="qwW-ZF-aPn" secondAttribute="leading" id="Ohx-pp-GcB"/>
-                                                                <constraint firstAttribute="bottom" secondItem="Qw1-yS-7iR" secondAttribute="bottom" id="QgC-vk-C4Z"/>
-                                                                <constraint firstAttribute="trailing" secondItem="SBv-TN-gdi" secondAttribute="trailing" id="YDK-Mo-GTF"/>
-                                                                <constraint firstItem="8T5-uc-dm4" firstAttribute="leading" secondItem="KN9-RC-Zc8" secondAttribute="leading" id="ah3-Mu-bld"/>
-                                                                <constraint firstItem="KN9-RC-Zc8" firstAttribute="leading" secondItem="qwW-ZF-aPn" secondAttribute="leading" constant="10" id="bIw-Gp-k1w"/>
-                                                                <constraint firstItem="Qw1-yS-7iR" firstAttribute="leading" secondItem="qwW-ZF-aPn" secondAttribute="leading" id="lph-0W-Zdl"/>
-                                                                <constraint firstAttribute="bottom" secondItem="SBv-TN-gdi" secondAttribute="bottom" id="qeD-r6-vnj"/>
-                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8T5-uc-dm4" secondAttribute="trailing" constant="10" id="vAm-Em-cks"/>
-                                                            </constraints>
-                                                            <connections>
-                                                                <outlet property="imageViewCell" destination="Qw1-yS-7iR" id="dVY-3l-sA7"/>
-                                                                <outlet property="labelPrimaryTitle" destination="8T5-uc-dm4" id="Gcq-EZ-RNZ"/>
-                                                                <outlet property="labelSecondaryTitle" destination="KN9-RC-Zc8" id="PWa-xv-8U0"/>
-                                                            </connections>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autoScroll" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="autoScrollTime">
-                                                            <real key="value" value="10"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="itemsPerPage">
-                                                            <integer key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <outlet property="dataSource" destination="Ndi-cX-hNU" id="o3t-Wv-csh"/>
-                                                        <outlet property="delegate" destination="Ndi-cX-hNU" id="cIC-bd-akW"/>
-                                                    </connections>
-                                                </collectionView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI4-YN-JJx">
-                                                    <rect key="frame" x="10" y="10" width="0.0" height="0.0"/>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-Td-9oe">
-                                                    <rect key="frame" x="0.0" y="211" width="375" height="49"/>
-                                                    <subviews>
-                                                        <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SzY-bf-gBg">
-                                                            <rect key="frame" x="15" y="0.0" width="345" height="49"/>
-                                                            <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <color key="currentPageIndicatorTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </pageControl>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="SzY-bf-gBg" firstAttribute="leading" secondItem="k9C-Td-9oe" secondAttribute="leading" constant="15" id="2sO-ky-jf7"/>
-                                                        <constraint firstAttribute="trailing" secondItem="SzY-bf-gBg" secondAttribute="trailing" constant="15" id="dmp-8w-CZf"/>
-                                                        <constraint firstAttribute="bottom" secondItem="SzY-bf-gBg" secondAttribute="bottom" id="mQd-kr-vCc"/>
-                                                        <constraint firstItem="SzY-bf-gBg" firstAttribute="top" secondItem="k9C-Td-9oe" secondAttribute="top" id="pNI-ak-ZnV"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="k9C-Td-9oe" secondAttribute="trailing" id="3ON-Oc-gCM"/>
-                                                <constraint firstItem="FI4-YN-JJx" firstAttribute="top" secondItem="Vyy-4z-d08" secondAttribute="top" constant="10" id="YEC-mO-1m7"/>
-                                                <constraint firstAttribute="trailing" secondItem="cD3-C9-put" secondAttribute="trailing" id="fRW-Yc-phb"/>
-                                                <constraint firstItem="FI4-YN-JJx" firstAttribute="leading" secondItem="Vyy-4z-d08" secondAttribute="leading" constant="10" id="hjk-K1-Ago"/>
-                                                <constraint firstItem="cD3-C9-put" firstAttribute="top" secondItem="Vyy-4z-d08" secondAttribute="top" id="nzR-wv-egD"/>
-                                                <constraint firstItem="cD3-C9-put" firstAttribute="leading" secondItem="Vyy-4z-d08" secondAttribute="leading" id="p2l-OE-7rh"/>
-                                                <constraint firstAttribute="bottom" secondItem="k9C-Td-9oe" secondAttribute="bottom" id="q0J-V8-Rg0"/>
-                                                <constraint firstItem="k9C-Td-9oe" firstAttribute="leading" secondItem="Vyy-4z-d08" secondAttribute="leading" id="xv6-Pm-YLG"/>
-                                                <constraint firstItem="k9C-Td-9oe" firstAttribute="top" secondItem="cD3-C9-put" secondAttribute="bottom" id="yUk-dJ-wE1"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <connections>
-                                            <outlet property="collectionView" destination="cD3-C9-put" id="bze-SC-DNj"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="ktI-Po-hDT" id="amd-kx-Pos"/>
                                     <outlet property="delegate" destination="ktI-Po-hDT" id="ukH-34-I0I"/>
