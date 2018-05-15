@@ -36,27 +36,9 @@ open class DSHorizontalTableViewCell: SPLTHorizontalBaseTableViewCell {
         }
     }
     
-    open override func setCellData(_ dspCategory: SPLTCategory, collectionViewItemSize: CGSize, collectionViewImageSize: CGSize) {
-        self.resetCollectionViewSize(collectionViewItemSize)
-        self.collectionViewImageSize = collectionViewImageSize
-        self.dspCategory = dspCategory
-        self.dspCategory?.delegate = self
-        if let strTitle = dspCategory.strName {
-            self.labelTitle?.text = strTitle
-        }
-        if dspCategory.channels.count > 1 {
-            self.collectionView?.reloadData()
-        } else if dspCategory.channels.count == 1 {
-            if let dspPlaylistChannel = dspCategory.channels[0] as? SPLTPlaylistChannel {
-                dspPlaylistChannel.loadFullChannel({ (channelDict) in
-                    // success
-                    self.collectionView?.reloadData()
-                }) { (error) in
-                    // error
-                }
-            }
-        }
-    }
+//    open override func setCellData(_ dspCategory: SPLTCategory, collectionViewItemSize: CGSize, collectionViewImageSize: CGSize) {
+//        super.setCellData(dspCategory, collectionViewItemSize: collectionViewItemSize, collectionViewImageSize: collectionViewImageSize)
+//    }
     
 }
 
@@ -64,19 +46,9 @@ open class DSHorizontalTableViewCell: SPLTHorizontalBaseTableViewCell {
 //MARK: - extension UICollectionViewDataSource
 extension DSHorizontalTableViewCell {
     
-    open override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let dspCategory = self.dspCategory {
-            if dspCategory.channels.count > 1 {
-                return dspCategory.channels.count
-            } else if dspCategory.channels.count == 1 {
-                if let dspPlaylistChannel = dspCategory.channels[0] as? SPLTPlaylistChannel {
-                    return dspPlaylistChannel.playlistVideos.count
-                }
-            }
-        }
-        
-        return 0
-    }
+//    open override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return super.collectionView(collectionView, numberOfItemsInSection: section)
+//    }
     open override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let dsHorizontalCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSHorizontalCollectionViewCell", for: indexPath) as? DSHorizontalCollectionViewCell {
             

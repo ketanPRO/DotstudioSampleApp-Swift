@@ -56,23 +56,10 @@ open class DSBrowseViewController: SPLTBrowseViewController {
         if indexPath.section == 0 {
             if let dsFeaturedHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSFeaturedHorizontalTableViewCell") as? DSFeaturedHorizontalTableViewCell {
                 dsHorizontalTableViewCell_ = dsFeaturedHorizontalTableViewCell
-                
-//                let category = self.categoriesBrowse[indexPath.section]
-//                let collectionViewItemWidth = tableView.frame.width
-//                let collectionViewItemHeight = (collectionViewItemWidth * 9.0 / 16.0)
-//                let collectionViewItemSize = CGSize(width: collectionViewItemWidth, height: collectionViewItemHeight)
-//
-//                dsFeaturedHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: collectionViewItemSize)
-//                return dsFeaturedHorizontalTableViewCell
             }
         } else {
             if let dsHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalTableViewCell") as? DSHorizontalTableViewCell {
                 dsHorizontalTableViewCell_ = dsHorizontalTableViewCell
-                
-//                let category = self.categoriesBrowse[indexPath.section]
-//                let size = self.getCollectionViewItemSize()
-//                dsHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: size)
-//                return dsHorizontalTableViewCell
             }
         }
         
@@ -91,11 +78,11 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     }*/
 
     
-    func reloadCategory(category: SPLTCategory) {
-        if let index = self.categoriesBrowse.index(of: category) {
-            self.reloadSectionAtIndex(index: index)
-        }
-    }
+//    func reloadCategory(category: SPLTCategory) {
+//        if let index = self.categoriesBrowse.index(of: category) {
+//            self.reloadSectionAtIndex(index: index)
+//        }
+//    }
     
 }
 
