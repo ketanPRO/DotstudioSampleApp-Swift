@@ -12,7 +12,7 @@ import DotstudioAPI
 class DSConfig {
 
     class func setup() {
-        SPLTRouter.API_KEY = ""
+        SPLTRouter.API_KEY = "a12878949f4ea52703ab6a07c662b31895886cea"
     }
     
 }
