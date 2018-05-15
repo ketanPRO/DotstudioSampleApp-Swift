@@ -12,11 +12,11 @@ import DotstudioAPI
 import DotstudioUI
 import Haneke
 
-open class DSHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell {
+open class DSHorizontalTableViewCell: SPLTHorizontalBaseTableViewCell {
     
     open override func awakeFromNib() {
         super.awakeFromNib()
-        self.collectionView?.register(UINib(nibName: "DSHorizontalBaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSHorizontalBaseCollectionViewCell")
+        self.collectionView?.register(UINib(nibName: "DSHorizontalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSHorizontalCollectionViewCell")
     }
     
     @IBOutlet weak open override var labelTitle: UILabel? {
@@ -36,9 +36,9 @@ open class DSHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell {
         }
     }
     
-    
-    open override func setCellData(_ dspCategory: SPLTCategory, sizeCollectionViewItem: CGSize) {
-        self.resetCollectionViewSize(sizeCollectionViewItem)
+    open override func setCellData(_ dspCategory: SPLTCategory, collectionViewItemSize: CGSize, collectionViewImageSize: CGSize) {
+        self.resetCollectionViewSize(collectionViewItemSize)
+        self.collectionViewImageSize = collectionViewImageSize
         self.dspCategory = dspCategory
         self.dspCategory?.delegate = self
         if let strTitle = dspCategory.strName {
@@ -62,7 +62,7 @@ open class DSHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell {
 
 ///MARK: -
 //MARK: - extension UICollectionViewDataSource
-extension DSHorizontalBaseTableViewCell {
+extension DSHorizontalTableViewCell {
     
     open override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let dspCategory = self.dspCategory {
@@ -78,24 +78,24 @@ extension DSHorizontalBaseTableViewCell {
         return 0
     }
     open override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let dsHorizontalBaseCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSHorizontalBaseCollectionViewCell", for: indexPath) as? DSHorizontalBaseCollectionViewCell {
+        if let dsHorizontalCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSHorizontalCollectionViewCell", for: indexPath) as? DSHorizontalCollectionViewCell {
             
             if let dspCategory = self.dspCategory {
                 if dspCategory.channels.count > 1 {
                     if indexPath.section < dspCategory.channels.count {
                         let channel = dspCategory.channels[indexPath.row]
-                        dsHorizontalBaseCollectionViewCell.setDspChannel(dspChannel: channel)
+                        dsHorizontalCollectionViewCell.setDspChannel(dspChannel: channel, collectionViewImageSize: self.collectionViewImageSize)
                     }
                 } else if dspCategory.channels.count == 1 {
                     if let dspPlaylistChannel = dspCategory.channels[0] as? SPLTPlaylistChannel {
                         if indexPath.section < dspPlaylistChannel.playlistVideos.count {
                             let video = dspPlaylistChannel.playlistVideos[indexPath.row]
-                            dsHorizontalBaseCollectionViewCell.setDspVideo(dspVideo: video)
+                            dsHorizontalCollectionViewCell.setDspVideo(dspVideo: video, collectionViewImageSize: self.collectionViewImageSize)
                         }
                     }
                 }
             }
-            return dsHorizontalBaseCollectionViewCell
+            return dsHorizontalCollectionViewCell
             
         }
         return UICollectionViewCell()

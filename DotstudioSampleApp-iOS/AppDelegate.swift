@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DotstudioAPI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+<<<<<<< HEAD
+=======
+        
+>>>>>>> d36e677c8c55f98646b7fbb2cd95c753918f8ab7
         DSConfig.setup()
         return true
     }

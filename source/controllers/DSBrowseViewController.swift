@@ -45,30 +45,44 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView?.register(UINib(nibName: "DSHorizontalBaseTableViewCell", bundle: nil), forCellReuseIdentifier: "DSHorizontalBaseTableViewCell")
+        self.tableView?.register(UINib(nibName: "DSFeaturedHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSFeaturedHorizontalTableViewCell")
+        self.tableView?.register(UINib(nibName: "DSHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSHorizontalTableViewCell")
     }
     
+    
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        var dsHorizontalTableViewCell_: DSHorizontalTableViewCell?
+
         if indexPath.section == 0 {
-            if let spltFeaturedHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SPLTFeaturedHorizontalTableViewCell") as? SPLTFeaturedHorizontalTableViewCell {
-                let category = self.categoriesBrowse[indexPath.section]
-                let size = self.getCollectionViewItemSize()
-                spltFeaturedHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: size)
-                return spltFeaturedHorizontalTableViewCell
+            if let dsFeaturedHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSFeaturedHorizontalTableViewCell") as? DSFeaturedHorizontalTableViewCell {
+                dsHorizontalTableViewCell_ = dsFeaturedHorizontalTableViewCell
                 
+//                let category = self.categoriesBrowse[indexPath.section]
+//                let collectionViewItemWidth = tableView.frame.width
+//                let collectionViewItemHeight = (collectionViewItemWidth * 9.0 / 16.0)
+//                let collectionViewItemSize = CGSize(width: collectionViewItemWidth, height: collectionViewItemHeight)
+//
+//                dsFeaturedHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: collectionViewItemSize)
+//                return dsFeaturedHorizontalTableViewCell
             }
-            
         } else {
-            if let dsHorizontalBaseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalBaseTableViewCell") as? DSHorizontalBaseTableViewCell {
-                let category = self.categoriesBrowse[indexPath.section]
-                let size = self.getCollectionViewItemSize()
-                dsHorizontalBaseTableViewCell.setCellData(category, sizeCollectionViewItem: size)
-                return dsHorizontalBaseTableViewCell
+            if let dsHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalTableViewCell") as? DSHorizontalTableViewCell {
+                dsHorizontalTableViewCell_ = dsHorizontalTableViewCell
                 
+//                let category = self.categoriesBrowse[indexPath.section]
+//                let size = self.getCollectionViewItemSize()
+//                dsHorizontalTableViewCell.setCellData(category, sizeCollectionViewItem: size)
+//                return dsHorizontalTableViewCell
             }
         }
         
+        if let dsHorizontalTableViewCell = dsHorizontalTableViewCell_ {
+            let category = self.categoriesBrowse[indexPath.section]
+            let collectionViewItemSize = self.getCollectionViewItemSizeAtIndexPath(indexPath)
+            let collectionViewImageSize = self.getCollectionViewImageSizeAtIndexPath(indexPath)
+            dsHorizontalTableViewCell.setCellData(category, collectionViewItemSize: collectionViewItemSize, collectionViewImageSize: collectionViewImageSize)
+            return dsHorizontalTableViewCell
+        }
         return UITableViewCell()
     }
     

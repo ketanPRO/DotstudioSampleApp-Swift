@@ -11,7 +11,7 @@ import DotstudioAPI
 import DotstudioUI
 import Haneke
 
-open class DSHorizontalBaseCollectionViewCell: SPLTHorizontalBaseCollectionViewCell  {
+open class DSHorizontalCollectionViewCell: SPLTHorizontalBaseCollectionViewCell  {
     @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
         get {
             return super.imageViewCell
@@ -37,8 +37,9 @@ open class DSHorizontalBaseCollectionViewCell: SPLTHorizontalBaseCollectionViewC
         }
     }
     
-    open override func setDspVideo(dspVideo: SPLTVideo) {
+    open override func setDspVideo(dspVideo: SPLTVideo, collectionViewImageSize: CGSize) {
         self.dspVideo = dspVideo
+        self.collectionViewImageSize = collectionViewImageSize
         if let strThumbUrl = dspVideo.thumb {
             //            self.imageViewCell?.image = UIImage(contentsOfFile: strThumbUrl)
             //            if let url = URL(string: strThumbUrl) {

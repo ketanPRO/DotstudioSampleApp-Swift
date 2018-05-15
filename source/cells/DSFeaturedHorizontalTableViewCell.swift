@@ -12,10 +12,12 @@ import DotstudioAPI
 import DotstudioUI
 import Haneke
 
-open class DSFeaturedHorizontalBaseCollectionViewCell: DSHorizontalBaseCollectionViewCell  {
-}
-
-open class DSFeaturedHorizontalTableViewCell: DSHorizontalBaseTableViewCell  {
+open class DSFeaturedHorizontalTableViewCell: DSHorizontalTableViewCell  {
+    
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        self.collectionView?.register(UINib(nibName: "DSFeaturedHorizontalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSFeaturedHorizontalCollectionViewCell")
+    }
 }
 
 
