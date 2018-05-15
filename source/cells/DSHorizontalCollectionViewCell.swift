@@ -37,22 +37,6 @@ open class DSHorizontalCollectionViewCell: SPLTHorizontalBaseCollectionViewCell 
         }
     }
     
-    open override func setDspVideo(dspVideo: SPLTVideo, collectionViewImageSize: CGSize) {
-        self.dspVideo = dspVideo
-        self.collectionViewImageSize = collectionViewImageSize
-        if let strThumbUrl = dspVideo.thumb {
-            //            self.imageViewCell?.image = UIImage(contentsOfFile: strThumbUrl)
-            //            if let url = URL(string: strThumbUrl) {
-            //                self.imageViewCell?.hnk_setImageFromURL(url)
-            //            }
-            self.imageViewCell?.splt_setImageFromStrImagePath(strThumbUrl)
-        }
-        if let strTitle = dspVideo.strTitle {
-            self.labelPrimaryTitle?.text = strTitle
-        }
-        self.labelSecondaryTitle?.text = ""
-    }
-
     open override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
