@@ -19,6 +19,7 @@ open class DSBrowseViewController: SPLTBrowseViewController {
             return super.tableView
         }
         set {
+            
             super.tableView = newValue
         }
     }
