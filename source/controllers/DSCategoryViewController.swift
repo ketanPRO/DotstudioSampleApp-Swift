@@ -1,8 +1,8 @@
 //
-//  DSCategoriesViewController.swift
-//  DotstudioSampleApp-iOS
+//  DSCategoryViewController.swift
+//  DotstudioSampleApp
 //
-//  Created by Anwer on 5/15/18.
+//  Created by Anwer on 5/16/18.
 //  Copyright © 2018 Dotstudioz. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import DotstudioUI
 import DotstudioAPI
 
-class DSCategoriesViewController: SPLTCategoriesViewController {
+class DSCategoryViewController: SPLTCategoryViewController {
     
     @IBOutlet weak override var collectionView: UICollectionView? {
         get {
@@ -57,6 +57,7 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
         }
     }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -91,21 +92,15 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
     }
 }
 
-extension DSCategoriesViewController {
+extension DSCategoryViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSCategoriesCollectionViewCell", for: indexPath) as? DSCategoriesCollectionViewCell {
-                let category = self.categories[indexPath.row]
-                let collectionViewImageSize = self.getCollectionViewImageSize()
-                categoryCollectionViewCell.cellType = DSCategoriesCollectionViewCell.cellTypes.Category.rawValue
-                categoryCollectionViewCell.setCellData(category, collectionViewImageSize: collectionViewImageSize)
+            let channel = self.category!.channels[indexPath.row]
+            let collectionViewImageSize = self.getCollectionViewImageSize()
+            categoryCollectionViewCell.cellType = DSCategoriesCollectionViewCell.cellTypes.Channel.rawValue
+            categoryCollectionViewCell.setCellChannelData(channel, collectionViewImageSize: collectionViewImageSize)
             return categoryCollectionViewCell
         }
         return UICollectionViewCell()
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let categoryViewController: DSCategoryViewController? = UIStoryboard(name: "category", bundle: nil).instantiateViewController(withIdentifier: "DSCategoryViewController") as? DSCategoryViewController
-        categoryViewController?.category =  self.categories[indexPath.row]
-        navigationController?.pushViewController(categoryViewController!, animated: true)
     }
 }

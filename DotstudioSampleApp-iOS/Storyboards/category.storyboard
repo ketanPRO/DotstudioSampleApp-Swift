@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Category View Controller-->
+        <scene sceneID="Kcv-ud-bal">
+            <objects>
+                <viewController storyboardIdentifier="DSCategoryViewController" id="e3V-oz-DVu" customClass="DSCategoryViewController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bVk-bp-APZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DEJ-2f-nvD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="auw-qE-IpD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Urp-ff-Lms">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JBN-09-egF">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="e3V-oz-DVu" id="xJk-CB-tpn"/>
+                                    <outlet property="delegate" destination="e3V-oz-DVu" id="lyE-4N-iNx"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DEJ-2f-nvD" firstAttribute="bottom" secondItem="mPp-6D-evJ" secondAttribute="bottom" id="GFc-q3-GKF"/>
+                            <constraint firstItem="auw-qE-IpD" firstAttribute="leading" secondItem="mPp-6D-evJ" secondAttribute="leading" id="Jr8-Tv-ve5"/>
+                            <constraint firstItem="auw-qE-IpD" firstAttribute="trailing" secondItem="mPp-6D-evJ" secondAttribute="trailing" id="Rb5-ec-NwR"/>
+                            <constraint firstItem="auw-qE-IpD" firstAttribute="top" secondItem="mPp-6D-evJ" secondAttribute="top" id="Ubl-t2-CY5"/>
+                            <constraint firstItem="DEJ-2f-nvD" firstAttribute="top" secondItem="bVk-bp-APZ" secondAttribute="top" constant="20" id="eRO-6W-zFP"/>
+                            <constraint firstItem="DEJ-2f-nvD" firstAttribute="trailing" secondItem="mPp-6D-evJ" secondAttribute="trailing" id="fIK-5z-3fg"/>
+                            <constraint firstItem="auw-qE-IpD" firstAttribute="bottom" secondItem="mPp-6D-evJ" secondAttribute="bottom" id="ia2-eI-JN4"/>
+                            <constraint firstItem="DEJ-2f-nvD" firstAttribute="leading" secondItem="mPp-6D-evJ" secondAttribute="leading" id="jMB-4C-kVr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mPp-6D-evJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="auw-qE-IpD" id="EFy-Ql-4A8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nL-Ut-dQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.8000000000000007" y="83.208395802098963"/>
+        </scene>
+    </scenes>
+</document>
