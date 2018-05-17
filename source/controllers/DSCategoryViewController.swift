@@ -61,7 +61,7 @@ class DSCategoryViewController: SPLTCategoryViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.collectionView?.register(UINib(nibName: "DSCategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSCategoriesCollectionViewCell")
+        self.collectionView?.register(UINib(nibName: "DSGenericCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSGenericCollectionViewCell")
     }
     
     override func getCollectionViewItemSize() -> CGSize {
@@ -94,13 +94,18 @@ class DSCategoryViewController: SPLTCategoryViewController {
 
 extension DSCategoryViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSCategoriesCollectionViewCell", for: indexPath) as? DSCategoriesCollectionViewCell {
+        if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSGenericCollectionViewCell", for: indexPath) as? DSGenericCollectionViewCell {
             let channel = self.category!.channels[indexPath.row]
             let collectionViewImageSize = self.getCollectionViewImageSize()
-            categoryCollectionViewCell.cellType = DSCategoriesCollectionViewCell.cellTypes.Channel.rawValue
+            categoryCollectionViewCell.cellType = DSGenericCollectionViewCell.cellTypes.Channel.rawValue
             categoryCollectionViewCell.setCellChannelData(channel, collectionViewImageSize: collectionViewImageSize)
             return categoryCollectionViewCell
         }
         return UICollectionViewCell()
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let categoryViewController: DSIVPMultiSeriesChannelViewController? = UIStoryboard(name: "ivp", bundle: nil).instantiateViewController(withIdentifier: "DSIVPMultiSeriesChannelViewController") as? DSIVPMultiSeriesChannelViewController
+        navigationController?.pushViewController(categoryViewController!, animated: true)
     }
 }

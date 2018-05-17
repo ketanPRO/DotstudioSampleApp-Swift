@@ -9,7 +9,7 @@
 import UIKit
 import DotstudioUI
 
-class DSCategoriesCollectionViewCell: SPLTCategoriesCollectionViewCell {
+class DSGenericCollectionViewCell: SPLTGenericCollectionViewCell {
     @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
         get {
             return super.imageViewCell

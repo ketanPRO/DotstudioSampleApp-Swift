@@ -60,7 +60,7 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.collectionView?.register(UINib(nibName: "DSCategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSCategoriesCollectionViewCell")
+        self.collectionView?.register(UINib(nibName: "DSGenericCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSGenericCollectionViewCell")
     }
     
     override func getCollectionViewItemSize() -> CGSize {
@@ -93,10 +93,10 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
 
 extension DSCategoriesViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSCategoriesCollectionViewCell", for: indexPath) as? DSCategoriesCollectionViewCell {
+        if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSGenericCollectionViewCell", for: indexPath) as? DSGenericCollectionViewCell {
                 let category = self.categories[indexPath.row]
                 let collectionViewImageSize = self.getCollectionViewImageSize()
-                categoryCollectionViewCell.cellType = DSCategoriesCollectionViewCell.cellTypes.Category.rawValue
+                categoryCollectionViewCell.cellType = DSGenericCollectionViewCell.cellTypes.Category.rawValue
                 categoryCollectionViewCell.setCellData(category, collectionViewImageSize: collectionViewImageSize)
             return categoryCollectionViewCell
         }

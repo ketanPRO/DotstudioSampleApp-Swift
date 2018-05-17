@@ -23,7 +23,7 @@ class DSConfig {
 //        DSConfig.setDebugMode(true)
         
         // Set company API key Below.
-        SPLTRouter.API_KEY = ""
+        SPLTRouter.API_KEY = "a12878949f4ea52703ab6a07c662b31895886cea"
         
         // Set Google Analytics Key
         DSConfig.strGoogleAnalyticsKey = nil
