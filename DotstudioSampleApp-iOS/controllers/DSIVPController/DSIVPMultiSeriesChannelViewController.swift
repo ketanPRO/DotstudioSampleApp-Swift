@@ -45,6 +45,7 @@ class DSIVPMultiSeriesChannelViewController: UIViewController {
             flowLayout.minimumLineSpacing = CGFloat(10)
             flowLayout.minimumInteritemSpacing = CGFloat(10)
             flowLayout.sectionInset = UIEdgeInsetsMake(CGFloat(10), 0, CGFloat(10), 0)
+//            flowLayout.estimatedItemSize = CGSize(width:view.frame.width - 10, height:400)
         }
     }
 }
