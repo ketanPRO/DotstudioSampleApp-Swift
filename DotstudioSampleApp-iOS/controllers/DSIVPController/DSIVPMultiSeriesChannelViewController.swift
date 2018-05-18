@@ -10,14 +10,14 @@ import UIKit
 import DotstudioUI
 import DotstudioAPI
 
-// Dummy data
+//TODO We will remove this once we get the real apis
 extension SPLTVideo {
     class func getDummyVideo() -> SPLTVideo {
         let video = SPLTVideo()
         video.strTitle = "Video Title"
         video.strSeriesTitle = "Series Title"
         video.strVideoInfo = "Info"
-        video.strDescription = "Description"
+        video.strDescription = "We have a subclass for our cell, now let's create the view controller class. Inside the viewDidLoad method you have to set the estimatedItemSize property on the collection view. There if you give wrong size, the autorotation won't work as expected."
         video.thumb = "http://via.placeholder.com/320x180"
         video.progressPoint = 70
         video.iDuration = 400
@@ -25,9 +25,20 @@ extension SPLTVideo {
     }
 }
 
-class DSIVPMultiSeriesChannelViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView?
+protocol MultiSeriesChannelDelegate: class {
+    func reloadCollectionViewData()
+}
 
+class DSIVPMultiSeriesChannelViewController: UIViewController, MultiSeriesChannelDelegate {
+    @IBOutlet weak var collectionView: UICollectionView?
+    var isCurrentVideoExpanded:Bool = false
+    
+
+    func reloadCollectionViewData() {
+        self.collectionView?.collectionViewLayout.invalidateLayout()
+        self.collectionView?.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,16 +56,22 @@ class DSIVPMultiSeriesChannelViewController: UIViewController {
             flowLayout.minimumLineSpacing = CGFloat(10)
             flowLayout.minimumInteritemSpacing = CGFloat(10)
             flowLayout.sectionInset = UIEdgeInsetsMake(CGFloat(10), 0, CGFloat(10), 0)
-//            flowLayout.estimatedItemSize = CGSize(width:view.frame.width - 10, height:400)
+            if #available(iOS 10.0, *) {
+                flowLayout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+            } else {
+                // Fallback on earlier versions
+                flowLayout.estimatedItemSize = CGSize(width: CGFloat((self.collectionView?.frame.size.width)!), height: 120)
+            }
+
         }
     }
 }
 
 extension DSIVPMultiSeriesChannelViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+   
+    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         switch section {
-        case 1: return CGSize(width: collectionView.frame.size.width, height:70)
+        case 1: return CGSize(width: collectionView.frame.size.width, height:100)
         default: return CGSize(width: collectionView.frame.size.width, height:0)
         }
     }
@@ -73,9 +90,9 @@ extension DSIVPMultiSeriesChannelViewController: UICollectionViewDataSource, UIC
         }else{
             return UICollectionReusableView()
         }
-    }
+    }*/
 
-    
+    /*
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         switch indexPath.section {
@@ -88,49 +105,72 @@ extension DSIVPMultiSeriesChannelViewController: UICollectionViewDataSource, UIC
             }
             default: return CGSize(width: (self.collectionView?.frame.size.width)!, height: 120.0)
         }
-    }
+    }*/
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 3 //TODO We will remove this once we get the real apis
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
-            case 1: return 10
+            case 1: return 10 //TODO We will remove this once we get the real apis
             case 2: return 10
             default: return 1
         }
     }
-
+    //TODO We will remove this once we get the real apis
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
             if let videoDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPCurrentVideoDetailsCell", for: indexPath) as? DSIVPCurrentVideoDetailsCell {
-                videoDetailsCell.setCellData(SPLTVideo.getDummyVideo())
+                videoDetailsCell.setCellData(SPLTVideo.getDummyVideo(),isExpanded: self.isCurrentVideoExpanded)
+                if let collectionView = self.collectionView {
+                    videoDetailsCell.discriptionWidthConstraint?.constant = CGFloat(collectionView.frame.size.width-20)
+                }
                 return videoDetailsCell
             }
             break
         case 1:
             if let videoDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPVideoDetailsCell", for: indexPath) as? DSIVPVideoDetailsCell {
                 videoDetailsCell.setCellData(SPLTVideo.getDummyVideo())
+                videoDetailsCell.delegate = self
+                if let collectionView = self.collectionView {
+                    videoDetailsCell.discriptionWidthConstraint?.constant = CGFloat(collectionView.frame.size.width-38)
+                }
                 return videoDetailsCell
             }
             break
         case 2:
             if let videoDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPRecommendedVideoDetailsCell", for: indexPath) as? DSIVPRecommendedVideoDetailsCell {
                 videoDetailsCell.setCellData(SPLTVideo.getDummyVideo())
+                var collectionViewItemWidth = self.view.frame.width - (CGFloat(3) * CGFloat(10))
+                collectionViewItemWidth = collectionViewItemWidth / CGFloat(2)
+                videoDetailsCell.discriptionWidthConstraint?.constant = CGFloat(collectionViewItemWidth)
+                
                 return videoDetailsCell
             }
             break
         default:
             if let videoDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPCurrentVideoDetailsCell", for: indexPath) as? DSIVPCurrentVideoDetailsCell {
                 videoDetailsCell.setCellData(SPLTVideo.getDummyVideo())
+                if let collectionView = self.collectionView {
+                    videoDetailsCell.discriptionWidthConstraint?.constant = CGFloat(collectionView.frame.size.width-38)
+                }
                 return videoDetailsCell
             }
             break
         }
         return UICollectionViewCell()
     }
+}
+extension DSIVPMultiSeriesChannelViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            self.isCurrentVideoExpanded = !self.isCurrentVideoExpanded
+            self.reloadCollectionViewData()
+        }
+    }
+    
 }
 
 

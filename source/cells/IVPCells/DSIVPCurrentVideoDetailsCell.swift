@@ -14,18 +14,33 @@ class DSIVPCurrentVideoDetailsCell: UICollectionViewCell {
     @IBOutlet weak var seriesTitleLbl: UILabel?
     @IBOutlet weak var infoLbl: UILabel?
     @IBOutlet weak var discriptionLbl: UILabel?
+    @IBOutlet weak var discriptionWidthConstraint: NSLayoutConstraint?
+  
+    var isExpanded:Bool = false
+    var videoObject:SPLTVideo?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    open func setCellData(_ videoObject: SPLTVideo) {
-        self.titleLbl?.text = videoObject.strTitle
-        self.seriesTitleLbl?.text = videoObject.strSeriesTitle
-        self.infoLbl?.text = videoObject.strVideoInfo
-        self.discriptionLbl?.text = videoObject.strDescription
-
+    open func setCellData(_ videoObject: SPLTVideo, isExpanded:Bool = false) {
+        self.isExpanded = isExpanded
+        self.videoObject = videoObject
+        self.updateUI()
+    }
+    
+    open func updateUI() {
+        self.titleLbl?.text = self.videoObject?.strTitle
+        self.seriesTitleLbl?.text = self.videoObject?.strSeriesTitle
+        self.infoLbl?.text = self.videoObject?.strVideoInfo
+        self.discriptionLbl?.text = self.videoObject?.strDescription
+        
+        if self.isExpanded == true {
+            discriptionLbl?.numberOfLines = 0
+        } else {
+            discriptionLbl?.numberOfLines = 1
+        }
     }
 
 }

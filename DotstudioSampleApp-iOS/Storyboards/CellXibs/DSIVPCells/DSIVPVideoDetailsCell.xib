@@ -13,10 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DSIVPVideoDetailsCell" id="gTV-IL-0wX" customClass="DSIVPVideoDetailsCell" customModule="DotstudioSampleApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gi-Wx-btW">
@@ -27,34 +27,41 @@
                             <constraint firstAttribute="width" constant="13" id="lwQ-Gb-EGY"/>
                         </constraints>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="expandedButtonActionWithSender:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4JM-kK-uAd"/>
+                        </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2wV-yr-mrV">
                         <rect key="frame" x="28" y="10" width="109.5" height="73"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.02328635045" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="109.5" id="FBu-DT-EHe"/>
                             <constraint firstAttribute="height" constant="73" id="vVx-TE-RY1"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Ex-Gays and Fitness Apps&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCf-5Y-4eA">
-                        <rect key="frame" x="140.5" y="10" width="169.5" height="16"/>
+                        <rect key="frame" x="140.5" y="10" width="224.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Throwing Shade " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1Z-kd-6nJ">
-                        <rect key="frame" x="140.5" y="36" width="169.5" height="16"/>
+                        <rect key="frame" x="140.5" y="36" width="224.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-bg-0Kd">
-                        <rect key="frame" x="28" y="91" width="282" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-bg-0Kd">
+                        <rect key="frame" x="28" y="91" width="337" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="337" id="XeZ-Hx-bG6"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Throwing Shade " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOe-1D-fEY">
-                        <rect key="frame" x="140.5" y="67" width="169.5" height="16"/>
+                        <rect key="frame" x="140.5" y="67" width="224.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -75,6 +82,7 @@
                 <constraint firstItem="R1Z-kd-6nJ" firstAttribute="trailing" secondItem="sCf-5Y-4eA" secondAttribute="trailing" id="ZtQ-DZ-NgO"/>
                 <constraint firstItem="sCf-5Y-4eA" firstAttribute="top" secondItem="2wV-yr-mrV" secondAttribute="top" id="cGN-Su-nh8"/>
                 <constraint firstAttribute="trailing" secondItem="sCf-5Y-4eA" secondAttribute="trailing" constant="10" id="lRO-6V-zJ0"/>
+                <constraint firstAttribute="bottom" secondItem="ZTa-bg-0Kd" secondAttribute="bottom" constant="5" id="qwc-zx-uh8"/>
                 <constraint firstItem="R1Z-kd-6nJ" firstAttribute="leading" secondItem="sCf-5Y-4eA" secondAttribute="leading" id="s2k-Wt-Dzq"/>
                 <constraint firstItem="EOe-1D-fEY" firstAttribute="leading" secondItem="R1Z-kd-6nJ" secondAttribute="leading" id="uGz-4l-01G"/>
                 <constraint firstItem="EOe-1D-fEY" firstAttribute="trailing" secondItem="R1Z-kd-6nJ" secondAttribute="trailing" id="v3o-XC-pfc"/>
@@ -84,11 +92,13 @@
             <size key="customSize" width="320" height="137"/>
             <connections>
                 <outlet property="discriptionLbl" destination="ZTa-bg-0Kd" id="GpN-32-ejA"/>
+                <outlet property="discriptionWidthConstraint" destination="XeZ-Hx-bG6" id="s1j-hE-SYn"/>
+                <outlet property="expandableButton" destination="3gi-Wx-btW" id="Hwc-Uz-OSv"/>
                 <outlet property="infoLbl" destination="EOe-1D-fEY" id="GSe-kJ-V5b"/>
                 <outlet property="seriesTitleLbl" destination="R1Z-kd-6nJ" id="Mb4-uX-Fiw"/>
                 <outlet property="titleLbl" destination="sCf-5Y-4eA" id="b4d-fY-rud"/>
             </connections>
-            <point key="canvasLocation" x="42" y="52"/>
+            <point key="canvasLocation" x="-78" y="35"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -14,6 +14,11 @@ class DSIVPVideoDetailsCell: UICollectionViewCell {
     @IBOutlet weak var seriesTitleLbl: UILabel?
     @IBOutlet weak var infoLbl: UILabel?
     @IBOutlet weak var discriptionLbl: UILabel?
+    @IBOutlet weak var discriptionWidthConstraint: NSLayoutConstraint?
+    @IBOutlet weak var expandableButton: UIButton?
+    
+    var videoObject:SPLTVideo?
+    weak var delegate: MultiSeriesChannelDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,11 +26,38 @@ class DSIVPVideoDetailsCell: UICollectionViewCell {
     }
     
     open func setCellData(_ videoObject: SPLTVideo) {
-        self.titleLbl?.text = videoObject.strTitle
-        self.seriesTitleLbl?.text = videoObject.strSeriesTitle
-        self.infoLbl?.text = videoObject.strVideoInfo
-        self.discriptionLbl?.text = videoObject.strDescription
+        self.videoObject = videoObject
+        self.updateUI()
     }
+    
+    open func updateUI() {
+        self.titleLbl?.text = self.videoObject?.strTitle
+        self.seriesTitleLbl?.text = self.videoObject?.strSeriesTitle
+        self.infoLbl?.text = self.videoObject?.strVideoInfo
+        
+        if self.expandableButton?.tag == 1 {
+            self.discriptionLbl?.text = self.videoObject?.strDescription
+            self.discriptionLbl?.numberOfLines = 0
+        } else {
+            self.discriptionLbl?.text = ""
+            self.discriptionLbl?.numberOfLines = 1
+        }
+    }
+    
+    @IBAction func expandedButtonAction(sender: UIButton) {
+        if sender.tag == 0 {
+            self.discriptionLbl?.text = self.videoObject?.strDescription
+            sender.tag = 1
+            self.discriptionLbl?.numberOfLines = 0
+        } else {
+            self.discriptionLbl?.text = ""
+            sender.tag = 0
+            self.discriptionLbl?.numberOfLines = 1
+        }
+        delegate?.reloadCollectionViewData()
+    }
+    
+    
     
 
 }

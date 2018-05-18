@@ -12,6 +12,9 @@ import DotstudioAPI
 class DSIVPRecommendedVideoDetailsCell: UICollectionViewCell {
     @IBOutlet weak var titleLbl: UILabel?
     @IBOutlet weak var seriesTitleLbl: UILabel?
+    @IBOutlet weak var discriptionWidthConstraint: NSLayoutConstraint?
+    
+    var videoObject:SPLTVideo?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,8 +22,13 @@ class DSIVPRecommendedVideoDetailsCell: UICollectionViewCell {
     }
     
     open func setCellData(_ videoObject: SPLTVideo) {
-        self.titleLbl?.text = videoObject.strTitle
-        self.seriesTitleLbl?.text = videoObject.strSeriesTitle
+        self.videoObject = videoObject
+        self.updateUI()
+    }
+    
+    open func updateUI() {
+        self.titleLbl?.text = self.videoObject?.strTitle
+        self.seriesTitleLbl?.text = self.videoObject?.strSeriesTitle
     }
 
 }

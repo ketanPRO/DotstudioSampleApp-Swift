@@ -22,28 +22,28 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="njQ-ch-DFd">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="56.5"/>
-                        <color key="backgroundColor" red="1" green="0.80267650319999995" blue="0.17815302429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.02328635045" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="njQ-ch-DFd" secondAttribute="height" multiplier="16:9" id="9kc-84-EDj"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45K-ps-Uc2">
                         <rect key="frame" x="0.0" y="61.5" width="100" height="16"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.023286350454940319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9m-fK-TGj">
                         <rect key="frame" x="0.0" y="79.5" width="100" height="16"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.02328635045" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="EHi-sq-Oaw"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.095337736490000005" green="0.40416840120000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="njQ-ch-DFd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2d2-wJ-0H2"/>
                 <constraint firstAttribute="trailing" secondItem="45K-ps-Uc2" secondAttribute="trailing" id="4CJ-gO-fjQ"/>
@@ -51,13 +51,14 @@
                 <constraint firstAttribute="trailing" secondItem="njQ-ch-DFd" secondAttribute="trailing" id="8wY-a2-Vjk"/>
                 <constraint firstItem="H9m-fK-TGj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="E4X-lU-Fhc"/>
                 <constraint firstItem="H9m-fK-TGj" firstAttribute="top" secondItem="45K-ps-Uc2" secondAttribute="bottom" constant="2" id="H6V-AO-VAD"/>
+                <constraint firstAttribute="bottom" secondItem="H9m-fK-TGj" secondAttribute="bottom" constant="4.5" id="Rua-Ls-7dR"/>
                 <constraint firstItem="45K-ps-Uc2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Z4y-lG-3XS"/>
-                <constraint firstAttribute="trailing" secondItem="H9m-fK-TGj" secondAttribute="trailing" id="f6x-zs-3dh"/>
                 <constraint firstItem="45K-ps-Uc2" firstAttribute="top" secondItem="njQ-ch-DFd" secondAttribute="bottom" constant="5" id="gXN-QA-3mk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="seriesTitleLbl" destination="H9m-fK-TGj" id="Fss-vU-jAl"/>
+                <outlet property="discriptionWidthConstraint" destination="EHi-sq-Oaw" id="sPN-5w-ycY"/>
+                <outlet property="seriesTitleLbl" destination="H9m-fK-TGj" id="hGN-Dm-5rT"/>
                 <outlet property="titleLbl" destination="45K-ps-Uc2" id="GZ6-5r-KiS"/>
             </connections>
         </collectionViewCell>
