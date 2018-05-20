@@ -105,7 +105,12 @@ extension DSCategoryViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let categoryViewController: DSIVPMultiSeriesChannelViewController? = UIStoryboard(name: "ivp", bundle: nil).instantiateViewController(withIdentifier: "DSIVPMultiSeriesChannelViewController") as? DSIVPMultiSeriesChannelViewController
-        navigationController?.pushViewController(categoryViewController!, animated: true)
+        if let dsIVPMultiSeriesChannelViewController = self.getViewControllerFromStoryboardName("ivp", strViewControllerIdentifier: "DSIVPMultiSeriesChannelViewController") as? DSIVPMultiSeriesChannelViewController {
+            if let channel = self.category?.channels[indexPath.row] {
+                dsIVPMultiSeriesChannelViewController.channel = channel
+            }
+//            self.navigationController.show(dsIVPMultiSeriesChannelViewController, sender: self)
+            self.navigationController?.pushViewController(dsIVPMultiSeriesChannelViewController, animated: true)
+        }
     }
 }

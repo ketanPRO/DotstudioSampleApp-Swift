@@ -26,6 +26,11 @@
 		6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */; };
 		6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CB8FC4720A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
+		6CFDF2C420B120FA00AFEAE8 /* SPLTIVPChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2BF20B120F800AFEAE8 /* SPLTIVPChannelViewController.swift */; };
+		6CFDF2C520B120FA00AFEAE8 /* SPLTIVPVideoChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2C020B120F900AFEAE8 /* SPLTIVPVideoChannelViewController.swift */; };
+		6CFDF2C620B120FA00AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2C120B120F900AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift */; };
+		6CFDF2C720B120FA00AFEAE8 /* SPLTIVPVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2C220B120F900AFEAE8 /* SPLTIVPVideoViewController.swift */; };
+		6CFDF2C820B120FA00AFEAE8 /* SPLTIVPSeriesChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2C320B120F900AFEAE8 /* SPLTIVPSeriesChannelViewController.swift */; };
 		EA22B71120A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
 		EA22B71220A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */; };
 		EA22B71320A9CB59000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
@@ -107,6 +112,11 @@
 		6C7E120C20A34CBF00A7BE1C /* splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
 		6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSplashViewController.swift; sourceTree = "<group>"; };
 		6CB8FC4520A9E776009A70B5 /* DSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConfig.swift; sourceTree = "<group>"; };
+		6CFDF2BF20B120F800AFEAE8 /* SPLTIVPChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPChannelViewController.swift; sourceTree = "<group>"; };
+		6CFDF2C020B120F900AFEAE8 /* SPLTIVPVideoChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPVideoChannelViewController.swift; sourceTree = "<group>"; };
+		6CFDF2C120B120F900AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPMultiSeriesChannelViewController.swift; sourceTree = "<group>"; };
+		6CFDF2C220B120F900AFEAE8 /* SPLTIVPVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPVideoViewController.swift; sourceTree = "<group>"; };
+		6CFDF2C320B120F900AFEAE8 /* SPLTIVPSeriesChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPSeriesChannelViewController.swift; sourceTree = "<group>"; };
 		EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA22B71620A9D9DD000A35CF /* DSHorizontalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHorizontalTableViewCell.xib; sourceTree = "<group>"; };
@@ -290,6 +300,11 @@
 		EA2D4AFA20AD5B2E0018A025 /* DSIVPController */ = {
 			isa = PBXGroup;
 			children = (
+				6CFDF2C220B120F900AFEAE8 /* SPLTIVPVideoViewController.swift */,
+				6CFDF2BF20B120F800AFEAE8 /* SPLTIVPChannelViewController.swift */,
+				6CFDF2C020B120F900AFEAE8 /* SPLTIVPVideoChannelViewController.swift */,
+				6CFDF2C320B120F900AFEAE8 /* SPLTIVPSeriesChannelViewController.swift */,
+				6CFDF2C120B120F900AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift */,
 				EA2D4AFB20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift */,
 			);
 			path = DSIVPController;
@@ -298,8 +313,8 @@
 		EA2D4AFF20AD5F740018A025 /* IVPCells */ = {
 			isa = PBXGroup;
 			children = (
-				EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailsCell.swift */,
 				EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.swift */,
+				EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailsCell.swift */,
 				EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.swift */,
 				EA2D4B1220ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift */,
 			);
@@ -309,9 +324,9 @@
 		EA2D4B0C20AD615F0018A025 /* DSIVPCells */ = {
 			isa = PBXGroup;
 			children = (
+				EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.xib */,
 				EA2D4B1320ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.xib */,
 				EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailsCell.xib */,
-				EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.xib */,
 				EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.xib */,
 			);
 			path = DSIVPCells;
@@ -619,17 +634,22 @@
 				EA2D4B1420ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift in Sources */,
 				6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */,
 				6C62D63520A3728F008C06E3 /* DSBrowseViewController.swift in Sources */,
+				6CFDF2C720B120FA00AFEAE8 /* SPLTIVPVideoViewController.swift in Sources */,
 				EA2D4AFC20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift in Sources */,
 				6C62D64320A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift in Sources */,
 				6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */,
 				EA22B71B20AABA6D000A35CF /* DSGenericCollectionViewCell.swift in Sources */,
 				EA2D4AE620AC43DC0018A025 /* DSCategoryViewController.swift in Sources */,
+				6CFDF2C520B120FA00AFEAE8 /* SPLTIVPVideoChannelViewController.swift in Sources */,
+				6CFDF2C620B120FA00AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift in Sources */,
 				EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.swift in Sources */,
 				EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailsCell.swift in Sources */,
+				6CFDF2C420B120FA00AFEAE8 /* SPLTIVPChannelViewController.swift in Sources */,
 				EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.swift in Sources */,
 				EC755ECE20A1899B00AE8EAE /* AppDelegate.swift in Sources */,
 				6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */,
 				6C4C1A0120AA8DAD002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.swift in Sources */,
+				6CFDF2C820B120FA00AFEAE8 /* SPLTIVPSeriesChannelViewController.swift in Sources */,
 				EA2D4AE120AADEBF0018A025 /* DSCategoriesViewController.swift in Sources */,
 				6C48D68E20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift in Sources */,
 				6C62D63320A37061008C06E3 /* DSHomeTabBarController.swift in Sources */,

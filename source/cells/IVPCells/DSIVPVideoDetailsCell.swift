@@ -9,52 +9,50 @@
 import UIKit
 import DotstudioAPI
 
-class DSIVPVideoDetailsCell: UICollectionViewCell {
-    @IBOutlet weak var titleLbl: UILabel?
-    @IBOutlet weak var seriesTitleLbl: UILabel?
-    @IBOutlet weak var infoLbl: UILabel?
-    @IBOutlet weak var discriptionLbl: UILabel?
-    @IBOutlet weak var discriptionWidthConstraint: NSLayoutConstraint?
-    @IBOutlet weak var expandableButton: UIButton?
+public protocol DSIVPVideoDetailsCellDelegate {
+    func didClickExpandButton(_ dsIVPVideoDetailsCell :DSIVPVideoDetailsCell)
+}
+
+open class DSIVPVideoDetailsCell: UICollectionViewCell {
+    @IBOutlet weak var labelTitle: UILabel?
+    @IBOutlet weak var labelSeriesTitle: UILabel?
+    @IBOutlet weak var labelInfo: UILabel?
+    @IBOutlet weak var labelDescription: UILabel?
+    @IBOutlet weak var constraintDiscriptionWidth: NSLayoutConstraint?
+    @IBOutlet weak var buttonExpand: UIButton?
     
-    var videoObject:SPLTVideo?
-    weak var delegate: MultiSeriesChannelDelegate?
+    var video:SPLTVideo?
+    var isExpanded:Bool = false
+    var delegate: DSIVPVideoDetailsCellDelegate?
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    open func setCellData(_ videoObject: SPLTVideo) {
-        self.videoObject = videoObject
+    open func setCellData(_ video: SPLTVideo) {
+        self.video = video
         self.updateUI()
     }
     
     open func updateUI() {
-        self.titleLbl?.text = self.videoObject?.strTitle
-        self.seriesTitleLbl?.text = self.videoObject?.strSeriesTitle
-        self.infoLbl?.text = self.videoObject?.strVideoInfo
-        
-        if self.expandableButton?.tag == 1 {
-            self.discriptionLbl?.text = self.videoObject?.strDescription
-            self.discriptionLbl?.numberOfLines = 0
-        } else {
-            self.discriptionLbl?.text = ""
-            self.discriptionLbl?.numberOfLines = 1
+        if let video = self.video {
+            self.isExpanded = video.isExpandedUI
+            self.labelTitle?.text = video.strTitle
+            self.labelSeriesTitle?.text = video.strSeriesTitle
+            self.labelInfo?.text = video.strVideoInfo
+            self.labelDescription?.text = video.strDescription
+            
+            if video.isExpandedUI {
+                self.labelDescription?.numberOfLines = 0
+            } else {
+                self.labelDescription?.numberOfLines = 2
+            }
         }
     }
     
-    @IBAction func expandedButtonAction(sender: UIButton) {
-        if sender.tag == 0 {
-            self.discriptionLbl?.text = self.videoObject?.strDescription
-            sender.tag = 1
-            self.discriptionLbl?.numberOfLines = 0
-        } else {
-            self.discriptionLbl?.text = ""
-            sender.tag = 0
-            self.discriptionLbl?.numberOfLines = 1
-        }
-        delegate?.reloadCollectionViewData()
+    @IBAction func didClickExpandButton(sender: UIButton) {
+        self.delegate?.didClickExpandButton(self)
     }
     
     

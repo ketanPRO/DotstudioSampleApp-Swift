@@ -9,37 +9,39 @@
 import UIKit
 import DotstudioAPI
 
-class DSIVPCurrentVideoDetailsCell: UICollectionViewCell {
-    @IBOutlet weak var titleLbl: UILabel?
-    @IBOutlet weak var seriesTitleLbl: UILabel?
-    @IBOutlet weak var infoLbl: UILabel?
-    @IBOutlet weak var discriptionLbl: UILabel?
-    @IBOutlet weak var discriptionWidthConstraint: NSLayoutConstraint?
+open class DSIVPCurrentVideoDetailsCell: UICollectionViewCell {
+    @IBOutlet weak var labelTitle: UILabel?
+    @IBOutlet weak var labelSeriesTitle: UILabel?
+    @IBOutlet weak var labelInfo: UILabel?
+    @IBOutlet weak var labelDescription: UILabel?
+    @IBOutlet weak var constraintDiscriptionWidth: NSLayoutConstraint?
   
     var isExpanded:Bool = false
-    var videoObject:SPLTVideo?
+    var video:SPLTVideo?
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    open func setCellData(_ videoObject: SPLTVideo, isExpanded:Bool = false) {
+    open func setCellData(_ video: SPLTVideo, isExpanded:Bool = false) {
         self.isExpanded = isExpanded
-        self.videoObject = videoObject
+        self.video = video
         self.updateUI()
     }
     
     open func updateUI() {
-        self.titleLbl?.text = self.videoObject?.strTitle
-        self.seriesTitleLbl?.text = self.videoObject?.strSeriesTitle
-        self.infoLbl?.text = self.videoObject?.strVideoInfo
-        self.discriptionLbl?.text = self.videoObject?.strDescription
-        
-        if self.isExpanded == true {
-            discriptionLbl?.numberOfLines = 0
-        } else {
-            discriptionLbl?.numberOfLines = 1
+        if let video = self.video {
+            self.labelTitle?.text = video.strTitle
+            self.labelSeriesTitle?.text = video.strSeriesTitle
+            self.labelInfo?.text = video.strVideoInfo
+            self.labelDescription?.text = video.strDescription
+            
+            if self.isExpanded == true {
+                self.labelDescription?.numberOfLines = 0
+            } else {
+                self.labelDescription?.numberOfLines = 1
+            }
         }
     }
 

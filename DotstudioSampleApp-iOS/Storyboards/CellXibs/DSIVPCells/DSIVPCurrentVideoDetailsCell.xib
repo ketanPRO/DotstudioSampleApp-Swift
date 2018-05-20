@@ -65,7 +65,7 @@
                     </button>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="jsB-JH-jC9" firstAttribute="leading" secondItem="gHi-kV-hDB" secondAttribute="trailing" constant="7" id="AbW-fQ-TmW"/>
                 <constraint firstItem="Lph-Qz-lho" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="AxT-yu-q7c"/>
@@ -88,11 +88,11 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="320" height="118"/>
             <connections>
-                <outlet property="discriptionLbl" destination="Lph-Qz-lho" id="evi-8Q-V3R"/>
-                <outlet property="discriptionWidthConstraint" destination="Ogu-oc-Y5M" id="Kmb-4S-lMj"/>
-                <outlet property="infoLbl" destination="Czd-f6-BoL" id="tfT-uq-upU"/>
-                <outlet property="seriesTitleLbl" destination="LNV-4t-RFX" id="4fb-8H-xiL"/>
-                <outlet property="titleLbl" destination="6aC-Gs-G3M" id="JTE-xk-qx0"/>
+                <outlet property="constraintDiscriptionWidth" destination="Ogu-oc-Y5M" id="Kmb-4S-lMj"/>
+                <outlet property="labelDescription" destination="Lph-Qz-lho" id="evi-8Q-V3R"/>
+                <outlet property="labelInfo" destination="Czd-f6-BoL" id="tfT-uq-upU"/>
+                <outlet property="labelSeriesTitle" destination="LNV-4t-RFX" id="4fb-8H-xiL"/>
+                <outlet property="labelTitle" destination="6aC-Gs-G3M" id="JTE-xk-qx0"/>
             </connections>
             <point key="canvasLocation" x="-14.5" y="44"/>
         </collectionViewCell>

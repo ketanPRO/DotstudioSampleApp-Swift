@@ -10,9 +10,9 @@ import UIKit
 import DotstudioAPI
 
 class DSIVPRecommendedVideoDetailsCell: UICollectionViewCell {
-    @IBOutlet weak var titleLbl: UILabel?
-    @IBOutlet weak var seriesTitleLbl: UILabel?
-    @IBOutlet weak var discriptionWidthConstraint: NSLayoutConstraint?
+    @IBOutlet weak var labelTitle: UILabel?
+    @IBOutlet weak var labelSeriesTitle: UILabel?
+    @IBOutlet weak var constraintDiscriptionWidth: NSLayoutConstraint?
     
     var videoObject:SPLTVideo?
     
@@ -27,8 +27,8 @@ class DSIVPRecommendedVideoDetailsCell: UICollectionViewCell {
     }
     
     open func updateUI() {
-        self.titleLbl?.text = self.videoObject?.strTitle
-        self.seriesTitleLbl?.text = self.videoObject?.strSeriesTitle
+        self.labelTitle?.text = self.videoObject?.strTitle
+        self.labelSeriesTitle?.text = self.videoObject?.strSeriesTitle
     }
 
 }

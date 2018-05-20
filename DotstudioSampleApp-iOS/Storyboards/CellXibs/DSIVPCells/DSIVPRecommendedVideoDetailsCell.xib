@@ -57,9 +57,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="discriptionWidthConstraint" destination="EHi-sq-Oaw" id="sPN-5w-ycY"/>
-                <outlet property="seriesTitleLbl" destination="H9m-fK-TGj" id="hGN-Dm-5rT"/>
-                <outlet property="titleLbl" destination="45K-ps-Uc2" id="GZ6-5r-KiS"/>
+                <outlet property="constraintDiscriptionWidth" destination="EHi-sq-Oaw" id="sPN-5w-ycY"/>
+                <outlet property="labelSeriesTitle" destination="H9m-fK-TGj" id="hGN-Dm-5rT"/>
+                <outlet property="labelTitle" destination="45K-ps-Uc2" id="GZ6-5r-KiS"/>
             </connections>
         </collectionViewCell>
     </objects>
