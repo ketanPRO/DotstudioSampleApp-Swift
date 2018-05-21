@@ -43,12 +43,12 @@
 		EA2D4AE920AC52B60018A025 /* category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4AE820AC52B60018A025 /* category.storyboard */; };
 		EA2D4AFC20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4AFB20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift */; };
 		EA2D4AFE20AD5BB70018A025 /* ivp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4AFD20AD5BB70018A025 /* ivp.storyboard */; };
-		EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailsCell.swift */; };
-		EA2D4B0320AD5FCE0018A025 /* DSIVPVideoDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailsCell.xib */; };
-		EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.swift */; };
-		EA2D4B0720AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.xib */; };
-		EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.swift */; };
-		EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.xib */; };
+		EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift */; };
+		EA2D4B0320AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib */; };
+		EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift */; };
+		EA2D4B0720AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib */; };
+		EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift */; };
+		EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib */; };
 		EA2D4B0F20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0E20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift */; };
 		EA2D4B1120AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B1020AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib */; };
 		EA2D4B1420ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B1220ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift */; };
@@ -127,12 +127,12 @@
 		EA2D4AE820AC52B60018A025 /* category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = category.storyboard; sourceTree = "<group>"; };
 		EA2D4AFB20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPMultiSeriesChannelViewController.swift; sourceTree = "<group>"; };
 		EA2D4AFD20AD5BB70018A025 /* ivp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ivp.storyboard; sourceTree = "<group>"; };
-		EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPVideoDetailsCell.swift; sourceTree = "<group>"; };
-		EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPVideoDetailsCell.xib; sourceTree = "<group>"; };
-		EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPCurrentVideoDetailsCell.swift; sourceTree = "<group>"; };
-		EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPCurrentVideoDetailsCell.xib; sourceTree = "<group>"; };
-		EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPRecommendedVideoDetailsCell.swift; sourceTree = "<group>"; };
-		EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPRecommendedVideoDetailsCell.xib; sourceTree = "<group>"; };
+		EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPVideoDetailTableViewCell.swift; sourceTree = "<group>"; };
+		EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPVideoDetailTableViewCell.xib; sourceTree = "<group>"; };
+		EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPCurrentVideoDetailTableViewCell.swift; sourceTree = "<group>"; };
+		EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPCurrentVideoDetailTableViewCell.xib; sourceTree = "<group>"; };
+		EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPRecommendedVideoDetailTableViewCell.swift; sourceTree = "<group>"; };
+		EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPRecommendedVideoDetailTableViewCell.xib; sourceTree = "<group>"; };
 		EA2D4B0E20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPVideosSectionHeaderView.swift; sourceTree = "<group>"; };
 		EA2D4B1020AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPVideosSectionHeaderView.xib; sourceTree = "<group>"; };
 		EA2D4B1220ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPVideosSectionHeaderCell.swift; sourceTree = "<group>"; };
@@ -313,9 +313,9 @@
 		EA2D4AFF20AD5F740018A025 /* IVPCells */ = {
 			isa = PBXGroup;
 			children = (
-				EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.swift */,
-				EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailsCell.swift */,
-				EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.swift */,
+				EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift */,
+				EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift */,
+				EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift */,
 				EA2D4B1220ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift */,
 			);
 			path = IVPCells;
@@ -324,10 +324,10 @@
 		EA2D4B0C20AD615F0018A025 /* DSIVPCells */ = {
 			isa = PBXGroup;
 			children = (
-				EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.xib */,
+				EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib */,
 				EA2D4B1320ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.xib */,
-				EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailsCell.xib */,
-				EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.xib */,
+				EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib */,
+				EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib */,
 			);
 			path = DSIVPCells;
 			sourceTree = "<group>";
@@ -539,14 +539,14 @@
 				EC755ED320A1899B00AE8EAE /* Main.storyboard in Resources */,
 				EA22B71720A9D9DD000A35CF /* DSHorizontalTableViewCell.xib in Resources */,
 				EA2D4AE920AC52B60018A025 /* category.storyboard in Resources */,
-				EA2D4B0720AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.xib in Resources */,
+				EA2D4B0720AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib in Resources */,
 				EA22B71C20AABA6D000A35CF /* DSGenericCollectionViewCell.xib in Resources */,
 				EA22B71720A9D9DD000A35CF /* DSHorizontalTableViewCell.xib in Resources */,
 				6C62D62F20A36DB1008C06E3 /* browse.storyboard in Resources */,
 				6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */,
-				EA2D4B0320AD5FCE0018A025 /* DSIVPVideoDetailsCell.xib in Resources */,
+				EA2D4B0320AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib in Resources */,
 				EA2D4B1120AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib in Resources */,
-				EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.xib in Resources */,
+				EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib in Resources */,
 				6C4C19FE20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib in Resources */,
 				EA2D4AFE20AD5BB70018A025 /* ivp.storyboard in Resources */,
 			);
@@ -642,10 +642,10 @@
 				EA2D4AE620AC43DC0018A025 /* DSCategoryViewController.swift in Sources */,
 				6CFDF2C520B120FA00AFEAE8 /* SPLTIVPVideoChannelViewController.swift in Sources */,
 				6CFDF2C620B120FA00AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift in Sources */,
-				EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailsCell.swift in Sources */,
-				EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailsCell.swift in Sources */,
+				EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift in Sources */,
+				EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift in Sources */,
 				6CFDF2C420B120FA00AFEAE8 /* SPLTIVPChannelViewController.swift in Sources */,
-				EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailsCell.swift in Sources */,
+				EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift in Sources */,
 				EC755ECE20A1899B00AE8EAE /* AppDelegate.swift in Sources */,
 				6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */,
 				6C4C1A0120AA8DAD002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.swift in Sources */,

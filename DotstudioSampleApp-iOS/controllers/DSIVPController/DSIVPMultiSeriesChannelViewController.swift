@@ -42,12 +42,16 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.collectionView?.register(UINib(nibName: "DSIVPCurrentVideoDetailsCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPCurrentVideoDetailsCell")
-        self.collectionView?.register(UINib(nibName: "DSIVPVideoDetailsCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPVideoDetailsCell")
-        self.collectionView?.register(UINib(nibName: "DSIVPRecommendedVideoDetailsCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPRecommendedVideoDetailsCell")
+        self.collectionView?.register(UINib(nibName: "DSIVPCurrentVideoDetailTableViewCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPCurrentVideoDetailTableViewCell")
+        self.collectionView?.register(UINib(nibName: "DSIVPVideoDetailTableViewCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPVideoDetailTableViewCell")
+        self.collectionView?.register(UINib(nibName: "DSIVPRecommendedVideoDetailTableViewCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPRecommendedVideoDetailTableViewCell")
         self.collectionView?.register(UINib(nibName: "DSIVPVideosSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "DSIVPVideosSectionHeaderView")
         
         self.resetCollectionViewSize()
+    }
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.resetCollectionViewSize()
     }
     
     open override func requestChannel() {
@@ -69,7 +73,6 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
                     // Fallback on earlier versions
                     flowLayout.estimatedItemSize = CGSize(width: collectionView.frame.size.width, height: 120.0)
                 }
-
             }
         }
         
@@ -123,6 +126,9 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
     override open func numberOfSections(in collectionView: UICollectionView) -> Int {
         
         let iSections = super.numberOfSections(in: collectionView)
+        if iSections > 2 {
+            return 2
+        }
         return iSections //3 //TODO We will remove this once we get the real apis
     }
     
@@ -157,38 +163,35 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
     }
     
     open func getCurrentVideoDetailsCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let dsIVPCurrentVideoDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPCurrentVideoDetailsCell", for: indexPath) as! DSIVPCurrentVideoDetailsCell
+        let dsIVPCurrentVideoDetailTableViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPCurrentVideoDetailTableViewCell", for: indexPath) as! DSIVPCurrentVideoDetailTableViewCell
         if let curVideo = self.curVideo {
-            dsIVPCurrentVideoDetailsCell.setCellData(curVideo,isExpanded: self.isCurrentVideoExpanded)
+            dsIVPCurrentVideoDetailTableViewCell.setCellData(curVideo,isExpanded: self.isCurrentVideoExpanded)
         }
-//        dsIVPCurrentVideoDetailsCell.constraintDiscriptionWidth?.constant = CGFloat(collectionView.frame.size.width-20)
-        return dsIVPCurrentVideoDetailsCell
+        return dsIVPCurrentVideoDetailTableViewCell
     }
     func getVideoDetailsCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let dsIVPVideoDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPVideoDetailsCell", for: indexPath) as? DSIVPVideoDetailsCell {
+        if let dsIVPVideoDetailTableViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPVideoDetailTableViewCell", for: indexPath) as? DSIVPVideoDetailTableViewCell {
             if let spltPlaylistChannel = self.channel as? SPLTPlaylistChannel {
                 if indexPath.row < spltPlaylistChannel.playlistVideos.count {
                     let video = spltPlaylistChannel.playlistVideos[indexPath.row]
-                    dsIVPVideoDetailsCell.setCellData(video)
+                    dsIVPVideoDetailTableViewCell.setCellData(video)
                 }
             }
-            dsIVPVideoDetailsCell.delegate = self
-//            dsIVPVideoDetailsCell.constraintDiscriptionWidth?.constant = CGFloat(collectionView.frame.size.width-38)
-            return dsIVPVideoDetailsCell
+            dsIVPVideoDetailTableViewCell.delegate = self
+            return dsIVPVideoDetailTableViewCell
         }
         return UICollectionViewCell()
     }
     func getRecommendedVideoDetailsCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let dsIVPRecommendedVideoDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPRecommendedVideoDetailsCell", for: indexPath) as? DSIVPRecommendedVideoDetailsCell {
+        if let dsIVPRecommendedVideoDetailTableViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPRecommendedVideoDetailTableViewCell", for: indexPath) as? DSIVPRecommendedVideoDetailTableViewCell {
             
             if indexPath.row < self.recommendationVideos.count {
                 let video = self.recommendationVideos[indexPath.row]
-                dsIVPRecommendedVideoDetailsCell.setCellData(video)
+                dsIVPRecommendedVideoDetailTableViewCell.setCellData(video)
             }
             var collectionViewItemWidth = self.view.frame.width - (CGFloat(3) * CGFloat(10))
             collectionViewItemWidth = collectionViewItemWidth / CGFloat(2)
-            dsIVPRecommendedVideoDetailsCell.constraintDiscriptionWidth?.constant = CGFloat(collectionViewItemWidth)
-            return dsIVPRecommendedVideoDetailsCell
+            return dsIVPRecommendedVideoDetailTableViewCell
         }
         return UICollectionViewCell()
     }
@@ -200,32 +203,42 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
         }
     }
     
+    // MARK: - size calculation
     open override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = super.collectionView(collectionView, layout: collectionViewLayout, sizeForItemAt: indexPath)
-        if let collectionView = self.collectionView {
-            let csize = CGSize(width: collectionView.frame.size.width, height: 120.0)
-            return csize
+        
+        let requiredWidth = collectionView.bounds.size.width
+        let targetSize = CGSize(width: requiredWidth, height: 0)
+        let cv = self.collectionView(collectionView, cellForItemAt: indexPath)
+//        cv.setNeedsLayout()
+        let adequateSize = cv.systemLayoutSizeFitting(targetSize)
+        return adequateSize
+        
+        
+//        let size = super.collectionView(collectionView, layout: collectionViewLayout, sizeForItemAt: indexPath)
+//        if let collectionView = self.collectionView {
+//            let csize = CGSize(width: collectionView.frame.size.width, height: 120.0)
+////            return csize
 //            if #available(iOS 10.0, *) {
 //                return UICollectionViewFlowLayoutAutomaticSize
 //            } else {
 //                // Fallback on earlier versions
 //                return csize
 //            }
-        }
-        return size
+//        }
+//        return size
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
-        view.layer.zPosition = 0.0
-    }
+//    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+//        view.layer.zPosition = 0.0
+//    }
     open override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 1 {
             if let playlistChannel = self.channel as? SPLTPlaylistChannel {
                 if playlistChannel.playlistVideos.count > 0 {
-                    if UIDevice.current.userInterfaceIdiom == .pad {
-                        return CGSize(width: 375.0, height: 80.0)
-                    }
-                    return CGSize(width: 375.0, height: 40.0)
+//                    if UIDevice.current.userInterfaceIdiom == .pad {
+//                        return CGSize(width: 375.0, height: 80.0)
+//                    }
+                    return CGSize(width: 375.0, height: 100.0)
                 }
             }
             return CGSize(width: 0.0, height: 0.0)
@@ -235,9 +248,9 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
     }
 }
 
-extension DSIVPMultiSeriesChannelViewController: DSIVPVideoDetailsCellDelegate {
-    public func didClickExpandButton(_ dsIVPVideoDetailsCell: DSIVPVideoDetailsCell) {
-        if let indexPath = self.collectionView?.indexPath(for: dsIVPVideoDetailsCell) {
+extension DSIVPMultiSeriesChannelViewController: DSIVPVideoDetailTableViewCellDelegate {
+    public func didClickExpandButton(_ dsIVPVideoDetailTableViewCell: DSIVPVideoDetailTableViewCell) {
+        if let indexPath = self.collectionView?.indexPath(for: dsIVPVideoDetailTableViewCell) {
             if indexPath.section == 1 {
                 if let spltPlaylistChannel = self.channel as? SPLTPlaylistChannel {
                     if indexPath.row < spltPlaylistChannel.playlistVideos.count {
