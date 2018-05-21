@@ -135,24 +135,11 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
     override open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         let iItems = super.collectionView(collectionView, numberOfItemsInSection: section)
-        if iItems > 0 {
-            print("itesm more than 1")
-        }
-        
-//        if section == 1 {
-//            if let playlistChannel = self.channel as? SPLTPlaylistChannel {
-//                if !self.isMoreEpisodesListHidden {
-//                    return playlistChannel.playlistVideos.count
-//                }
-//            }
-//            return 0
-//        }
         return iItems
     }
     
     //TODO We will remove this once we get the real apis
     override open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print(indexPath.section)
         switch indexPath.section {
             case 0: return self.getCurrentVideoDetailsCell(collectionView, cellForItemAt: indexPath)
             case 1: return self.getVideoDetailsCell(collectionView, cellForItemAt: indexPath)

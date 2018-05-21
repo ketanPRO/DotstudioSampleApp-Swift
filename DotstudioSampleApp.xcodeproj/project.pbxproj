@@ -26,11 +26,6 @@
 		6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */; };
 		6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CB8FC4720A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
-		6CFDF2C420B120FA00AFEAE8 /* SPLTIVPChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2BF20B120F800AFEAE8 /* SPLTIVPChannelViewController.swift */; };
-		6CFDF2C520B120FA00AFEAE8 /* SPLTIVPVideoChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2C020B120F900AFEAE8 /* SPLTIVPVideoChannelViewController.swift */; };
-		6CFDF2C620B120FA00AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2C120B120F900AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift */; };
-		6CFDF2C720B120FA00AFEAE8 /* SPLTIVPVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2C220B120F900AFEAE8 /* SPLTIVPVideoViewController.swift */; };
-		6CFDF2C820B120FA00AFEAE8 /* SPLTIVPSeriesChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDF2C320B120F900AFEAE8 /* SPLTIVPSeriesChannelViewController.swift */; };
 		EA22B71120A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
 		EA22B71220A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */; };
 		EA22B71320A9CB59000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
@@ -634,22 +629,17 @@
 				EA2D4B1420ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift in Sources */,
 				6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */,
 				6C62D63520A3728F008C06E3 /* DSBrowseViewController.swift in Sources */,
-				6CFDF2C720B120FA00AFEAE8 /* SPLTIVPVideoViewController.swift in Sources */,
 				EA2D4AFC20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift in Sources */,
 				6C62D64320A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift in Sources */,
 				6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */,
 				EA22B71B20AABA6D000A35CF /* DSGenericCollectionViewCell.swift in Sources */,
 				EA2D4AE620AC43DC0018A025 /* DSCategoryViewController.swift in Sources */,
-				6CFDF2C520B120FA00AFEAE8 /* SPLTIVPVideoChannelViewController.swift in Sources */,
-				6CFDF2C620B120FA00AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift in Sources */,
 				EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift in Sources */,
 				EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift in Sources */,
-				6CFDF2C420B120FA00AFEAE8 /* SPLTIVPChannelViewController.swift in Sources */,
 				EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift in Sources */,
 				EC755ECE20A1899B00AE8EAE /* AppDelegate.swift in Sources */,
 				6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */,
 				6C4C1A0120AA8DAD002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.swift in Sources */,
-				6CFDF2C820B120FA00AFEAE8 /* SPLTIVPSeriesChannelViewController.swift in Sources */,
 				EA2D4AE120AADEBF0018A025 /* DSCategoriesViewController.swift in Sources */,
 				6C48D68E20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift in Sources */,
 				6C62D63320A37061008C06E3 /* DSHomeTabBarController.swift in Sources */,

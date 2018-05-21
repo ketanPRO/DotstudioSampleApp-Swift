@@ -40,12 +40,10 @@ open class DSHorizontalTableViewCell: SPLTHorizontalBaseTableViewCell {
 //        super.setCellData(dspCategory, collectionViewItemSize: collectionViewItemSize, collectionViewImageSize: collectionViewImageSize)
 //    }
     
-}
 
 ///MARK: -
 //MARK: - extension UICollectionViewDataSource
-extension DSHorizontalTableViewCell {
-    
+
 //    open override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return super.collectionView(collectionView, numberOfItemsInSection: section)
 //    }
