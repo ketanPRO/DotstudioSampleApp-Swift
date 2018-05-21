@@ -50,17 +50,17 @@ open class DSHorizontalTableViewCell: SPLTHorizontalBaseTableViewCell {
     open override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let dsHorizontalCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSHorizontalCollectionViewCell", for: indexPath) as? DSHorizontalCollectionViewCell {
             
-            if let dspCategory = self.dspCategory {
-                if dspCategory.channels.count > 1 {
-                    if indexPath.section < dspCategory.channels.count {
-                        let channel = dspCategory.channels[indexPath.row]
-                        dsHorizontalCollectionViewCell.setDspChannel(dspChannel: channel, collectionViewImageSize: self.collectionViewImageSize)
+            if let category = self.category {
+                if category.channels.count > 1 {
+                    if indexPath.section < category.channels.count {
+                        let channel = category.channels[indexPath.row]
+                        dsHorizontalCollectionViewCell.setChannel(channel: channel, collectionViewImageSize: self.collectionViewImageSize)
                     }
-                } else if dspCategory.channels.count == 1 {
-                    if let dspPlaylistChannel = dspCategory.channels[0] as? SPLTPlaylistChannel {
-                        if indexPath.section < dspPlaylistChannel.playlistVideos.count {
-                            let video = dspPlaylistChannel.playlistVideos[indexPath.row]
-                            dsHorizontalCollectionViewCell.setDspVideo(dspVideo: video, collectionViewImageSize: self.collectionViewImageSize)
+                } else if category.channels.count == 1 {
+                    if let playlistChannel = category.channels[0] as? SPLTPlaylistChannel {
+                        if indexPath.section < playlistChannel.playlistVideos.count {
+                            let video = playlistChannel.playlistVideos[indexPath.row]
+                            dsHorizontalCollectionViewCell.setVideo(video: video, collectionViewImageSize: self.collectionViewImageSize)
                         }
                     }
                 }

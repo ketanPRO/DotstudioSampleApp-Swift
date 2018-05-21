@@ -107,11 +107,6 @@
 		6C7E120C20A34CBF00A7BE1C /* splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
 		6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSplashViewController.swift; sourceTree = "<group>"; };
 		6CB8FC4520A9E776009A70B5 /* DSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConfig.swift; sourceTree = "<group>"; };
-		6CFDF2BF20B120F800AFEAE8 /* SPLTIVPChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPChannelViewController.swift; sourceTree = "<group>"; };
-		6CFDF2C020B120F900AFEAE8 /* SPLTIVPVideoChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPVideoChannelViewController.swift; sourceTree = "<group>"; };
-		6CFDF2C120B120F900AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPMultiSeriesChannelViewController.swift; sourceTree = "<group>"; };
-		6CFDF2C220B120F900AFEAE8 /* SPLTIVPVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPVideoViewController.swift; sourceTree = "<group>"; };
-		6CFDF2C320B120F900AFEAE8 /* SPLTIVPSeriesChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLTIVPSeriesChannelViewController.swift; sourceTree = "<group>"; };
 		EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA22B71620A9D9DD000A35CF /* DSHorizontalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHorizontalTableViewCell.xib; sourceTree = "<group>"; };
@@ -295,11 +290,6 @@
 		EA2D4AFA20AD5B2E0018A025 /* DSIVPController */ = {
 			isa = PBXGroup;
 			children = (
-				6CFDF2C220B120F900AFEAE8 /* SPLTIVPVideoViewController.swift */,
-				6CFDF2BF20B120F800AFEAE8 /* SPLTIVPChannelViewController.swift */,
-				6CFDF2C020B120F900AFEAE8 /* SPLTIVPVideoChannelViewController.swift */,
-				6CFDF2C320B120F900AFEAE8 /* SPLTIVPSeriesChannelViewController.swift */,
-				6CFDF2C120B120F900AFEAE8 /* SPLTIVPMultiSeriesChannelViewController.swift */,
 				EA2D4AFB20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift */,
 			);
 			path = DSIVPController;
