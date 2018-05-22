@@ -27,7 +27,7 @@
         <!--TabBarController-->
         <scene sceneID="78k-ka-fqh">
             <objects>
-                <tabBarController storyboardIdentifier="SPLTHomeTabBarController" title="TabBarController" id="8pK-Gi-DTQ" customClass="DSHomeTabBarController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="SPLTHomeTabBarController" title="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="8pK-Gi-DTQ" customClass="DSHomeTabBarController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fpe-2w-9kS"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="toV-2o-4L3">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="0.0"/>

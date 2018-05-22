@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="hWW-07-Sz8">
             <objects>
-                <viewController storyboardIdentifier="DSBrowseViewController" title="Home" id="njV-Ne-Eq3" customClass="DSBrowseViewController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DSBrowseViewController" title="Home" automaticallyAdjustsScrollViewInsets="NO" id="njV-Ne-Eq3" customClass="DSBrowseViewController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GWm-yx-J5A"/>
                         <viewControllerLayoutGuide type="bottom" id="S4W-Il-XSf"/>
