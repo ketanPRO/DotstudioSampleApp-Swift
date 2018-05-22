@@ -57,10 +57,10 @@
                             <size key="value" width="79" height="113"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="tableViewHeight">
-                            <integer key="value" value="316"/>
+                            <integer key="value" value="153"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="tableViewHeightForIpad">
-                            <integer key="value" value="632"/>
+                            <integer key="value" value="306"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="size" keyPath="collectionViewItemSizeForIpad">
                             <size key="value" width="158" height="226"/>
