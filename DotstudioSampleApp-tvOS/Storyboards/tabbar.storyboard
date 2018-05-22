@@ -12,7 +12,7 @@
         <!--Base Navigation View Controller-->
         <scene sceneID="WsA-bx-le8">
             <objects>
-                <navigationController storyboardIdentifier="SPLTBaseNavigationViewController" navigationBarHidden="YES" id="2tD-Ob-VZk" customClass="SPLTBaseNavigationViewController" customModule="DotStudioUI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SPLTBaseNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2tD-Ob-VZk" customClass="SPLTBaseNavigationViewController" customModule="DotStudioUI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ISn-ea-Joc">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhs-fm-LQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3886" y="-6358"/>
+            <point key="canvasLocation" x="-4404" y="-6358"/>
         </scene>
         <!--TabBarController-->
         <scene sceneID="78k-ka-fqh">

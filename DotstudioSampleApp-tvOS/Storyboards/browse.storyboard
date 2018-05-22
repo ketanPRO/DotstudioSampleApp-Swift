@@ -58,6 +58,14 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Home" id="7Dt-CY-kDt"/>
                     <simulatedTabBarMetrics key="simulatedTopBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="size" keyPath="collectionViewItemSize">
+                            <size key="value" width="300" height="200"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="tableViewHeight">
+                            <integer key="value" value="500"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="CnN-So-oL1" id="GXb-El-uOe"/>
                     </connections>

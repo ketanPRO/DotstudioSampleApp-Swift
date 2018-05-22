@@ -79,19 +79,31 @@ open class DSBrowseViewController: SPLTBrowseViewController {
         }
         return UITableViewCell()
     }
+    
+    
+    open override func getCollectionViewItemSizeAtIndexPath(_ indexPath: IndexPath) -> CGSize {
+        let size = super.getCollectionViewItemSizeAtIndexPath(indexPath)
+        print(size)
+        return size
+    }
+    open override func getCollectionViewImageSizeAtIndexPath(_ indexPath: IndexPath) -> CGSize {
+        let size = super.getCollectionViewImageSizeAtIndexPath(indexPath)
+        print(size)
+        return size
+    }
 }
 
-extension DSBrowseViewController: DSHorizontalTableViewCellDelegate {
-    public func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectChannel channel: SPLTChannel, atIndex index: Int) {
-        print("channel selected")
-    }
-    
-    public func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectVideo video: SPLTVideo, inChannel channel: SPLTChannel?, atIndex index: Int) {
-        print("video selected")
-    }
-    
-    
-}
+//extension DSBrowseViewController: DSHorizontalTableViewCellDelegate {
+//    public func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectChannel channel: SPLTChannel, atIndex index: Int) {
+//        print("channel selected")
+//    }
+//
+//    public func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectVideo video: SPLTVideo, inChannel channel: SPLTChannel?, atIndex index: Int) {
+//        print("video selected")
+//    }
+//
+//
+//}
 
 
 
