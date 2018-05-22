@@ -28,23 +28,23 @@ open class DSBrowseViewController: SPLTBrowseViewController {
         }
     }
     
-    @IBInspectable override open var tableViewHeight: CGFloat {
-        get {
-            return super.tableViewHeight
-        }
-        set {
-            super.tableViewHeight = newValue
-        }
-    }
-    
-    @IBInspectable override open var collectionViewItemSize: CGSize {
-        get {
-            return super.collectionViewItemSize
-        }
-        set {
-            super.collectionViewItemSize = newValue
-        }
-    }
+//    @IBInspectable override open var tableViewHeight: CGFloat {
+//        get {
+//            return super.tableViewHeight
+//        }
+//        set {
+//            super.tableViewHeight = newValue
+//        }
+//    }
+//    
+//    @IBInspectable override open var collectionViewItemSize: CGSize {
+//        get {
+//            return super.collectionViewItemSize
+//        }
+//        set {
+//            super.collectionViewItemSize = newValue
+//        }
+//    }
     
     
     

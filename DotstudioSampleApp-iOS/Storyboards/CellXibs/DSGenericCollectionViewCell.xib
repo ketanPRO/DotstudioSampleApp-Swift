@@ -70,6 +70,9 @@
                 <constraint firstItem="bwH-gm-QeR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xTd-en-PG5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="imageKey" value="poster"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="imageViewCell" destination="L1n-fI-QRc" id="ITb-81-CH1"/>
                 <outlet property="labelPrimaryTitle" destination="pZs-6i-CV4" id="vaE-Qo-L6p"/>
