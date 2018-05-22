@@ -49,6 +49,8 @@
 		EA2D4B1420ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B1220ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift */; };
 		EA2D4B1520ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B1320ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.xib */; };
 		EA62255A20A96E9D00D4CC10 /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
+		EA8AC94020B3E0870023FB7D /* DSCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4AE020AADEBF0018A025 /* DSCategoriesViewController.swift */; };
+		EA8AC94120B3E0AD0023FB7D /* DSGenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B71920AABA6D000A35CF /* DSGenericCollectionViewCell.swift */; };
 		EAA9370820A4992C0031BB9B /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA9370720A4992B0031BB9B /* Haneke.framework */; };
 		EAAAFEF720A450E20071ADD4 /* tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */; };
 		EAAAFEF920A4555C0071ADD4 /* browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF820A4555C0071ADD4 /* browse.storyboard */; };
@@ -650,6 +652,8 @@
 				EAAAFEFD20A45D1B0071ADD4 /* DSHomeTabBarController.swift in Sources */,
 				EA22B71320A9CB59000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */,
 				EAAAFEFF20A45D270071ADD4 /* DSTabBarBaseNavigationViewController.swift in Sources */,
+				EA8AC94020B3E0870023FB7D /* DSCategoriesViewController.swift in Sources */,
+				EA8AC94120B3E0AD0023FB7D /* DSGenericCollectionViewCell.swift in Sources */,
 				6C4C1A0320AA8DB5002F5AB6 /* DSFeaturedHorizontalTableViewCell.swift in Sources */,
 				EA2D4AE720AC43DC0018A025 /* DSCategoryViewController.swift in Sources */,
 			);

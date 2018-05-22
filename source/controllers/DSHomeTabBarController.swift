@@ -21,18 +21,22 @@ open class DSHomeTabBarController: SPLTHomeTabBarController {
     open override func addBrowseViewController() {
         if let dsBrowseViewController = self.getViewControllerFromStoryboardName("browse", strViewControllerIdentifier: "DSBrowseViewController") as? DSBrowseViewController {
             self.spltBrowseViewController = dsBrowseViewController
-            let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsBrowseViewController)
             self.tabViewControllers.append(dsBrowseViewController)
-            self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
+            #if os(iOS)
+                let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsBrowseViewController)
+                self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
+            #endif
         }
     }
     
     open override func addCategoriesViewController() {
         if let dsCategoriesViewController = self.getViewControllerFromStoryboardName("categories", strViewControllerIdentifier: "DSCategoriesViewController") as? DSCategoriesViewController {
             self.spltCategoriesViewController = dsCategoriesViewController
-            let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsCategoriesViewController)
             self.tabViewControllers.append(dsCategoriesViewController)
-            self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
+            #if os(iOS)
+                let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsCategoriesViewController)
+                self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
+            #endif
         }
     }
     
