@@ -25,6 +25,8 @@ open class DSHomeTabBarController: SPLTHomeTabBarController {
             #if os(iOS)
                 let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsBrowseViewController)
                 self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
+            #elseif os(tvOS)
+                self.setViewControllers(self.tabViewControllers, animated: false)
             #endif
         }
     }
@@ -36,6 +38,8 @@ open class DSHomeTabBarController: SPLTHomeTabBarController {
             #if os(iOS)
                 let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsCategoriesViewController)
                 self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
+            #elseif os(tvOS)
+                self.setViewControllers(self.tabViewControllers, animated: false)
             #endif
         }
     }
