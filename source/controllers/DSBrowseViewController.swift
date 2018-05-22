@@ -12,9 +12,9 @@ import DotstudioAPI
 import UIKit
 
 
-protocol DSHorizontalTableViewCellDelegate: SPLTHorizontalBaseTableViewCellDelegate {
-    
-}
+//protocol DSHorizontalTableViewCellDelegate: SPLTHorizontalBaseTableViewCellDelegate {
+//
+//}
 @IBDesignable
 open class DSBrowseViewController: SPLTBrowseViewController {
     
@@ -92,6 +92,8 @@ extension DSBrowseViewController: DSHorizontalTableViewCellDelegate {
     
     
 }
+
+
 
 
 

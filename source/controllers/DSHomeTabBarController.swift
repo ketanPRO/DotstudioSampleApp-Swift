@@ -44,4 +44,15 @@ extension DSHomeTabBarController {
     }
 }
 
-
+//extension DSHomeTabBarController: SPLTIVPPresentor {
+//    func openIVPViewControllerVideo(video: SPLTVideo?, in channel: SPLTChannel?, atAutoPlayIndex autoPlayIndex: Int?, spltIVPViewControllerDelegate: SPLTIVPViewControllerDelegate?) {
+//        if let dsIVPMultiSeriesChannelViewController = self.getViewControllerFromStoryboardName("ivp", strViewControllerIdentifier: "DSIVPMultiSeriesChannelViewController") as? DSIVPMultiSeriesChannelViewController {
+//            dsIVPMultiSeriesChannelViewController.channel = channel
+//            dsIVPMultiSeriesChannelViewController.autoPlayIndex = autoPlayIndex
+//            dsIVPMultiSeriesChannelViewController.curVideo = video
+//            self.present(dsIVPMultiSeriesChannelViewController, animated: true) {
+//                // success presented IVP...
+//            }
+//        }
+//    }
+//}
