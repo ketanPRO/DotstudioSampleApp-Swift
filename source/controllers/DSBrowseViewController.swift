@@ -81,16 +81,6 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     }
     
     
-    open override func getCollectionViewItemSizeAtIndexPath(_ indexPath: IndexPath) -> CGSize {
-        let size = super.getCollectionViewItemSizeAtIndexPath(indexPath)
-        print(size)
-        return size
-    }
-    open override func getCollectionViewImageSizeAtIndexPath(_ indexPath: IndexPath) -> CGSize {
-        let size = super.getCollectionViewImageSizeAtIndexPath(indexPath)
-        print(size)
-        return size
-    }
 }
 
 //extension DSBrowseViewController: DSHorizontalTableViewCellDelegate {
