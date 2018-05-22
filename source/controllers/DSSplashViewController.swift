@@ -59,10 +59,17 @@ open class DSSplashViewController: SPLTSplashViewController {
 //        self.loadMainViewController()
 //    }
     override open func loadMainViewController() {
-        let spltHomeTabBarController = self.getViewControllerFromStoryboardName("tabbar", strViewControllerIdentifier: "SPLTHomeTabBarController")
+        #if os(iOS)
+            let spltHomeTabBarController = self.getViewControllerFromStoryboardName("tabbar", strViewControllerIdentifier: "SPLTHomeTabBarController")
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                appDelegate.window?.rootViewController = spltHomeTabBarController //homeTabBarController
+            }
+        #elseif os(tvOS)
+        let spltBaseNavigationViewController = self.getViewControllerFromStoryboardName("tabbar", strViewControllerIdentifier: "SPLTBaseNavigationViewController")
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            appDelegate.window?.rootViewController = spltHomeTabBarController //homeTabBarController
+            appDelegate.window?.rootViewController = spltBaseNavigationViewController //homeTabBarController
         }
+        #endif
     }
     
 }

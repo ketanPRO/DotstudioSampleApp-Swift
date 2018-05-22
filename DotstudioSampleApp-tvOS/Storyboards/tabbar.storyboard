@@ -6,45 +6,37 @@
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Categories-->
-        <scene sceneID="dMB-va-dgq">
+        <!--Base Navigation View Controller-->
+        <scene sceneID="WsA-bx-le8">
             <objects>
-                <viewController title="Categories" id="LmE-1U-Jep" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Awb-bv-dkx"/>
-                        <viewControllerLayoutGuide type="bottom" id="ccn-bs-eQ4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fn8-L2-jzs">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="f33-Ks-adh"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="gX1-JH-Wca"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ff3-1n-QAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="SPLTBaseNavigationViewController" navigationBarHidden="YES" id="2tD-Ob-VZk" customClass="SPLTBaseNavigationViewController" customModule="DotStudioUI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ISn-ea-Joc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8pK-Gi-DTQ" kind="relationship" relationship="rootViewController" id="Cli-nE-w7I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhs-fm-LQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-174" y="-1870"/>
+            <point key="canvasLocation" x="-3886" y="-6358"/>
         </scene>
-        <!--Home Tab Bar Controller-->
+        <!--TabBarController-->
         <scene sceneID="78k-ka-fqh">
             <objects>
-                <tabBarController storyboardIdentifier="SPLTHomeTabBarController" id="8pK-Gi-DTQ" customClass="DSHomeTabBarController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="SPLTHomeTabBarController" title="TabBarController" id="8pK-Gi-DTQ" customClass="DSHomeTabBarController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fpe-2w-9kS"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="toV-2o-4L3">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="LmE-1U-Jep" kind="relationship" relationship="viewControllers" id="GMA-9p-a6g"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tcs-9O-psU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2964" y="-3307"/>
+            <point key="canvasLocation" x="-1747" y="-6358"/>
         </scene>
     </scenes>
 </document>
