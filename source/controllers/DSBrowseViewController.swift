@@ -11,6 +11,10 @@ import DotstudioUI
 import DotstudioAPI
 import UIKit
 
+
+protocol DSHorizontalTableViewCellDelegate: SPLTHorizontalBaseTableViewCellDelegate {
+    
+}
 @IBDesignable
 open class DSBrowseViewController: SPLTBrowseViewController {
     
@@ -69,6 +73,7 @@ open class DSBrowseViewController: SPLTBrowseViewController {
             let category = self.categoriesBrowse[indexPath.section]
             let collectionViewItemSize = self.getCollectionViewItemSizeAtIndexPath(indexPath)
             let collectionViewImageSize = self.getCollectionViewImageSizeAtIndexPath(indexPath)
+            dsHorizontalTableViewCell.delegate = self
             dsHorizontalTableViewCell.setCellData(category, collectionViewItemSize: collectionViewItemSize, collectionViewImageSize: collectionViewImageSize)
             return dsHorizontalTableViewCell
         }
@@ -76,7 +81,17 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     }
 }
 
-
+extension DSBrowseViewController: DSHorizontalTableViewCellDelegate {
+    public func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectChannel channel: SPLTChannel, atIndex index: Int) {
+        print("channel selected")
+    }
+    
+    public func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectVideo video: SPLTVideo, inChannel channel: SPLTChannel?, atIndex index: Int) {
+        print("video selected")
+    }
+    
+    
+}
 
 
 

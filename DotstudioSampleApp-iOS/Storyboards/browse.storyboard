@@ -49,13 +49,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Home" id="Cqk-py-sX1">
-                        <barButtonItem key="backBarButtonItem" title=" " id="hs7-BF-fjk"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="YG6-pa-yfz"/>
-                        <barButtonItem key="rightBarButtonItem" id="WFA-ZG-rlX">
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Home" id="Cqk-py-sX1"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>

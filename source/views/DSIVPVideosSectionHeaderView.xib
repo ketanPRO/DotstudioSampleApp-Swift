@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Row-Ac-xfq">
-                    <rect key="frame" x="10" y="5" width="320" height="16"/>
+                    <rect key="frame" x="10" y="5" width="320" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -31,9 +31,9 @@
                     </constraints>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-r9-IrR">
-                    <rect key="frame" x="10" y="38" width="355" height="62"/>
+                    <rect key="frame" x="10" y="40" width="355" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TVD-OM-jSq">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="TVD-OM-jSq">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -45,14 +45,16 @@
                     </connections>
                 </collectionView>
             </subviews>
+            <color key="backgroundColor" red="0.92941176469999998" green="0.1137254902" blue="0.63530815969999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TZp-r9-IrR" secondAttribute="trailing" constant="10" id="Lmg-RN-yd9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fDw-2O-F63" secondAttribute="trailing" constant="10" id="QCj-Ot-XK4"/>
                 <constraint firstItem="fDw-2O-F63" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="Wqf-It-mtu"/>
                 <constraint firstItem="TZp-r9-IrR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="XZn-dZ-oNa"/>
                 <constraint firstItem="Row-Ac-xfq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="fyU-Mg-4nq"/>
+                <constraint firstItem="TZp-r9-IrR" firstAttribute="top" secondItem="Row-Ac-xfq" secondAttribute="bottom" constant="5" id="iE1-eO-Or6"/>
                 <constraint firstItem="Row-Ac-xfq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="mOU-2c-LGd"/>
-                <constraint firstItem="TZp-r9-IrR" firstAttribute="top" secondItem="fDw-2O-F63" secondAttribute="bottom" constant="3" id="nmc-Kb-TdN"/>
+                <constraint firstItem="TZp-r9-IrR" firstAttribute="top" secondItem="fDw-2O-F63" secondAttribute="bottom" constant="5" id="nmc-Kb-TdN"/>
                 <constraint firstItem="TZp-r9-IrR" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="xLF-dW-UQp"/>
                 <constraint firstItem="fDw-2O-F63" firstAttribute="leading" secondItem="Row-Ac-xfq" secondAttribute="trailing" constant="5" id="z0n-gV-uSZ"/>
             </constraints>
