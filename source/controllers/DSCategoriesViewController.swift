@@ -64,31 +64,22 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
     }
     
     override func getCollectionViewItemSize() -> CGSize {
-        #if os(iOS)
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            return self.getCollectionViewItemSizeForIpad()
-        }
-        #endif
+//        #if os(iOS)
+//        if UIDevice.current.userInterfaceIdiom == .pad {
+//            return self.getCollectionViewItemSizeForIpad()
+//        }
+//        #endif
         
         var collectionViewItemWidth = self.view.frame.width - (CGFloat(self.collectionViewNumberOfColumns + 1) * CGFloat(self.collectionViewItemSpacing))
         if self.collectionViewNumberOfColumns == 1 {
             collectionViewItemWidth = self.view.frame.width
         }
         collectionViewItemWidth = collectionViewItemWidth / CGFloat(self.collectionViewNumberOfColumns)
-        let collectionViewItemHeight = collectionViewItemWidth*9/16
+        let collectionViewItemHeight = collectionViewItemWidth
         let size = CGSize(width: collectionViewItemWidth, height: collectionViewItemHeight)
         return size
     }
     
-    override func resetCollectionViewSize(_ collectionViewItemSize: CGSize) {
-        super.resetCollectionViewSize(collectionViewItemSize)
-        
-        if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.minimumLineSpacing = CGFloat(self.collectionViewItemSpacing)
-            flowLayout.minimumInteritemSpacing = CGFloat(self.collectionViewItemSpacing)
-            flowLayout.sectionInset = UIEdgeInsetsMake(CGFloat(self.collectionViewItemSpacing), 0, CGFloat(self.collectionViewItemSpacing), 0)
-        }
-    }
 }
 
 extension DSCategoriesViewController {

@@ -28,23 +28,23 @@ open class DSBrowseViewController: SPLTBrowseViewController {
         }
     }
     
-    @IBInspectable override open var tableViewHeight: CGFloat {
-        get {
-            return super.tableViewHeight
-        }
-        set {
-            super.tableViewHeight = newValue
-        }
-    }
-    
-    @IBInspectable override open var collectionViewItemSize: CGSize {
-        get {
-            return super.collectionViewItemSize
-        }
-        set {
-            super.collectionViewItemSize = newValue
-        }
-    }
+//    @IBInspectable override open var tableViewHeight: CGFloat {
+//        get {
+//            return super.tableViewHeight
+//        }
+//        set {
+//            super.tableViewHeight = newValue
+//        }
+//    }
+//    
+//    @IBInspectable override open var collectionViewItemSize: CGSize {
+//        get {
+//            return super.collectionViewItemSize
+//        }
+//        set {
+//            super.collectionViewItemSize = newValue
+//        }
+//    }
     
     
     
@@ -81,16 +81,6 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     }
     
     
-    open override func getCollectionViewItemSizeAtIndexPath(_ indexPath: IndexPath) -> CGSize {
-        let size = super.getCollectionViewItemSizeAtIndexPath(indexPath)
-        print(size)
-        return size
-    }
-    open override func getCollectionViewImageSizeAtIndexPath(_ indexPath: IndexPath) -> CGSize {
-        let size = super.getCollectionViewImageSizeAtIndexPath(indexPath)
-        print(size)
-        return size
-    }
 }
 
 //extension DSBrowseViewController: DSHorizontalTableViewCellDelegate {

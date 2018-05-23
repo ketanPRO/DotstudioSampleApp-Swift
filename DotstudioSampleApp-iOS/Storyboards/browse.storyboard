@@ -54,10 +54,22 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="size" keyPath="collectionViewItemSize">
-                            <size key="value" width="160" height="90"/>
+                            <size key="value" width="79" height="113"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="tableViewHeight">
-                            <real key="value" value="150"/>
+                            <integer key="value" value="153"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="tableViewHeightForIpad">
+                            <integer key="value" value="306"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="collectionViewItemSizeForIpad">
+                            <size key="value" width="158" height="226"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="collectionViewImageSize">
+                            <size key="value" width="79" height="113"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="collectionViewImageSizeForIpad">
+                            <size key="value" width="158" height="226"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>

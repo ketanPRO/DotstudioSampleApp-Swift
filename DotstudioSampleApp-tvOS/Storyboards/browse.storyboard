@@ -59,11 +59,14 @@
                     <tabBarItem key="tabBarItem" title="Home" id="7Dt-CY-kDt"/>
                     <simulatedTabBarMetrics key="simulatedTopBarMetrics"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="size" keyPath="collectionViewItemSize">
-                            <size key="value" width="300" height="200"/>
-                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="tableViewHeight">
-                            <integer key="value" value="500"/>
+                            <integer key="value" value="300"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="collectionViewItemSize">
+                            <size key="value" width="170" height="240"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="collectionViewImageSize">
+                            <size key="value" width="170" height="240"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
