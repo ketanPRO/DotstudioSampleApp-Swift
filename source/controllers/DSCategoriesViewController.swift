@@ -21,23 +21,23 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
         }
     }
     
-    @IBInspectable override open var collectionViewItemSize: CGSize {
-        get {
-            return super.collectionViewItemSize
-        }
-        set {
-            super.collectionViewItemSize = newValue
-        }
-    }
-    
-    @IBInspectable override open var collectionViewImageSize: CGSize {
-        get {
-            return super.collectionViewImageSize
-        }
-        set {
-            super.collectionViewImageSize = newValue
-        }
-    }
+//    @IBInspectable override open var collectionViewItemSize: CGSize {
+//        get {
+//            return super.collectionViewItemSize
+//        }
+//        set {
+//            super.collectionViewItemSize = newValue
+//        }
+//    }
+//
+//    @IBInspectable override open var collectionViewImageSize: CGSize {
+//        get {
+//            return super.collectionViewImageSize
+//        }
+//        set {
+//            super.collectionViewImageSize = newValue
+//        }
+//    }
     
     @IBInspectable override open var collectionViewNumberOfColumns: Int {
         get {
@@ -61,8 +61,25 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.collectionView?.register(UINib(nibName: "DSGenericCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSGenericCollectionViewCell")
+        
+        
+        var collectionViewItemWidth = self.view.frame.width - (CGFloat(self.collectionViewNumberOfColumns + 1) * CGFloat(self.collectionViewItemSpacing))
+        if self.collectionViewNumberOfColumns == 1 {
+            collectionViewItemWidth = self.view.frame.width
+        }
+        collectionViewItemWidth = collectionViewItemWidth / CGFloat(self.collectionViewNumberOfColumns)
+        let collectionViewItemHeight = collectionViewItemWidth
+        let size = CGSize(width: collectionViewItemWidth, height: collectionViewItemHeight)
+        self.resetCollectionViewSize(size)
     }
     
+    open func resetCollectionViewSize(_ collectionViewItemSize: CGSize) {
+        if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.itemSize = collectionViewItemSize
+        }
+        
+    }
+
 //    override func getCollectionViewItemSize() -> CGSize {
 ////        #if os(iOS)
 ////        if UIDevice.current.userInterfaceIdiom == .pad {
@@ -79,6 +96,7 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
 //        let size = CGSize(width: collectionViewItemWidth, height: collectionViewItemHeight)
 //        return size
 //    }
+
     
 }
 

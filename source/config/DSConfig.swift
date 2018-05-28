@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import DotstudioUI
 import DotstudioAPI
 
 class DSConfig {
@@ -19,6 +21,17 @@ class DSConfig {
         SPLTConfig.setDebugMode(on)
     }
     class func setup() {
+        
+//        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+//            if let window = appDelegate.window {
+//                SPLTAppDelegate.shared.setMainWindow(window)
+//            }
+//        }
+        
+        SPLTConfig.infoDictionaryBundleMain = Bundle.main.infoDictionary
+        SPLTConfig.bundleIdentifierBundleMain = Bundle.main.bundleIdentifier
+        SPLTConfig.APPNAME = "SampleApp"
+        
         // To enable debug mode. uncomment below method & pass true.
 //        DSConfig.setDebugMode(true)
         

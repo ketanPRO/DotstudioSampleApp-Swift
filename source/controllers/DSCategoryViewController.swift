@@ -105,12 +105,22 @@ extension DSCategoryViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let dsIVPMultiSeriesChannelViewController = self.getViewControllerFromStoryboardName("ivp", strViewControllerIdentifier: "DSIVPMultiSeriesChannelViewController") as? DSIVPMultiSeriesChannelViewController {
-            if let channel = self.category?.channels[indexPath.row] {
-                dsIVPMultiSeriesChannelViewController.channel = channel
+        
+        if let channel = self.category?.channels[indexPath.row] {
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                if let spltIVPPresentor = appDelegate.window?.rootViewController as? SPLTIVPPresentor {
+                    spltIVPPresentor.openIVPViewControllerVideo(video: nil, in: channel, atAutoPlayIndex: nil, spltIVPViewControllerDelegate: nil)
+                }
             }
-//            self.navigationController.show(dsIVPMultiSeriesChannelViewController, sender: self)
-            self.navigationController?.pushViewController(dsIVPMultiSeriesChannelViewController, animated: true)
         }
+        
+        
+//        if let dsIVPMultiSeriesChannelViewController = self.getViewControllerFromStoryboardName("ivp", strViewControllerIdentifier: "DSIVPMultiSeriesChannelViewController") as? DSIVPMultiSeriesChannelViewController {
+//            if let channel = self.category?.channels[indexPath.row] {
+//                dsIVPMultiSeriesChannelViewController.channel = channel
+//            }
+////            self.navigationController.show(dsIVPMultiSeriesChannelViewController, sender: self)
+//            self.navigationController?.pushViewController(dsIVPMultiSeriesChannelViewController, animated: true)
+//        }
     }
 }
