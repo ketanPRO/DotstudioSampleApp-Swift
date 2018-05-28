@@ -56,6 +56,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="GmV-sq-qAc" id="7Tu-9g-VLK"/>
+                        <outlet property="viewDotstudioIMAPlayer" destination="7qA-Ud-pw0" id="JtR-Iv-kaw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQS-xt-pdL" userLabel="First Responder" sceneMemberID="firstResponder"/>

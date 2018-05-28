@@ -63,22 +63,22 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
         self.collectionView?.register(UINib(nibName: "DSGenericCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSGenericCollectionViewCell")
     }
     
-    override func getCollectionViewItemSize() -> CGSize {
-//        #if os(iOS)
-//        if UIDevice.current.userInterfaceIdiom == .pad {
-//            return self.getCollectionViewItemSizeForIpad()
+//    override func getCollectionViewItemSize() -> CGSize {
+////        #if os(iOS)
+////        if UIDevice.current.userInterfaceIdiom == .pad {
+////            return self.getCollectionViewItemSizeForIpad()
+////        }
+////        #endif
+//        
+//        var collectionViewItemWidth = self.view.frame.width - (CGFloat(self.collectionViewNumberOfColumns + 1) * CGFloat(self.collectionViewItemSpacing))
+//        if self.collectionViewNumberOfColumns == 1 {
+//            collectionViewItemWidth = self.view.frame.width
 //        }
-//        #endif
-        
-        var collectionViewItemWidth = self.view.frame.width - (CGFloat(self.collectionViewNumberOfColumns + 1) * CGFloat(self.collectionViewItemSpacing))
-        if self.collectionViewNumberOfColumns == 1 {
-            collectionViewItemWidth = self.view.frame.width
-        }
-        collectionViewItemWidth = collectionViewItemWidth / CGFloat(self.collectionViewNumberOfColumns)
-        let collectionViewItemHeight = collectionViewItemWidth
-        let size = CGSize(width: collectionViewItemWidth, height: collectionViewItemHeight)
-        return size
-    }
+//        collectionViewItemWidth = collectionViewItemWidth / CGFloat(self.collectionViewNumberOfColumns)
+//        let collectionViewItemHeight = collectionViewItemWidth
+//        let size = CGSize(width: collectionViewItemWidth, height: collectionViewItemHeight)
+//        return size
+//    }
     
 }
 
@@ -86,9 +86,9 @@ extension DSCategoriesViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSGenericCollectionViewCell", for: indexPath) as? DSGenericCollectionViewCell {
                 let category = self.categories[indexPath.row]
-                let collectionViewImageSize = self.getCollectionViewImageSize()
+//                let collectionViewImageSize = self.getCollectionViewImageSize()
                 categoryCollectionViewCell.cellType = DSGenericCollectionViewCell.cellTypes.Category.rawValue
-                categoryCollectionViewCell.setCellData(category, collectionViewImageSize: collectionViewImageSize)
+                categoryCollectionViewCell.setCellData(category, collectionViewImageSize: self.collectionViewImageSize)
             return categoryCollectionViewCell
         }
         return UICollectionViewCell()

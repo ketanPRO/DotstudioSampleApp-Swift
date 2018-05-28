@@ -1,4 +1,10 @@
+github "Alamofire/Alamofire" "4.7.2"
+github "BoltsFramework/Bolts-ObjC" "1.9.0"
 github "Haneke/HanekeSwift" "v0.11.1"
-github "dotstudiopro/DotstudioAPI_iOS" "a5a468a78e780fb2b841f39bdb6630a7531500c7"
-github "ketanPRO/DotstudioUI-swift" "9ed7706a39bdb3af394dcdb0d4abb373586b4c07"
-
+github "auth0/Auth0.swift" "1.11.0"
+github "auth0/SimpleKeychain" "0.8.1"
+github "dotstudiopro/DotstudioAPI_iOS" "13a986b54bcdd6698d00e48c59957aeee22282a3"
+github "facebook/facebook-ios-sdk" "sdk-version-4.33.0"
+github "facebook/facebook-sdk-swift" "0.3.0"
+github "ketanPRO/DotstudioUI-swift" "a8123bb265b6a4396a9c961780789718c5b3316a"
+github "yeahdongcn/UIColor-Hex-Swift" "4.0.1"

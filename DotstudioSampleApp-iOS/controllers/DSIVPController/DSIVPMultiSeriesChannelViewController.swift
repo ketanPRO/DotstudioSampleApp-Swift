@@ -9,6 +9,7 @@
 import UIKit
 import DotstudioUI
 import DotstudioAPI
+import DotstudioIMAPlayer
 
 ////TODO We will remove this once we get the real apis
 //extension SPLTVideo {
@@ -36,11 +37,17 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
         }
     }
     var isCurrentVideoExpanded:Bool = false
-    
+    @IBOutlet weak open var viewDotstudioIMAPlayer: UIView!
+    var dotstudioIMAPlayerViewController: DotstudioIMAPlayerViewController?
 
     override open func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if let dotstudioIMAPlayerViewController = DotstudioIMAPlayerViewController.getSPLTViewController() as? DotstudioIMAPlayerViewController {
+            self.dotstudioIMAPlayerViewController = dotstudioIMAPlayerViewController
+            self.splt_configureChildViewController(childController: dotstudioIMAPlayerViewController, onView: self.viewDotstudioIMAPlayer)
+        }
         
         self.collectionView?.register(UINib(nibName: "DSIVPCurrentVideoDetailTableViewCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPCurrentVideoDetailTableViewCell")
         self.collectionView?.register(UINib(nibName: "DSIVPVideoDetailTableViewCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPVideoDetailTableViewCell")
@@ -80,6 +87,13 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
         
     }
 
+    //MARK: - Set Video methods.
+    open override func setCurrentVideo(curVideo: SPLTVideo) {
+        super.setCurrentVideo(curVideo: curVideo)
+        self.dotstudioIMAPlayerViewController?.setCurrentVideo(curVideo: curVideo)
+    }
+    
+    
     //MARK: - UICollectionViewDataSource methods
    
     /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

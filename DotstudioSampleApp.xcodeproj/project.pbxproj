@@ -27,6 +27,7 @@
 		6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CB8FC4720A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CBB5DAC20B4937B009C1CA2 /* DSGenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B71920AABA6D000A35CF /* DSGenericCollectionViewCell.swift */; };
+		72580E8BA6C4C9DFDA167A30 /* libPods-DotstudioSampleApp-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */; };
 		EA22B71120A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
 		EA22B71220A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */; };
 		EA22B71320A9CB59000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
@@ -99,6 +100,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DotstudioSampleApp-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		549635D4965F29FDE445DA98 /* Pods-DotstudioSampleApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFeaturedHorizontalTableViewCell.swift; sourceTree = "<group>"; };
 		6C4C19FC20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSFeaturedHorizontalTableViewCell.xib; sourceTree = "<group>"; };
 		6C4C19FD20AA8B5A002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSFeaturedHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		6C7E120C20A34CBF00A7BE1C /* splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
 		6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSplashViewController.swift; sourceTree = "<group>"; };
 		6CB8FC4520A9E776009A70B5 /* DSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConfig.swift; sourceTree = "<group>"; };
+		B13DBF1AB3DD678AAA00AA61 /* Pods_DotstudioSampleApp_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotstudioSampleApp_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA22B71620A9D9DD000A35CF /* DSHorizontalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHorizontalTableViewCell.xib; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		EC755F5820A1EAC900AE8EAE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/tvOS/Bolts.framework; sourceTree = "<group>"; };
 		EC755F5920A1EAC900AE8EAE /* FBSDKTVOSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKTVOSKit.framework; path = Carthage/Build/tvOS/FBSDKTVOSKit.framework; sourceTree = "<group>"; };
 		EC755F5A20A1EAC900AE8EAE /* Auth0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Auth0.framework; path = Carthage/Build/tvOS/Auth0.framework; sourceTree = "<group>"; };
+		F51CE6D17045D9D0F52B0784 /* Pods-DotstudioSampleApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +206,7 @@
 				EC755F3A20A1EAB100AE8EAE /* Alamofire.framework in Frameworks */,
 				EC755F3B20A1EAB100AE8EAE /* DotstudioAPI.framework in Frameworks */,
 				EA62255A20A96E9D00D4CC10 /* DotstudioUI.framework in Frameworks */,
+				72580E8BA6C4C9DFDA167A30 /* libPods-DotstudioSampleApp-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +282,15 @@
 				6CB8FC4520A9E776009A70B5 /* DSConfig.swift */,
 			);
 			path = config;
+			sourceTree = "<group>";
+		};
+		8B5AF9FF145F5719313F4D80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				549635D4965F29FDE445DA98 /* Pods-DotstudioSampleApp-iOS.debug.xcconfig */,
+				F51CE6D17045D9D0F52B0784 /* Pods-DotstudioSampleApp-iOS.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		EA22B71820A9DC69000A35CF /* CellXibs */ = {
@@ -373,6 +388,7 @@
 				EC755EF520A1B03600AE8EAE /* DotstudioSampleApp-tvOS */,
 				EC755ECB20A1899B00AE8EAE /* Products */,
 				EC755EDF20A190BC00AE8EAE /* Frameworks */,
+				8B5AF9FF145F5719313F4D80 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -427,6 +443,8 @@
 				EC755EE220A190BD00AE8EAE /* Alamofire.framework */,
 				EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */,
 				EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */,
+				2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */,
+				B13DBF1AB3DD678AAA00AA61 /* Pods_DotstudioSampleApp_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -479,10 +497,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC755EDC20A1899B00AE8EAE /* Build configuration list for PBXNativeTarget "DotstudioSampleApp-iOS" */;
 			buildPhases = (
+				D22142FBB6C4769BAE96AC33 /* [CP] Check Pods Manifest.lock */,
 				EC755EC620A1899B00AE8EAE /* Sources */,
 				EC755EC720A1899B00AE8EAE /* Frameworks */,
 				EC755EC820A1899B00AE8EAE /* Resources */,
 				EC755EE620A190D400AE8EAE /* Carthage copy-frameworks Script */,
+				93A87E3B05D8CA397FD49112 /* [CP] Embed Pods Frameworks */,
+				2B1B6FA179B6062669C36447 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -598,6 +619,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2B1B6FA179B6062669C36447 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-resources.sh",
+				"${PODS_ROOT}/DotstudioIMAPlayer/DotstudioIMAPlayer/DotstudioIMAPlayerViewController.storyboard",
+				"${PODS_ROOT}/DotstudioIMAPlayer/DotstudioIMAPlayer/DotstudioIMAPlayer.xcassets",
+				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk/CastFrameworkAssets.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DotstudioIMAPlayerViewController.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93A87E3B05D8CA397FD49112 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioAPI.framework",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioAPI.framework.dSYM",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework.dSYM",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework.dSYM",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/HEXColor.framework",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/HEXColor.framework.dSYM",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioAPI.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/DotstudioAPI.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioUI.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/DotstudioUI.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Haneke.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HEXColor.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/HEXColor.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D22142FBB6C4769BAE96AC33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DotstudioSampleApp-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EAEFBE3F20A4287E000770BB /* Carthage copy-frameworks Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -842,6 +937,7 @@
 		};
 		EC755EDD20A1899B00AE8EAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 549635D4965F29FDE445DA98 /* Pods-DotstudioSampleApp-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -862,6 +958,7 @@
 		};
 		EC755EDE20A1899B00AE8EAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F51CE6D17045D9D0F52B0784 /* Pods-DotstudioSampleApp-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
