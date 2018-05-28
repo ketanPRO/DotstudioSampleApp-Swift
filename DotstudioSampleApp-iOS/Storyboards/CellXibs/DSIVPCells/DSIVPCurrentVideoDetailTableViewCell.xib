@@ -9,7 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections>
+                <outlet property="buttonCast" destination="jsB-JH-jC9" id="JnI-pO-Q8U"/>
+                <outlet property="buttonShare" destination="gHi-kV-hDB" id="TVh-e2-AIs"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DSIVPCurrentVideoDetailTableViewCell" id="gTV-IL-0wX" customClass="DSIVPCurrentVideoDetailTableViewCell" customModule="DotstudioSampleApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
@@ -46,17 +51,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHi-kV-hDB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHi-kV-hDB">
                                 <rect key="frame" x="298" y="5" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.72659361950000001" green="1" blue="0.90634141639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="hfs-4j-3em"/>
                                     <constraint firstAttribute="height" constant="30" id="vXT-jD-91l"/>
                                 </constraints>
+                                <state key="normal" image="cast-icon"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsB-JH-jC9">
                                 <rect key="frame" x="335" y="5" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.095337736490000005" green="0.40416840120000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="7Le-m5-FPu"/>
                                     <constraint firstAttribute="height" constant="30" id="QJh-ug-FpK"/>
@@ -104,4 +108,7 @@
             <point key="canvasLocation" x="-14.5" y="44"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="cast-icon" width="28" height="22"/>
+    </resources>
 </document>

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,44 +23,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gi-Wx-btW">
-                                <rect key="frame" x="10" y="10" width="44" height="50"/>
-                                <color key="backgroundColor" red="0.095337736486710067" green="0.40416840118315822" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="5" y="10" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cs1-XC-ZOx"/>
-                                    <constraint firstAttribute="width" constant="44" id="lwQ-Gb-EGY"/>
+                                    <constraint firstAttribute="height" constant="30" id="cs1-XC-ZOx"/>
+                                    <constraint firstAttribute="width" constant="30" id="lwQ-Gb-EGY"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="didClickExpandButtonWithSender:" destination="gTV-IL-0wX" eventType="primaryActionTriggered" id="3yX-jy-k7w"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2wV-yr-mrV" customClass="SPLTBaseImageView" customModule="DotstudioUI">
-                                <rect key="frame" x="59" y="5" width="109.5" height="73"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.02328635045" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="40" y="5" width="112" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="109.5" id="FBu-DT-EHe"/>
-                                    <constraint firstAttribute="height" constant="73" id="vVx-TE-RY1"/>
+                                    <constraint firstAttribute="width" secondItem="2wV-yr-mrV" secondAttribute="height" multiplier="16:9" id="1M3-UG-P1j"/>
+                                    <constraint firstAttribute="height" constant="63" id="vVx-TE-RY1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Ex-Gays and Fitness Apps&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCf-5Y-4eA">
-                                <rect key="frame" x="171.5" y="5" width="183.5" height="16"/>
+                                <rect key="frame" x="155" y="5" width="200" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Throwing Shade " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1Z-kd-6nJ">
-                                <rect key="frame" x="171.5" y="26" width="183.5" height="16"/>
+                                <rect key="frame" x="155" y="26" width="200" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-bg-0Kd">
-                                <rect key="frame" x="59" y="83" width="296" height="52"/>
+                                <rect key="frame" x="40" y="73" width="315" height="62"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Throwing Shade " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOe-1D-fEY">
-                                <rect key="frame" x="171.5" y="45" width="183.5" height="16"/>
+                                <rect key="frame" x="155" y="45" width="200" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,7 +73,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EOe-1D-fEY" firstAttribute="top" secondItem="R1Z-kd-6nJ" secondAttribute="bottom" constant="3" id="3QS-Jc-Rnh"/>
-                            <constraint firstItem="3gi-Wx-btW" firstAttribute="leading" secondItem="AlM-gj-rna" secondAttribute="leading" constant="10" id="4M3-16-Kex"/>
+                            <constraint firstItem="3gi-Wx-btW" firstAttribute="leading" secondItem="AlM-gj-rna" secondAttribute="leading" constant="5" id="4M3-16-Kex"/>
                             <constraint firstAttribute="trailing" secondItem="sCf-5Y-4eA" secondAttribute="trailing" constant="20" id="7fQ-ZP-TYJ"/>
                             <constraint firstItem="sCf-5Y-4eA" firstAttribute="leading" secondItem="2wV-yr-mrV" secondAttribute="trailing" constant="3" id="Cyt-gT-VVQ"/>
                             <constraint firstAttribute="width" constant="375" id="DHz-GO-fkx"/>
@@ -97,6 +102,11 @@
                 <constraint firstItem="AlM-gj-rna" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kBE-4j-lmg"/>
             </constraints>
             <size key="customSize" width="320" height="137"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="size" keyPath="videoImageSize">
+                    <size key="value" width="112" height="63"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="buttonExpand" destination="3gi-Wx-btW" id="Hwc-Uz-OSv"/>
                 <outlet property="imageViewCell" destination="2wV-yr-mrV" id="WcS-bk-oTa"/>

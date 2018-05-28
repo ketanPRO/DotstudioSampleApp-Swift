@@ -98,6 +98,13 @@ open class DSBrowseViewController: SPLTBrowseViewController {
         return UITableViewCell()
     }
     
+    open override func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectChannel channel: SPLTChannel, atIndex index: Int) {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            if let spltIVPPresentor = appDelegate.window?.rootViewController as? SPLTIVPPresentor {
+                spltIVPPresentor.openIVPViewControllerVideo(video: nil, in: channel, atAutoPlayIndex: nil, spltIVPViewControllerDelegate: nil)
+            }
+        }
+    }
     open override func spltHorizontalBaseTableViewCell(_ spltHorizontalBaseTableViewCell: SPLTHorizontalBaseTableViewCell, didSelectVideo video: SPLTVideo, inChannel channel: SPLTChannel?, atIndex index: Int) {
 //        if let channel = self.category?.channels[index] {
             if let appDelegate = UIApplication.shared.delegate as? AppDelegate {

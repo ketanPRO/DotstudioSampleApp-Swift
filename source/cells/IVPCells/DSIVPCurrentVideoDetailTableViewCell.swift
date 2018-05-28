@@ -55,10 +55,16 @@ open class DSIVPCurrentVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell
     @IBOutlet weak var constraintCellWidth: NSLayoutConstraint?
   
     var isExpanded:Bool = false
-    
+    let imageIconDefaultSize = CGSize(width: 66, height: 66)
+
+    @IBOutlet weak var buttonShare: UIButton!
+    @IBOutlet weak var buttonCast: UIButton!
     override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let imageTopBarShare = UIImage(icon: .FAShare, size: self.imageIconDefaultSize, textColor: .white, backgroundColor: .clear)
+        self.buttonShare.setImage(imageTopBarShare, for: .normal)
+
     }
     
 //    open func setCellWidth(_ width: CGFloat) {
