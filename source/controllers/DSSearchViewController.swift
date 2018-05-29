@@ -54,23 +54,7 @@ class DSSearchViewController: SPLTSearchViewController {
             super.collectionViewItemSpacing = newValue
         }
     }
-//    @IBOutlet override weak var constraintCollectionViewBottom: NSLayoutConstraint?
-    
-//    let spltSearchAPI = SPLTSearchAPI()
-//    var videosDict: [[String: AnyObject]] = [[:]] {
-//        didSet {
-//            self.videos.removeAll()
-//            for videoDict in videosDict {
-//                let spltVideo = SPLTVideo(searchResultVideoDict: videoDict)
-//                self.videos.append(spltVideo)
-//            }
-//        }
-//    }
-//    var videos: [SPLTVideo] = [] {
-//        didSet {
-//            //            self.collectionView?.reloadData()
-//        }
-//    }
+
     
     
     override func viewDidLoad() {
@@ -109,6 +93,7 @@ class DSSearchViewController: SPLTSearchViewController {
                 case .channel:
                     if indexPath.row < self.channels.count {
                         let channel = self.channels[indexPath.row]
+                        genericCollectionViewCell.imageKey = "spotlight_poster"
                         genericCollectionViewCell.setCellChannelData(channel, collectionViewImageSize: self.collectionViewImageSize)
                     }
                     break
@@ -151,31 +136,6 @@ class DSSearchViewController: SPLTSearchViewController {
                 }
             }
         }
-        
-        
-//        if let storyboard = self.storyboard {
-//            if let videoViewController = storyboard.instantiateViewController(withIdentifier: "DTSZVideoViewController") as? DTSZVideoViewController {
-//                #if USE_NEW_CHANNEL_SCREEN
-//                if indexPath.row < self.videos.count {
-//                    let video = self.videos[indexPath.row]
-//                    self.delegate?.didSelectSearchVideo(spltVideo: video)
-//                }
-//                #else
-//                if indexPath.row < self.videos.count {
-//                    let video = self.videos[indexPath.row]
-//                    if let strVideoId = video.strId {
-//                        let videoDetail: DTSZVideo = DTSZVideo(strVideoId: strVideoId)
-//                        videoViewController.setVideoDetailFromSearch(videoDetail_: videoDetail)
-//                        self.navigationController?.present(videoViewController, animated: true, completion: {
-//                            
-//                        })
-//                    }
-//                }
-//                #endif
-//                
-//                
-//            }
-//        }
     }
     
     

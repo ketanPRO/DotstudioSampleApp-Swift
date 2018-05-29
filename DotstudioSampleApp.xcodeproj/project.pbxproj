@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6C2A840320BD5D8F00BBA36E /* DSSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */; };
-		6C2A840520BD615B00BBA36E /* SPLTSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A840420BD615B00BBA36E /* SPLTSearchViewController.swift */; };
 		6C48D68E20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */; };
 		6C4C19FE20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C19FC20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib */; };
 		6C4C19FF20AA8B5A002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C19FD20AA8B5A002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.xib */; };
@@ -106,7 +105,6 @@
 		2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DotstudioSampleApp-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		549635D4965F29FDE445DA98 /* Pods-DotstudioSampleApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSearchViewController.swift; sourceTree = "<group>"; };
-		6C2A840420BD615B00BBA36E /* SPLTSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLTSearchViewController.swift; sourceTree = "<group>"; };
 		6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFeaturedHorizontalTableViewCell.swift; sourceTree = "<group>"; };
 		6C4C19FC20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSFeaturedHorizontalTableViewCell.xib; sourceTree = "<group>"; };
 		6C4C19FD20AA8B5A002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSFeaturedHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 				6C62D63420A3728F008C06E3 /* DSBrowseViewController.swift */,
 				EA2D4AE020AADEBF0018A025 /* DSCategoriesViewController.swift */,
 				EA2D4AE520AC43DC0018A025 /* DSCategoryViewController.swift */,
-				6C2A840420BD615B00BBA36E /* SPLTSearchViewController.swift */,
 				6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */,
 			);
 			path = controllers;
@@ -512,7 +509,7 @@
 				EC755EC820A1899B00AE8EAE /* Resources */,
 				EC755EE620A190D400AE8EAE /* Carthage copy-frameworks Script */,
 				C3F10B0FC7AA29AD893F572E /* [CP] Copy Pods Resources */,
-				62BDC90D23E0DBED1E157E58 /* [CP] Embed Pods Frameworks */,
+				7796664499A4628834896B7D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -629,7 +626,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		62BDC90D23E0DBED1E157E58 /* [CP] Embed Pods Frameworks */ = {
+		7796664499A4628834896B7D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -766,7 +763,6 @@
 				EA2D4B1420ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift in Sources */,
 				6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */,
 				6C62D63520A3728F008C06E3 /* DSBrowseViewController.swift in Sources */,
-				6C2A840520BD615B00BBA36E /* SPLTSearchViewController.swift in Sources */,
 				EA2D4AFC20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift in Sources */,
 				6C62D64320A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift in Sources */,
 				6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */,
