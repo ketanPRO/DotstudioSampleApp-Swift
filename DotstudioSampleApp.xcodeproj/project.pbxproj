@@ -347,8 +347,8 @@
 		EA2D4B0D20AD9ADA0018A025 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				EA2D4B0E20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift */,
 				EA2D4B1020AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib */,
+				EA2D4B0E20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";

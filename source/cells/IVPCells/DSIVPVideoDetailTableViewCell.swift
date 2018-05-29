@@ -59,21 +59,33 @@ open class DSIVPVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
     var videoImageSize: CGSize = CGSize(width: 112.0, height: 63.0)
     @IBOutlet weak var buttonExpand: UIButton?
     @IBOutlet weak var constraintCellWidth: NSLayoutConstraint?
+    var isInitialSetup: Bool = true
     let imageIconDefaultSize = CGSize(width: 44, height: 44)
 
     var isExpanded: Bool = false
     var delegate: DSIVPVideoDetailTableViewCellDelegate?
     
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+        
+    }
     override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let imageExpand = UIImage(icon: .FAEllipsisV, size: self.imageIconDefaultSize, textColor: .white, backgroundColor: .clear)
-        self.buttonExpand?.setImage(imageExpand, for: .normal)
     }
     
     open override func setCellData(_ video: SPLTVideo) {
         self.video = video
+        self.setupButtonIcons()
         super.setCellData(video)
+        self.isInitialSetup = false
+    }
+    
+    open func setupButtonIcons() {
+        if self.isInitialSetup {
+            let imageExpand = UIImage(icon: .FAEllipsisV, size: self.imageIconDefaultSize, textColor: .black, backgroundColor: .clear)
+            self.buttonExpand?.setImage(imageExpand, for: .normal)
+        }
     }
     
     open override func updateUI() {

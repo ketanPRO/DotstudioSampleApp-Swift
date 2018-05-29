@@ -6,33 +6,36 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="DSIVPVideosSectionHeaderView" id="iN0-l3-epB" customClass="DSIVPVideosSectionHeaderView" customModule="DotstudioSampleApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="DSIVPVideosSectionHeaderView" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="DSIVPVideosSectionHeaderView" customModule="DotstudioSampleApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Row-Ac-xfq">
-                    <rect key="frame" x="10" y="5" width="320" height="30"/>
+                    <rect key="frame" x="10" y="5" width="310" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDw-2O-F63">
-                    <rect key="frame" x="335" y="5" width="30" height="30"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.02328635045" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="325" y="5" width="40" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="GbQ-UG-wXA"/>
-                        <constraint firstAttribute="height" constant="30" id="hxX-16-jKa"/>
+                        <constraint firstAttribute="width" constant="40" id="GbQ-UG-wXA"/>
+                        <constraint firstAttribute="height" constant="40" id="hxX-16-jKa"/>
                     </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-r9-IrR">
-                    <rect key="frame" x="10" y="40" width="355" height="60"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-r9-IrR">
+                    <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="TVD-OM-jSq">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,22 +48,22 @@
                     </connections>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" red="0.92941176469999998" green="0.1137254902" blue="0.63530815969999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TZp-r9-IrR" secondAttribute="trailing" constant="10" id="Lmg-RN-yd9"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fDw-2O-F63" secondAttribute="trailing" constant="10" id="QCj-Ot-XK4"/>
-                <constraint firstItem="fDw-2O-F63" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="Wqf-It-mtu"/>
-                <constraint firstItem="TZp-r9-IrR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="XZn-dZ-oNa"/>
-                <constraint firstItem="Row-Ac-xfq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="fyU-Mg-4nq"/>
+                <constraint firstAttribute="trailing" secondItem="TZp-r9-IrR" secondAttribute="trailing" id="Lmg-RN-yd9"/>
+                <constraint firstAttribute="trailing" secondItem="fDw-2O-F63" secondAttribute="trailing" constant="10" id="QCj-Ot-XK4"/>
+                <constraint firstItem="fDw-2O-F63" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Wqf-It-mtu"/>
+                <constraint firstItem="TZp-r9-IrR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XZn-dZ-oNa"/>
+                <constraint firstItem="Row-Ac-xfq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="fyU-Mg-4nq"/>
                 <constraint firstItem="TZp-r9-IrR" firstAttribute="top" secondItem="Row-Ac-xfq" secondAttribute="bottom" constant="5" id="iE1-eO-Or6"/>
-                <constraint firstItem="Row-Ac-xfq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="mOU-2c-LGd"/>
+                <constraint firstItem="Row-Ac-xfq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="mOU-2c-LGd"/>
                 <constraint firstItem="TZp-r9-IrR" firstAttribute="top" secondItem="fDw-2O-F63" secondAttribute="bottom" constant="5" id="nmc-Kb-TdN"/>
-                <constraint firstItem="TZp-r9-IrR" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="xLF-dW-UQp"/>
+                <constraint firstItem="TZp-r9-IrR" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="xLF-dW-UQp"/>
                 <constraint firstItem="fDw-2O-F63" firstAttribute="leading" secondItem="Row-Ac-xfq" secondAttribute="trailing" constant="5" id="z0n-gV-uSZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="buttonMore" destination="fDw-2O-F63" id="hDh-7b-lfc"/>
                 <outlet property="collectionView" destination="TZp-r9-IrR" id="Txp-VJ-pW1"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="52"/>

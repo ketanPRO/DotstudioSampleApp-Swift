@@ -118,32 +118,32 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
     
     open override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 1 {
-            if let playlistChannel = self.channel as? SPLTPlaylistChannel {
-                if playlistChannel.playlistVideos.count > 0 {
-                    return CGSize(width: 375.0, height: 100.0)
-                }
+            if let spltMultiLevelChannel = self.channel as? SPLTMultiLevelChannel {
+                return CGSize(width: collectionView.bounds.size.width, height: 100.0)
+            } else if let playlistChannel = self.channel as? SPLTPlaylistChannel {
+                return CGSize(width: collectionView.bounds.size.width, height: 50.0)
+//                if playlistChannel.playlistVideos.count > 0 {
+//                    return CGSize(width: collectionView.bounds.size.width, height: 100.0)
+//                }
             }
-            return CGSize(width: 0, height: 0.0)
         }
         return CGSize(width: 0.0, height: 0.0)
-        //        return super.collectionView(collectionView, layout: collectionViewLayout, referenceSizeForHeaderInSection: section)
     }
 
     open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if indexPath.section == 1 {
             switch kind {
             case UICollectionElementKindSectionHeader:
-                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                             withReuseIdentifier: "DSIVPVideosSectionHeaderView",
-                                                                             for: indexPath) as! DSIVPVideosSectionHeaderView
-                return headerView
+                if let dsIVPVideosSectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "DSIVPVideosSectionHeaderView", for: indexPath) as? DSIVPVideosSectionHeaderView {
+                    dsIVPVideosSectionHeaderView.setCellData(self.channel)
+                    return dsIVPVideosSectionHeaderView
+                }
             default:
                 fatalError("This should never happen!!")
             }
-        }else{
-            let uiCollectionReusableView = UICollectionReusableView(frame: CGRect.zero)
-            return uiCollectionReusableView
         }
+        let uiCollectionReusableView = UICollectionReusableView(frame: CGRect.zero)
+        return uiCollectionReusableView
     }
 
     

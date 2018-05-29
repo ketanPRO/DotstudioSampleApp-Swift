@@ -55,15 +55,14 @@ open class DSIVPCurrentVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell
     @IBOutlet weak var constraintCellWidth: NSLayoutConstraint?
   
     var isExpanded:Bool = false
+    var isInitialSetup: Bool = true
     let imageIconDefaultSize = CGSize(width: 66, height: 66)
 
-    @IBOutlet weak var buttonShare: UIButton!
-    @IBOutlet weak var buttonCast: UIButton!
+    @IBOutlet weak var buttonShare: UIButton?
+    @IBOutlet weak var buttonCast: UIButton?
     override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let imageTopBarShare = UIImage(icon: .FAShare, size: self.imageIconDefaultSize, textColor: .white, backgroundColor: .clear)
-        self.buttonShare.setImage(imageTopBarShare, for: .normal)
 
     }
     
@@ -72,13 +71,22 @@ open class DSIVPCurrentVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell
 //        self.constraintCellWidth?.isActive = true
 //    }
     
+    
     open func setCellData(_ video: SPLTVideo, isExpanded:Bool = false) {
 //        self.setCellWidth(375.0)
         self.video = video
+        self.setupButtonIcons()
         self.isExpanded = isExpanded
         self.setCellData(video)
+        self.isInitialSetup = false
     }
-    
+    open func setupButtonIcons() {
+        if self.isInitialSetup {
+            let imageTopBarShare = UIImage(icon: .FAShare, size: self.imageIconDefaultSize, textColor: .black, backgroundColor: .clear)
+            self.buttonShare?.setImage(imageTopBarShare, for: .normal)
+        }
+    }
+
     open override func updateUI() {
         super.updateUI()
         if self.isExpanded == true {
