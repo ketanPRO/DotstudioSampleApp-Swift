@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C2A840320BD5D8F00BBA36E /* DSSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */; };
+		6C2A840520BD615B00BBA36E /* SPLTSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A840420BD615B00BBA36E /* SPLTSearchViewController.swift */; };
 		6C48D68E20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */; };
 		6C4C19FE20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C19FC20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib */; };
 		6C4C19FF20AA8B5A002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C19FD20AA8B5A002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.xib */; };
@@ -24,6 +26,7 @@
 		6C62D65220A47E4E008C06E3 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C62D65120A47E4E008C06E3 /* Haneke.framework */; };
 		6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7E120C20A34CBF00A7BE1C /* splash.storyboard */; };
 		6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */; };
+		6CAEFE0020BD732000481D51 /* search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CAEFDFF20BD732000481D51 /* search.storyboard */; };
 		6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CB8FC4720A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CBB5DAC20B4937B009C1CA2 /* DSGenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B71920AABA6D000A35CF /* DSGenericCollectionViewCell.swift */; };
@@ -102,6 +105,8 @@
 /* Begin PBXFileReference section */
 		2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DotstudioSampleApp-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		549635D4965F29FDE445DA98 /* Pods-DotstudioSampleApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSearchViewController.swift; sourceTree = "<group>"; };
+		6C2A840420BD615B00BBA36E /* SPLTSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLTSearchViewController.swift; sourceTree = "<group>"; };
 		6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFeaturedHorizontalTableViewCell.swift; sourceTree = "<group>"; };
 		6C4C19FC20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSFeaturedHorizontalTableViewCell.xib; sourceTree = "<group>"; };
 		6C4C19FD20AA8B5A002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSFeaturedHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -116,6 +121,7 @@
 		6C62D65120A47E4E008C06E3 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = Carthage/Build/iOS/Haneke.framework; sourceTree = "<group>"; };
 		6C7E120C20A34CBF00A7BE1C /* splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
 		6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSplashViewController.swift; sourceTree = "<group>"; };
+		6CAEFDFF20BD732000481D51 /* search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = search.storyboard; sourceTree = "<group>"; };
 		6CB8FC4520A9E776009A70B5 /* DSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConfig.swift; sourceTree = "<group>"; };
 		B13DBF1AB3DD678AAA00AA61 /* Pods_DotstudioSampleApp_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotstudioSampleApp_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -272,6 +278,8 @@
 				6C62D63420A3728F008C06E3 /* DSBrowseViewController.swift */,
 				EA2D4AE020AADEBF0018A025 /* DSCategoriesViewController.swift */,
 				EA2D4AE520AC43DC0018A025 /* DSCategoryViewController.swift */,
+				6C2A840420BD615B00BBA36E /* SPLTSearchViewController.swift */,
+				6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -473,6 +481,7 @@
 				6C62D63020A36DBE008C06E3 /* categories.storyboard */,
 				EA2D4AE820AC52B60018A025 /* category.storyboard */,
 				EA2D4AFD20AD5BB70018A025 /* ivp.storyboard */,
+				6CAEFDFF20BD732000481D51 /* search.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -503,7 +512,7 @@
 				EC755EC820A1899B00AE8EAE /* Resources */,
 				EC755EE620A190D400AE8EAE /* Carthage copy-frameworks Script */,
 				C3F10B0FC7AA29AD893F572E /* [CP] Copy Pods Resources */,
-				A58AA372480A694BCBB44B08 /* [CP] Embed Pods Frameworks */,
+				62BDC90D23E0DBED1E157E58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -596,6 +605,7 @@
 				EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib in Resources */,
 				6C4C19FE20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib in Resources */,
 				EA2D4AFE20AD5BB70018A025 /* ivp.storyboard in Resources */,
+				6CAEFE0020BD732000481D51 /* search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +629,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A58AA372480A694BCBB44B08 /* [CP] Embed Pods Frameworks */ = {
+		62BDC90D23E0DBED1E157E58 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -632,8 +642,6 @@
 				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework.dSYM",
 				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework",
 				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework.dSYM",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/HEXColor.framework",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/HEXColor.framework.dSYM",
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -644,8 +652,6 @@
 				"${DWARF_DSYM_FOLDER_PATH}/DotstudioUI.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Haneke.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HEXColor.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/HEXColor.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,11 +760,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC755ED020A1899B00AE8EAE /* ViewController.swift in Sources */,
+				6C2A840320BD5D8F00BBA36E /* DSSearchViewController.swift in Sources */,
 				EA2D4B0F20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift in Sources */,
 				EA22B71120A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */,
 				EA2D4B1420ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift in Sources */,
 				6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */,
 				6C62D63520A3728F008C06E3 /* DSBrowseViewController.swift in Sources */,
+				6C2A840520BD615B00BBA36E /* SPLTSearchViewController.swift in Sources */,
 				EA2D4AFC20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift in Sources */,
 				6C62D64320A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift in Sources */,
 				6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */,

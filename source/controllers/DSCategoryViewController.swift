@@ -97,7 +97,6 @@ extension DSCategoryViewController {
         if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSGenericCollectionViewCell", for: indexPath) as? DSGenericCollectionViewCell {
             let channel = self.category!.channels[indexPath.row]
             let collectionViewImageSize = self.getCollectionViewImageSize()
-            categoryCollectionViewCell.cellType = DSGenericCollectionViewCell.cellTypes.Channel.rawValue
             categoryCollectionViewCell.setCellChannelData(channel, collectionViewImageSize: collectionViewImageSize)
             return categoryCollectionViewCell
         }

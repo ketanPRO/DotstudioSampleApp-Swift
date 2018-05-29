@@ -56,6 +56,14 @@ class DSCategoriesViewController: SPLTCategoriesViewController {
             super.collectionViewItemSpacing = newValue
         }
     }
+    @IBInspectable override open var filterCriteria: String {
+        get {
+            return super.filterCriteria
+        }
+        set {
+            super.filterCriteria = newValue
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,7 +113,6 @@ extension DSCategoriesViewController {
         if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSGenericCollectionViewCell", for: indexPath) as? DSGenericCollectionViewCell {
                 let category = self.categories[indexPath.row]
 //                let collectionViewImageSize = self.getCollectionViewImageSize()
-                categoryCollectionViewCell.cellType = DSGenericCollectionViewCell.cellTypes.Category.rawValue
                 categoryCollectionViewCell.setCellData(category, collectionViewImageSize: self.collectionViewImageSize)
             return categoryCollectionViewCell
         }

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="SanFranciscoText-Regular.otf">
+            <string>SanFranciscoText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="aD1-fu-BiS">
+            <objects>
+                <viewController storyboardIdentifier="DSSearchViewController" title="Search" id="ifu-B3-4hH" customClass="DSSearchViewController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nfr-fb-QzW"/>
+                        <viewControllerLayoutGuide type="bottom" id="fzo-OY-sdh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U4r-t2-z9m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="XGN-ej-5I6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ifu-B3-4hH" id="pCx-Ku-SK2"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-tx-IRX">
+                                <rect key="frame" x="0.0" y="56" width="375" height="547"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Gur-po-kH3">
+                                    <size key="itemSize" width="300" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="APE-38-xyJ" customClass="DTSZSpotlightVideoCollectionViewCell" customModule="DotstudioSampleApp" customModuleProvider="target">
+                                        <rect key="frame" x="37.5" y="0.0" width="300" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z4y-gY-xmK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="z4y-gY-xmK" secondAttribute="height" multiplier="16:9" id="BzD-u2-LEO"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccd-K6-8fh" customClass="K10BaseGradientLabel" customModule="DotstudioSampleApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="RjP-Sz-FhU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v15-5N-fI6">
+                                                    <rect key="frame" x="0.0" y="172" width="300" height="14"/>
+                                                    <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBottomGradient" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF5-aO-5PN">
+                                                    <rect key="frame" x="0.0" y="186" width="300" height="14"/>
+                                                    <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="z4y-gY-xmK" firstAttribute="leading" secondItem="APE-38-xyJ" secondAttribute="leading" id="2jZ-8d-KTa"/>
+                                            <constraint firstItem="v15-5N-fI6" firstAttribute="leading" secondItem="APE-38-xyJ" secondAttribute="leading" id="3sS-iR-yO1"/>
+                                            <constraint firstItem="LF5-aO-5PN" firstAttribute="top" secondItem="v15-5N-fI6" secondAttribute="bottom" id="HmT-0W-EFI"/>
+                                            <constraint firstItem="Ccd-K6-8fh" firstAttribute="top" secondItem="APE-38-xyJ" secondAttribute="top" id="NTn-eo-K3r"/>
+                                            <constraint firstItem="Ccd-K6-8fh" firstAttribute="leading" secondItem="APE-38-xyJ" secondAttribute="leading" id="OEe-Ey-DR5"/>
+                                            <constraint firstAttribute="trailing" secondItem="z4y-gY-xmK" secondAttribute="trailing" id="OZ1-0q-P5l"/>
+                                            <constraint firstItem="z4y-gY-xmK" firstAttribute="top" secondItem="APE-38-xyJ" secondAttribute="top" id="SR2-uA-mxI"/>
+                                            <constraint firstAttribute="bottom" secondItem="LF5-aO-5PN" secondAttribute="bottom" id="eLO-OQ-8T8"/>
+                                            <constraint firstAttribute="trailing" secondItem="LF5-aO-5PN" secondAttribute="trailing" id="fUm-5W-yDN"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ccd-K6-8fh" secondAttribute="trailing" id="gbR-Ix-Vot"/>
+                                            <constraint firstItem="LF5-aO-5PN" firstAttribute="leading" secondItem="APE-38-xyJ" secondAttribute="leading" id="vLR-3Y-Sq3"/>
+                                            <constraint firstAttribute="trailing" secondItem="v15-5N-fI6" secondAttribute="trailing" id="y29-RY-ewi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="z4y-gY-xmK" id="kWd-o9-5ua"/>
+                                            <outlet property="labelSecondaryTitle" destination="LF5-aO-5PN" id="0ca-Qx-eNn"/>
+                                            <outlet property="labelTitle" destination="v15-5N-fI6" id="SQw-B8-KfG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ifu-B3-4hH" id="hwn-oK-8r1"/>
+                                    <outlet property="delegate" destination="ifu-B3-4hH" id="N5s-Uk-KcV"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xcc-tx-IRX" secondAttribute="trailing" id="9Du-Fw-fSw"/>
+                            <constraint firstAttribute="trailing" secondItem="XGN-ej-5I6" secondAttribute="trailing" id="GSk-5Z-wtc"/>
+                            <constraint firstItem="fzo-OY-sdh" firstAttribute="top" secondItem="Xcc-tx-IRX" secondAttribute="bottom" id="VcV-Mi-8sX"/>
+                            <constraint firstItem="Xcc-tx-IRX" firstAttribute="leading" secondItem="U4r-t2-z9m" secondAttribute="leading" id="W6L-JU-G3a"/>
+                            <constraint firstItem="Xcc-tx-IRX" firstAttribute="top" secondItem="XGN-ej-5I6" secondAttribute="bottom" id="Wdo-BY-KAe"/>
+                            <constraint firstItem="XGN-ej-5I6" firstAttribute="leading" secondItem="U4r-t2-z9m" secondAttribute="leading" id="XXA-la-hcW"/>
+                            <constraint firstItem="XGN-ej-5I6" firstAttribute="top" secondItem="Nfr-fb-QzW" secondAttribute="bottom" id="r7d-9c-zXT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Ph-B7-D3Z"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="size" keyPath="collectionViewImageSize">
+                            <size key="value" width="154" height="154"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="collectionViewNumberOfColumns">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="collectionViewItemSpacing">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="collectionView" destination="Xcc-tx-IRX" id="37L-u6-eHk"/>
+                        <outlet property="constraintCollectionViewBottom" destination="VcV-Mi-8sX" id="NIp-Yz-MGL"/>
+                        <outlet property="searchBar" destination="XGN-ej-5I6" id="X1f-MR-ZbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rM-Y2-6CT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704.79999999999995" y="-3959.3703148425789"/>
+        </scene>
+    </scenes>
+</document>

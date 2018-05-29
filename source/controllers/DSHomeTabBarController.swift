@@ -18,6 +18,11 @@ open class DSHomeTabBarController: SPLTHomeTabBarController {
         super.viewDidLoad()
     }
     
+    open override func addTabBarViewControllers() {
+        self.addBrowseViewController()
+        self.addCategoriesViewController()
+        self.addSearchViewController()
+    }
     open override func addBrowseViewController() {
         if let dsBrowseViewController = self.getViewControllerFromStoryboardName("browse", strViewControllerIdentifier: "DSBrowseViewController") as? DSBrowseViewController {
             self.spltBrowseViewController = dsBrowseViewController
@@ -36,6 +41,17 @@ open class DSHomeTabBarController: SPLTHomeTabBarController {
             #if os(iOS)
                 let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsCategoriesViewController)
                 self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
+            #endif
+        }
+    }
+    
+    open func addSearchViewController() {
+        if let dsSearchViewController = self.getViewControllerFromStoryboardName("search", strViewControllerIdentifier: "DSSearchViewController") as? DSSearchViewController {
+//            self.spltCategoriesViewController = dsSearchViewController
+            self.tabViewControllers.append(dsSearchViewController)
+            #if os(iOS)
+            let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsSearchViewController)
+            self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
             #endif
         }
     }
