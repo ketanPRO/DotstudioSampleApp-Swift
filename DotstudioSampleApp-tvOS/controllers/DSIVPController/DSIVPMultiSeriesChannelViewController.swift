@@ -10,16 +10,23 @@ import UIKit
 import DotstudioUI
 import DotstudioAPI
 
-class DSIVPMultiSeriesChannelViewController: UIViewController {
+public protocol DSIVPMultiSeriesChannelViewControllerDelegate {
+    func didClickCloseButton(_ dsIVPMultiSeriesChannelViewController: DSIVPMultiSeriesChannelViewController)
+}
 
+public class DSIVPMultiSeriesChannelViewController: UIViewController {
+
+    var delegate: DSIVPMultiSeriesChannelViewControllerDelegate?
     var channel:SPLTChannel?
-    override func viewDidLoad() {
+    var curVideo: SPLTVideo?
+    var autoPlayIndex: Int?
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

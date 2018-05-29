@@ -51,7 +51,9 @@ extension DSHomeTabBarController {
 //MARK: - SPLTIVPPresentor methods
 extension DSHomeTabBarController: SPLTIVPPresentor {
     
-    public func openIVPViewControllerVideo(video: SPLTVideo?, in channel: SPLTChannel?, atAutoPlayIndex autoPlayIndex: Int?, spltIVPViewControllerDelegate: SPLTIVPViewControllerDelegate?) {
+    public func openIVPViewControllerVideo(video: SPLTVideo?, in channel: SPLTChannel?, atAutoPlayIndex autoPlayIndex: Int?, spltIVPViewControllerDelegate: SPLTIVPPresentorDelegate?) {
+
+//    public func openIVPViewControllerVideo(video: SPLTVideo?, in channel: SPLTChannel?, atAutoPlayIndex autoPlayIndex: Int?, spltIVPViewControllerDelegate: SPLTIVPViewControllerDelegate?) {
         if let dsIVPMultiSeriesChannelViewController = self.getViewControllerFromStoryboardName("ivp", strViewControllerIdentifier: "DSIVPMultiSeriesChannelViewController") as? DSIVPMultiSeriesChannelViewController {
             dsIVPMultiSeriesChannelViewController.channel = channel
             dsIVPMultiSeriesChannelViewController.autoPlayIndex = autoPlayIndex

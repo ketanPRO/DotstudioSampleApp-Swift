@@ -502,8 +502,8 @@
 				EC755EC720A1899B00AE8EAE /* Frameworks */,
 				EC755EC820A1899B00AE8EAE /* Resources */,
 				EC755EE620A190D400AE8EAE /* Carthage copy-frameworks Script */,
-				2B1B6FA179B6062669C36447 /* [CP] Copy Pods Resources */,
-				D6E5C8352793E138CE418A9D /* [CP] Embed Pods Frameworks */,
+				C3F10B0FC7AA29AD893F572E /* [CP] Copy Pods Resources */,
+				A58AA372480A694BCBB44B08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -619,7 +619,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B1B6FA179B6062669C36447 /* [CP] Copy Pods Resources */ = {
+		A58AA372480A694BCBB44B08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioAPI.framework",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioAPI.framework.dSYM",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework.dSYM",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework.dSYM",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/HEXColor.framework",
+				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/HEXColor.framework.dSYM",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioAPI.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/DotstudioAPI.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioUI.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/DotstudioUI.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Haneke.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HEXColor.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/HEXColor.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3F10B0FC7AA29AD893F572E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -657,40 +691,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D6E5C8352793E138CE418A9D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioAPI.framework",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioAPI.framework.dSYM",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework.dSYM",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework.dSYM",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/HEXColor.framework",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/HEXColor.framework.dSYM",
-				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioAPI.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/DotstudioAPI.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioUI.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/DotstudioUI.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Haneke.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HEXColor.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/HEXColor.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EAEFBE3F20A4287E000770BB /* Carthage copy-frameworks Script */ = {

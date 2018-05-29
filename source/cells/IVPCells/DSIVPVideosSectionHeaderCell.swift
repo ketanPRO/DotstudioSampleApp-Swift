@@ -10,6 +10,7 @@ import UIKit
 
 class DSIVPVideosSectionHeaderCell: UICollectionViewCell {
 
+    @IBOutlet open weak override var labelTitle: UILabel?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

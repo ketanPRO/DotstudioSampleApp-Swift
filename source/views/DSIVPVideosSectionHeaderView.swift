@@ -72,11 +72,22 @@ class DSIVPVideosSectionHeaderView: UICollectionReusableView {
 
 extension DSIVPVideosSectionHeaderView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        if let spltMultiLevelChannel = self.spltMultiLevelChannel {
+            return spltMultiLevelChannel.childChannels.count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let categoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPVideosSectionHeaderCell", for: indexPath) as? DSIVPVideosSectionHeaderCell {
+            if let spltMultiLevelChannel = self.spltMultiLevelChannel {
+                if indexPath.row < spltMultiLevelChannel.childChannels.count {
+                    let childChannel = spltMultiLevelChannel.childChannels[indexPath.row]
+                    if let strTitle = childChannel.strTitle {
+                        categoryCollectionViewCell.labelTitle?.text = strTitle
+                    }
+                }
+            }
             return categoryCollectionViewCell
         }
         return UICollectionViewCell()
