@@ -75,10 +75,16 @@ open class DSIVPVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
     }
     
     open override func setCellData(_ video: SPLTVideo) {
-        self.video = video
-        self.setupButtonIcons()
-        super.setCellData(video)
-        self.isInitialSetup = false
+//        if video.strId == self.video?.strId {
+//            // Video is already set & UI, so just update expanded state.
+//            self.updateExpandedState()
+//        } else {
+            // Else setup all data...
+            self.video = video
+            self.setupButtonIcons()
+            super.setCellData(video)
+            self.isInitialSetup = false
+//        }
     }
     
     open func setupButtonIcons() {
@@ -90,6 +96,10 @@ open class DSIVPVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
     
     open override func updateUI() {
         super.updateUI()
+        self.updateExpandedState()
+    }
+    
+    func updateExpandedState() {
         if let video = self.video {
             self.isExpanded = video.isExpandedUI
             if video.isExpandedUI {

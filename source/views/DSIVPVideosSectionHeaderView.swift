@@ -9,7 +9,12 @@
 import UIKit
 import DotstudioAPI
 
+protocol DSIVPVideosSectionHeaderViewDelegate {
+    func didClickExpandButtonInHeaderView(_ dsIVPVideosSectionHeaderView :DSIVPVideosSectionHeaderView)
+}
 class DSIVPVideosSectionHeaderView: UICollectionReusableView {
+    
+    var delegate: DSIVPVideosSectionHeaderViewDelegate?
    @IBOutlet weak var collectionView: UICollectionView?
     
     @IBOutlet weak var buttonMore: UIButton?
@@ -60,6 +65,9 @@ class DSIVPVideosSectionHeaderView: UICollectionReusableView {
         }
     }
     
+    @IBAction func didClickExpandButton(sender: UIButton) {
+        self.delegate?.didClickExpandButtonInHeaderView(self)
+    }
 }
 
 extension DSIVPVideosSectionHeaderView : UICollectionViewDataSource {
