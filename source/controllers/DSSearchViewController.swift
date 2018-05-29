@@ -120,34 +120,39 @@ class DSSearchViewController: SPLTSearchViewController {
                     break
             }
             
-//            let category = self.categories[indexPath.row]
-//            //                let collectionViewImageSize = self.getCollectionViewImageSize()
-//            categoryCollectionViewCell.cellType = DSGenericCollectionViewCell.cellTypes.Category.rawValue
-//            categoryCollectionViewCell.setCellData(category, collectionViewImageSize: self.collectionViewImageSize)
             return genericCollectionViewCell
         }
         return UICollectionViewCell()
-//        let videoCollectionViewCell: DTSZSpotlightVideoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! DTSZSpotlightVideoCollectionViewCell
-//        if indexPath.row < self.videos.count {
-//            videoCollectionViewCell.video = self.videos[indexPath.row]
-//        }
-//        return videoCollectionViewCell
-        return UICollectionViewCell()
     }
-    
-//    override func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-//        return 0
-//    }
-    //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-    //        return 1
-    //    }
-//}
 
 //MARK: -
 //MARK: - extension UICollectionViewDelegate
 
 //extension DSSearchViewController: UICollectionViewDelegate {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            if let spltIVPPresentor = appDelegate.window?.rootViewController as? SPLTIVPPresentor {
+                
+                switch self.searchType {
+                case .channel:
+                    if indexPath.row < self.channels.count {
+                        let channel = self.channels[indexPath.row]
+                        spltIVPPresentor.openIVPViewControllerVideo(video: nil, in: channel, atAutoPlayIndex: nil, spltIVPViewControllerDelegate: nil)
+                    }
+                    break
+                case .video:
+                    if indexPath.row < self.videos.count {
+                        let video = self.videos[indexPath.row]
+                        spltIVPPresentor.openIVPViewControllerVideo(video: video, in: nil, atAutoPlayIndex: nil, spltIVPViewControllerDelegate: nil)
+                    }
+                    break
+                }
+            }
+        }
+        
+        
 //        if let storyboard = self.storyboard {
 //            if let videoViewController = storyboard.instantiateViewController(withIdentifier: "DTSZVideoViewController") as? DTSZVideoViewController {
 //                #if USE_NEW_CHANNEL_SCREEN

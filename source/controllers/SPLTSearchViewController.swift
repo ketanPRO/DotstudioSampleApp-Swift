@@ -113,10 +113,6 @@ open class SPLTSearchViewController: SPLTBaseViewController, UISearchBarDelegate
     open func searchVideoResultsWithTerm(strSearchTerm: String) {
         //        self.showProgress()
         SPLTSearchAPI().searchVideoResults(strSearchTerm, completion: { (searchVideoResults) in
-            // search results
-            //            if let hitsDictArray = searchResult["hits"] as? [[String: AnyObject]] {
-            //                self.searchResultDictArray = hitsDictArray
-            //            }
             if let videoDictSearchResults = searchVideoResults["hits"] as? [[String: AnyObject]] {
                 self.videosDict = videoDictSearchResults
                 self.collectionView?.reloadData()
@@ -130,10 +126,6 @@ open class SPLTSearchViewController: SPLTBaseViewController, UISearchBarDelegate
     open func searchChannelResultsWithTerm(strSearchTerm: String) {
         //        self.showProgress()
         SPLTSearchAPI().getSearchResults(strSearchTerm, completion: { (searchChannelResults) in
-            // search results
-            //            if let hitsDictArray = searchResult["hits"] as? [[String: AnyObject]] {
-            //                self.searchResultDictArray = hitsDictArray
-            //            }
             if let channelDictSearchResults = searchChannelResults["hits"] as? [[String: AnyObject]] {
                 self.channelsDict = channelDictSearchResults
                 self.collectionView?.reloadData()
@@ -199,49 +191,19 @@ open class SPLTSearchViewController: SPLTBaseViewController, UISearchBarDelegate
         }
     }
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let videoCollectionViewCell: DTSZSpotlightVideoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! DTSZSpotlightVideoCollectionViewCell
-//        if indexPath.row < self.videos.count {
-//            videoCollectionViewCell.video = self.videos[indexPath.row]
-//        }
         return UICollectionViewCell()
     }
     
     open func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
-    //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-    //        return 1
-    //    }
-
     
     
     
 //MARK: -
 //MARK: - extension UICollectionViewDelegate
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        if let storyboard = self.storyboard {
-        //            if let videoViewController = storyboard.instantiateViewController(withIdentifier: "DTSZVideoViewController") as? DTSZVideoViewController {
-        //                #if USE_NEW_CHANNEL_SCREEN
-        //                if indexPath.row < self.videos.count {
-        //                    let video = self.videos[indexPath.row]
-        //                    self.delegate?.didSelectSearchVideo(spltVideo: video)
-        //                }
-        //                #else
-        //                if indexPath.row < self.videos.count {
-        //                    let video = self.videos[indexPath.row]
-        //                    if let strVideoId = video.strId {
-        //                        let videoDetail: DTSZVideo = DTSZVideo(strVideoId: strVideoId)
-        //                        videoViewController.setVideoDetailFromSearch(videoDetail_: videoDetail)
-        //                        self.navigationController?.present(videoViewController, animated: true, completion: {
-        //
-        //                        })
-        //                    }
-        //                }
-        //                #endif
-        //
-        //
-        //            }
-        //        }
+
     }
     
     
