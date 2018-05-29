@@ -23,7 +23,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qju-at-xde">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zzy-By-9cs" customClass="SPLTBaseImageView" customModule="DotstudioUI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zzy-By-9cs" customClass="SPLTBaseImageView" customModule="DotstudioUI">
                                 <rect key="frame" x="2" y="2" width="316" height="178"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zzy-By-9cs" secondAttribute="height" multiplier="16:9" id="cZd-Ud-U7e"/>
