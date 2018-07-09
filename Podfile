@@ -1,7 +1,8 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.2'
+
 
 target 'DotstudioSampleApp-iOS' do
+    platform :ios, '9.2'
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   # use_frameworks!
 
@@ -11,10 +12,13 @@ target 'DotstudioSampleApp-iOS' do
 
 end
 
-#target 'DotstudioSampleApp-tvOS' do
+target 'DotstudioSampleApp-tvOS' do
+    platform :tvos, '9.2'
 #  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 #  use_frameworks!
 #
 #  # Pods for DotstudioSampleApp-tvOS
 #
-#end
+	pod 'DotstudioTVOSVastPlayer', :git => 'https://github.com/dotstudiopro/DotstudioTVOSVastPlayer.git'
+
+end

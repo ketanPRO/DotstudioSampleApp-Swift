@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10E7A749041C2C8C030C5AEC /* libPods-DotstudioSampleApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C20B01E132CDA1D5A3F08A1 /* libPods-DotstudioSampleApp-tvOS.a */; };
 		6C2A840320BD5D8F00BBA36E /* DSSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */; };
 		6C48D68E20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */; };
 		6C4C19FE20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C19FC20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib */; };
@@ -103,6 +104,7 @@
 
 /* Begin PBXFileReference section */
 		2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DotstudioSampleApp-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C20B01E132CDA1D5A3F08A1 /* libPods-DotstudioSampleApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DotstudioSampleApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		549635D4965F29FDE445DA98 /* Pods-DotstudioSampleApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSearchViewController.swift; sourceTree = "<group>"; };
 		6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFeaturedHorizontalTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,7 +123,8 @@
 		6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSplashViewController.swift; sourceTree = "<group>"; };
 		6CAEFDFF20BD732000481D51 /* search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = search.storyboard; sourceTree = "<group>"; };
 		6CB8FC4520A9E776009A70B5 /* DSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConfig.swift; sourceTree = "<group>"; };
-		B13DBF1AB3DD678AAA00AA61 /* Pods_DotstudioSampleApp_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotstudioSampleApp_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABC37275156C75B98CEEFE9 /* Pods-DotstudioSampleApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E2F18092F0B61A1D598AD83B /* Pods-DotstudioSampleApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA22B71620A9D9DD000A35CF /* DSHorizontalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSHorizontalTableViewCell.xib; sourceTree = "<group>"; };
@@ -229,6 +232,7 @@
 				EC755F6220A1EAC900AE8EAE /* Bolts.framework in Frameworks */,
 				EC755F6320A1EAC900AE8EAE /* FBSDKTVOSKit.framework in Frameworks */,
 				EC755F6420A1EAC900AE8EAE /* Auth0.framework in Frameworks */,
+				10E7A749041C2C8C030C5AEC /* libPods-DotstudioSampleApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +298,8 @@
 			children = (
 				549635D4965F29FDE445DA98 /* Pods-DotstudioSampleApp-iOS.debug.xcconfig */,
 				F51CE6D17045D9D0F52B0784 /* Pods-DotstudioSampleApp-iOS.release.xcconfig */,
+				9ABC37275156C75B98CEEFE9 /* Pods-DotstudioSampleApp-tvOS.debug.xcconfig */,
+				E2F18092F0B61A1D598AD83B /* Pods-DotstudioSampleApp-tvOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -449,7 +455,7 @@
 				EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */,
 				EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */,
 				2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */,
-				B13DBF1AB3DD678AAA00AA61 /* Pods_DotstudioSampleApp_tvOS.framework */,
+				3C20B01E132CDA1D5A3F08A1 /* libPods-DotstudioSampleApp-tvOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -524,10 +530,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC755F0020A1B03600AE8EAE /* Build configuration list for PBXNativeTarget "DotstudioSampleApp-tvOS" */;
 			buildPhases = (
+				13B32A89D223B316C33C1A6D /* [CP] Check Pods Manifest.lock */,
 				EC755EF020A1B03600AE8EAE /* Sources */,
 				EC755EF120A1B03600AE8EAE /* Frameworks */,
 				EC755EF220A1B03600AE8EAE /* Resources */,
 				EAEFBE3F20A4287E000770BB /* Carthage copy-frameworks Script */,
+				0D6441DCB15643DB68B1D6BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -626,6 +634,56 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D6441DCB15643DB68B1D6BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS-frameworks.sh",
+				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/Alamofire.framework",
+				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/Alamofire.framework.dSYM",
+				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/DotstudioAPI.framework",
+				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/DotstudioAPI.framework.dSYM",
+				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/DotstudioUI.framework",
+				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/DotstudioUI.framework.dSYM",
+				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/Haneke.framework",
+				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/Haneke.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Alamofire.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioAPI.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/DotstudioAPI.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioUI.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/DotstudioUI.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Haneke.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13B32A89D223B316C33C1A6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DotstudioSampleApp-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7796664499A4628834896B7D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -985,6 +1043,7 @@
 		};
 		EC755F0120A1B03600AE8EAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABC37275156C75B98CEEFE9 /* Pods-DotstudioSampleApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1007,6 +1066,7 @@
 		};
 		EC755F0220A1B03600AE8EAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F18092F0B61A1D598AD83B /* Pods-DotstudioSampleApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

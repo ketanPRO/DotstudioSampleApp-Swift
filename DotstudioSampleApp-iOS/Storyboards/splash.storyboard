@@ -13,7 +13,7 @@
         <!--Splash View Controller-->
         <scene sceneID="eSD-Re-ni7">
             <objects>
-                <viewController storyboardIdentifier="DSSplashViewController" id="nDS-4Q-Pfo" customClass="DSSplashViewController" customModule="DotstudioSampleApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DSSplashViewController" id="nDS-4Q-Pfo" customClass="DSSplashViewController" customModule="DotstudioSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWR-NP-7e0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

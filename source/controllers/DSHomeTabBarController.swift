@@ -46,19 +46,21 @@ open class DSHomeTabBarController: SPLTHomeTabBarController {
     }
     
     open func addSearchViewController() {
+        #if os(iOS)
         if let dsSearchViewController = self.getViewControllerFromStoryboardName("search", strViewControllerIdentifier: "DSSearchViewController") as? DSSearchViewController {
 //            self.spltCategoriesViewController = dsSearchViewController
             self.tabViewControllers.append(dsSearchViewController)
-            #if os(iOS)
+//            #if os(iOS)
             let spltTabBarBaseNavigationViewController = SPLTTabBarBaseNavigationViewController(rootViewController: dsSearchViewController)
             self.tabBarNavigationViewControllers.append(spltTabBarBaseNavigationViewController)
-            #endif
+//            #endif
         }
+        #endif
     }
     
-}
-
-extension DSHomeTabBarController {
+//}
+//
+//extension DSHomeTabBarController {
     open override func didUpdateCategoryChannelsForCategory(_ category: SPLTCategory) {
         //self.updateUI()
     }
@@ -66,6 +68,10 @@ extension DSHomeTabBarController {
 
 //MARK: - SPLTIVPPresentor methods
 extension DSHomeTabBarController: SPLTIVPPresentor {
+    public func openIVPViewControllerVideo(video: SPLTVideo?, in channel: SPLTChannel?, atAutoPlayIndex autoPlayIndex: Int?, spltIVPViewControllerDelegate: SPLTIVPPresentorDelegate?, bAdsEnabled: Bool) {
+        
+    }
+    
     
     public func openIVPViewControllerVideo(video: SPLTVideo?, in channel: SPLTChannel?, atAutoPlayIndex autoPlayIndex: Int?, spltIVPViewControllerDelegate: SPLTIVPPresentorDelegate?) {
 
