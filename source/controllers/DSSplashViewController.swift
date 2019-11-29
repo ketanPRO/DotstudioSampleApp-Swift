@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import DotstudioUI
-import DotstudioAPI
+import DotstudioPRO
 import UIKit
 
 @IBDesignable
@@ -47,6 +46,7 @@ open class DSSplashViewController: SPLTSplashViewController {
         SPLTTokenAPI().getToken { (accessToken) in
             print(accessToken)
         }
+        self.loadMainViewController()
     }
     
     override open func didReceiveMemoryWarning() {

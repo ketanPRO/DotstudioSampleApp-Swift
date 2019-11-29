@@ -8,8 +8,7 @@
 
 import Foundation
 import UIKit
-import DotstudioAPI
-import DotstudioUI
+import DotstudioPRO
 
 protocol DSSearchViewControllerDelegate {
     func didSelectSearchVideo(video: SPLTVideo)
@@ -61,7 +60,7 @@ class DSSearchViewController: SPLTSearchViewController {
         super.viewDidLoad()
         self.searchType = .channel
         
-        self.collectionView?.register(UINib(nibName: "DSGenericCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSGenericCollectionViewCell")
+        //self.collectionView?.register(UINib(nibName: "DSGenericCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DSGenericCollectionViewCell")
 
 
     }

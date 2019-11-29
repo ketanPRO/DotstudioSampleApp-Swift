@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import DotstudioUI
-import DotstudioAPI
+import DotstudioPRO
 
 public protocol DSIVPMultiSeriesChannelViewControllerDelegate {
     func didClickCloseButton(_ dsIVPMultiSeriesChannelViewController: DSIVPMultiSeriesChannelViewController)

@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import DotstudioUI
-import DotstudioAPI
+import DotstudioPRO
 import UIKit
 
 @IBDesignable

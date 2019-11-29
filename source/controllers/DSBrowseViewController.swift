@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import DotstudioUI
-import DotstudioAPI
+import DotstudioPRO
 import UIKit
 
 
@@ -51,24 +50,48 @@ open class DSBrowseViewController: SPLTBrowseViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView?.register(UINib(nibName: "DSFeaturedHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSFeaturedHorizontalTableViewCell")
-        self.tableView?.register(UINib(nibName: "DSHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSHorizontalTableViewCell")
+//        self.tableView?.register(UINib(nibName: "DSFeaturedHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSFeaturedHorizontalTableViewCell")
+//        self.tableView?.register(UINib(nibName: "DSHorizontalTableViewCell", bundle: nil), forCellReuseIdentifier: "DSHorizontalTableViewCell")
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            let width = self.view.frame.width
-            let height = width * 9.0 / 16.0
-            return height
+            
+            #if os(iOS)
+                if indexPath.section == 0 {
+                    let width = self.view.frame.width
+                    let height = (width * 9.0 / 16.0) + 20
+                    return height
+                }
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    if indexPath.section < self.categoriesBrowse.count {
+                        let category = self.categoriesBrowse[indexPath.section]
+                        if category is SPLTCustomCategory {
+                            return 230
+                        }
+                    }
+                    return self.tableViewHeightForIpad
+                }
+                if indexPath.section < self.categoriesBrowse.count {
+                    let category = self.categoriesBrowse[indexPath.section]
+                    if category is SPLTCustomCategory {
+                        return 170
+                    }
+                }
+                return self.tableViewHeight
+            #elseif os(tvOS)
+    //            if indexPath.section == 0 {
+    //                return 650
+    //            }
+                return self.tableViewHeight
+            #endif
+            
         }
-        return self.tableViewHeight
-    }
     
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var dsHorizontalTableViewCell_: DSHorizontalTableViewCell?
 
         if indexPath.section < self.categoriesBrowse.count {
-            let category = self.categoriesBrowse[indexPath.section]
+            //let category = self.categoriesBrowse[indexPath.section]
             var collectionViewItemSize = self.collectionViewItemSize
             var collectionViewImageSize = self.collectionViewImageSize
             if indexPath.section == 0 {
@@ -80,11 +103,12 @@ open class DSBrowseViewController: SPLTBrowseViewController {
                     collectionViewItemSize = size
                     collectionViewImageSize = size
                 }
-            } else {
-                if let dsHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalTableViewCell") as? DSHorizontalTableViewCell {
-                    dsHorizontalTableViewCell_ = dsHorizontalTableViewCell
-                }
             }
+//            else {
+//                if let dsHorizontalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DSHorizontalTableViewCell") as? DSHorizontalTableViewCell {
+//                    dsHorizontalTableViewCell_ = dsHorizontalTableViewCell
+//                }
+//            }
             
             if let dsHorizontalTableViewCell = dsHorizontalTableViewCell_ {
                 let category = self.categoriesBrowse[indexPath.section]

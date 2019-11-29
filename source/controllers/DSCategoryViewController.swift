@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import DotstudioUI
-import DotstudioAPI
+import DotstudioPRO
 
 class DSCategoryViewController: SPLTCategoryViewController {
     

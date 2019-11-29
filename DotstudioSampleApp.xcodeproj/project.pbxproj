@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10E7A749041C2C8C030C5AEC /* libPods-DotstudioSampleApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C20B01E132CDA1D5A3F08A1 /* libPods-DotstudioSampleApp-tvOS.a */; };
+		65D236171A6F3396897C6939 /* Pods_DotstudioSampleApp_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4214BB6045CB288F73D23FCD /* Pods_DotstudioSampleApp_tvOS.framework */; };
+		6AA1FDDEDD16CC92A1E7D01A /* Pods_DotstudioSampleApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65A78CB386088C5EEFCBEB /* Pods_DotstudioSampleApp_iOS.framework */; };
 		6C2A840320BD5D8F00BBA36E /* DSSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */; };
 		6C48D68E20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */; };
 		6C4C19FE20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4C19FC20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib */; };
@@ -23,14 +24,14 @@
 		6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62D63720A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift */; };
 		6C62D64320A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62D64220A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift */; };
 		6C62D64420A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62D64220A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift */; };
-		6C62D65220A47E4E008C06E3 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C62D65120A47E4E008C06E3 /* Haneke.framework */; };
 		6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7E120C20A34CBF00A7BE1C /* splash.storyboard */; };
 		6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E121020A34D6000A7BE1C /* DSSplashViewController.swift */; };
 		6CAEFE0020BD732000481D51 /* search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CAEFDFF20BD732000481D51 /* search.storyboard */; };
 		6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CB8FC4720A9E776009A70B5 /* DSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FC4520A9E776009A70B5 /* DSConfig.swift */; };
 		6CBB5DAC20B4937B009C1CA2 /* DSGenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B71920AABA6D000A35CF /* DSGenericCollectionViewCell.swift */; };
-		72580E8BA6C4C9DFDA167A30 /* libPods-DotstudioSampleApp-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */; };
+		D8CA54A123894168009DB190 /* DSHorizontalCategoryChannelVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA54A023894168009DB190 /* DSHorizontalCategoryChannelVideoCollectionViewCell.swift */; };
+		D8CA54A223894168009DB190 /* DSHorizontalCategoryChannelVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA54A023894168009DB190 /* DSHorizontalCategoryChannelVideoCollectionViewCell.swift */; };
 		EA22B71120A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
 		EA22B71220A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */; };
 		EA22B71320A9CB59000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */; };
@@ -43,24 +44,22 @@
 		EA2D4AE920AC52B60018A025 /* category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4AE820AC52B60018A025 /* category.storyboard */; };
 		EA2D4AFC20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4AFB20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift */; };
 		EA2D4AFE20AD5BB70018A025 /* ivp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4AFD20AD5BB70018A025 /* ivp.storyboard */; };
-		EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift */; };
-		EA2D4B0320AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib */; };
-		EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift */; };
-		EA2D4B0720AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib */; };
-		EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift */; };
-		EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib */; };
+		EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.swift */; };
+		EA2D4B0320AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.xib */; };
+		EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.swift */; };
+		EA2D4B0720AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.xib */; };
+		EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.swift */; };
+		EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.xib */; };
 		EA2D4B0F20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B0E20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift */; };
 		EA2D4B1120AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B1020AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib */; };
 		EA2D4B1420ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4B1220ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift */; };
 		EA2D4B1520ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2D4B1320ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.xib */; };
-		EA62255A20A96E9D00D4CC10 /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */; };
 		EA8AC94020B3E0870023FB7D /* DSCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2D4AE020AADEBF0018A025 /* DSCategoriesViewController.swift */; };
 		EA8AC94520B3E2FF0023FB7D /* DSIVPMultiSeriesChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8AC94420B3E2FF0023FB7D /* DSIVPMultiSeriesChannelViewController.swift */; };
 		EA8AC95C20B412170023FB7D /* DSFeaturedHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8AC95A20B412170023FB7D /* DSFeaturedHorizontalCollectionViewCell.xib */; };
 		EA8AC96120B4125D0023FB7D /* DSHorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8AC95F20B4125D0023FB7D /* DSHorizontalCollectionViewCell.xib */; };
 		EA8AC96620B4235C0023FB7D /* DSFeaturedHorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8AC95020B410600023FB7D /* DSFeaturedHorizontalTableViewCell.xib */; };
 		EA8AC96720B4235F0023FB7D /* DSHorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8AC95620B411E60023FB7D /* DSHorizontalTableViewCell.xib */; };
-		EAA9370820A4992C0031BB9B /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA9370720A4992B0031BB9B /* Haneke.framework */; };
 		EAAAFEF720A450E20071ADD4 /* tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF620A450E20071ADD4 /* tabbar.storyboard */; };
 		EAAAFEF920A4555C0071ADD4 /* browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEF820A4555C0071ADD4 /* browse.storyboard */; };
 		EAAAFEFB20A456090071ADD4 /* categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAAFEFA20A456090071ADD4 /* categories.storyboard */; };
@@ -78,33 +77,11 @@
 		EC755EF920A1B03600AE8EAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC755EF820A1B03600AE8EAE /* ViewController.swift */; };
 		EC755EFC20A1B03600AE8EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC755EFA20A1B03600AE8EAE /* Main.storyboard */; };
 		EC755EFE20A1B03600AE8EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC755EFD20A1B03600AE8EAE /* Assets.xcassets */; };
-		EC755F3A20A1EAB100AE8EAE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE220A190BD00AE8EAE /* Alamofire.framework */; };
-		EC755F3B20A1EAB100AE8EAE /* DotstudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */; };
-		EC755F4720A1EAB200AE8EAE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3D20A1EAB100AE8EAE /* FBSDKLoginKit.framework */; };
-		EC755F4820A1EAB200AE8EAE /* FBSDKPlacesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3E20A1EAB100AE8EAE /* FBSDKPlacesKit.framework */; };
-		EC755F4920A1EAB200AE8EAE /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F3F20A1EAB100AE8EAE /* FacebookLogin.framework */; };
-		EC755F4A20A1EAB200AE8EAE /* FacebookShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4020A1EAB100AE8EAE /* FacebookShare.framework */; };
-		EC755F4B20A1EAB200AE8EAE /* SimpleKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4120A1EAB200AE8EAE /* SimpleKeychain.framework */; };
-		EC755F4C20A1EAB200AE8EAE /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4220A1EAB200AE8EAE /* FacebookCore.framework */; };
-		EC755F4D20A1EAB200AE8EAE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4320A1EAB200AE8EAE /* Bolts.framework */; };
-		EC755F4E20A1EAB200AE8EAE /* Auth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4420A1EAB200AE8EAE /* Auth0.framework */; };
-		EC755F4F20A1EAB200AE8EAE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4520A1EAB200AE8EAE /* FBSDKCoreKit.framework */; };
-		EC755F5020A1EAB200AE8EAE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F4620A1EAB200AE8EAE /* FBSDKShareKit.framework */; };
-		EC755F5B20A1EAC900AE8EAE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5120A1EAC800AE8EAE /* Alamofire.framework */; };
-		EC755F5C20A1EAC900AE8EAE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5220A1EAC900AE8EAE /* FBSDKShareKit.framework */; };
-		EC755F5D20A1EAC900AE8EAE /* DotstudioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5320A1EAC900AE8EAE /* DotstudioUI.framework */; };
-		EC755F5E20A1EAC900AE8EAE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5420A1EAC900AE8EAE /* FBSDKCoreKit.framework */; };
-		EC755F5F20A1EAC900AE8EAE /* SimpleKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5520A1EAC900AE8EAE /* SimpleKeychain.framework */; };
-		EC755F6020A1EAC900AE8EAE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5620A1EAC900AE8EAE /* FBSDKLoginKit.framework */; };
-		EC755F6120A1EAC900AE8EAE /* DotstudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5720A1EAC900AE8EAE /* DotstudioAPI.framework */; };
-		EC755F6220A1EAC900AE8EAE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5820A1EAC900AE8EAE /* Bolts.framework */; };
-		EC755F6320A1EAC900AE8EAE /* FBSDKTVOSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5920A1EAC900AE8EAE /* FBSDKTVOSKit.framework */; };
-		EC755F6420A1EAC900AE8EAE /* Auth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC755F5A20A1EAC900AE8EAE /* Auth0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DotstudioSampleApp-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C20B01E132CDA1D5A3F08A1 /* libPods-DotstudioSampleApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DotstudioSampleApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A65A78CB386088C5EEFCBEB /* Pods_DotstudioSampleApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotstudioSampleApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4214BB6045CB288F73D23FCD /* Pods_DotstudioSampleApp_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotstudioSampleApp_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		549635D4965F29FDE445DA98 /* Pods-DotstudioSampleApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6C2A840220BD5D8F00BBA36E /* DSSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSearchViewController.swift; sourceTree = "<group>"; };
 		6C48D68D20A5449C006486AD /* DSFeaturedHorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFeaturedHorizontalTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +101,7 @@
 		6CAEFDFF20BD732000481D51 /* search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = search.storyboard; sourceTree = "<group>"; };
 		6CB8FC4520A9E776009A70B5 /* DSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConfig.swift; sourceTree = "<group>"; };
 		9ABC37275156C75B98CEEFE9 /* Pods-DotstudioSampleApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D8CA54A023894168009DB190 /* DSHorizontalCategoryChannelVideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSHorizontalCategoryChannelVideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E2F18092F0B61A1D598AD83B /* Pods-DotstudioSampleApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotstudioSampleApp-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA22B71020A9CADE000A35CF /* DSHorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSHorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -135,12 +113,12 @@
 		EA2D4AE820AC52B60018A025 /* category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = category.storyboard; sourceTree = "<group>"; };
 		EA2D4AFB20AD5B5E0018A025 /* DSIVPMultiSeriesChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPMultiSeriesChannelViewController.swift; sourceTree = "<group>"; };
 		EA2D4AFD20AD5BB70018A025 /* ivp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ivp.storyboard; sourceTree = "<group>"; };
-		EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPVideoDetailTableViewCell.swift; sourceTree = "<group>"; };
-		EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPVideoDetailTableViewCell.xib; sourceTree = "<group>"; };
-		EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPCurrentVideoDetailTableViewCell.swift; sourceTree = "<group>"; };
-		EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPCurrentVideoDetailTableViewCell.xib; sourceTree = "<group>"; };
-		EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPRecommendedVideoDetailTableViewCell.swift; sourceTree = "<group>"; };
-		EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPRecommendedVideoDetailTableViewCell.xib; sourceTree = "<group>"; };
+		EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPVideoDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPVideoDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPCurrentVideoDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPCurrentVideoDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPRecommendedVideoDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPRecommendedVideoDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		EA2D4B0E20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPVideosSectionHeaderView.swift; sourceTree = "<group>"; };
 		EA2D4B1020AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSIVPVideosSectionHeaderView.xib; sourceTree = "<group>"; };
 		EA2D4B1220ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSIVPVideosSectionHeaderCell.swift; sourceTree = "<group>"; };
@@ -199,21 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C62D65220A47E4E008C06E3 /* Haneke.framework in Frameworks */,
-				EC755F4720A1EAB200AE8EAE /* FBSDKLoginKit.framework in Frameworks */,
-				EC755F4820A1EAB200AE8EAE /* FBSDKPlacesKit.framework in Frameworks */,
-				EC755F4920A1EAB200AE8EAE /* FacebookLogin.framework in Frameworks */,
-				EC755F4A20A1EAB200AE8EAE /* FacebookShare.framework in Frameworks */,
-				EC755F4B20A1EAB200AE8EAE /* SimpleKeychain.framework in Frameworks */,
-				EC755F4C20A1EAB200AE8EAE /* FacebookCore.framework in Frameworks */,
-				EC755F4D20A1EAB200AE8EAE /* Bolts.framework in Frameworks */,
-				EC755F4E20A1EAB200AE8EAE /* Auth0.framework in Frameworks */,
-				EC755F4F20A1EAB200AE8EAE /* FBSDKCoreKit.framework in Frameworks */,
-				EC755F5020A1EAB200AE8EAE /* FBSDKShareKit.framework in Frameworks */,
-				EC755F3A20A1EAB100AE8EAE /* Alamofire.framework in Frameworks */,
-				EC755F3B20A1EAB100AE8EAE /* DotstudioAPI.framework in Frameworks */,
-				EA62255A20A96E9D00D4CC10 /* DotstudioUI.framework in Frameworks */,
-				72580E8BA6C4C9DFDA167A30 /* libPods-DotstudioSampleApp-iOS.a in Frameworks */,
+				6AA1FDDEDD16CC92A1E7D01A /* Pods_DotstudioSampleApp_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,18 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC755F5B20A1EAC900AE8EAE /* Alamofire.framework in Frameworks */,
-				EC755F5C20A1EAC900AE8EAE /* FBSDKShareKit.framework in Frameworks */,
-				EC755F5D20A1EAC900AE8EAE /* DotstudioUI.framework in Frameworks */,
-				EC755F5E20A1EAC900AE8EAE /* FBSDKCoreKit.framework in Frameworks */,
-				EAA9370820A4992C0031BB9B /* Haneke.framework in Frameworks */,
-				EC755F5F20A1EAC900AE8EAE /* SimpleKeychain.framework in Frameworks */,
-				EC755F6020A1EAC900AE8EAE /* FBSDKLoginKit.framework in Frameworks */,
-				EC755F6120A1EAC900AE8EAE /* DotstudioAPI.framework in Frameworks */,
-				EC755F6220A1EAC900AE8EAE /* Bolts.framework in Frameworks */,
-				EC755F6320A1EAC900AE8EAE /* FBSDKTVOSKit.framework in Frameworks */,
-				EC755F6420A1EAC900AE8EAE /* Auth0.framework in Frameworks */,
-				10E7A749041C2C8C030C5AEC /* libPods-DotstudioSampleApp-tvOS.a in Frameworks */,
+				65D236171A6F3396897C6939 /* Pods_DotstudioSampleApp_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +209,7 @@
 				6C4C1A0020AA8DAD002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.swift */,
 				6C62D64220A3FDA0008C06E3 /* DSHorizontalTableViewCell.swift */,
 				EA22B70F20A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift */,
+				D8CA54A023894168009DB190 /* DSHorizontalCategoryChannelVideoCollectionViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -336,9 +290,9 @@
 		EA2D4AFF20AD5F740018A025 /* IVPCells */ = {
 			isa = PBXGroup;
 			children = (
-				EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift */,
-				EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift */,
-				EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift */,
+				EA2D4B0420AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.swift */,
+				EA2D4B0020AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.swift */,
+				EA2D4B0820AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.swift */,
 				EA2D4B1220ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift */,
 			);
 			path = IVPCells;
@@ -347,10 +301,10 @@
 		EA2D4B0C20AD615F0018A025 /* DSIVPCells */ = {
 			isa = PBXGroup;
 			children = (
-				EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib */,
+				EA2D4B0520AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.xib */,
 				EA2D4B1320ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.xib */,
-				EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib */,
-				EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib */,
+				EA2D4B0120AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.xib */,
+				EA2D4B0920AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.xib */,
 			);
 			path = DSIVPCells;
 			sourceTree = "<group>";
@@ -454,8 +408,8 @@
 				EC755EE220A190BD00AE8EAE /* Alamofire.framework */,
 				EC755EE120A190BC00AE8EAE /* DotstudioAPI.framework */,
 				EC755EE020A190BC00AE8EAE /* DotstudioUI.framework */,
-				2986330C626EB8BCEBE7EB87 /* libPods-DotstudioSampleApp-iOS.a */,
-				3C20B01E132CDA1D5A3F08A1 /* libPods-DotstudioSampleApp-tvOS.a */,
+				1A65A78CB386088C5EEFCBEB /* Pods_DotstudioSampleApp_iOS.framework */,
+				4214BB6045CB288F73D23FCD /* Pods_DotstudioSampleApp_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -513,9 +467,8 @@
 				EC755EC620A1899B00AE8EAE /* Sources */,
 				EC755EC720A1899B00AE8EAE /* Frameworks */,
 				EC755EC820A1899B00AE8EAE /* Resources */,
-				EC755EE620A190D400AE8EAE /* Carthage copy-frameworks Script */,
-				C3F10B0FC7AA29AD893F572E /* [CP] Copy Pods Resources */,
-				7796664499A4628834896B7D /* [CP] Embed Pods Frameworks */,
+				7769F084AA14519D4FA63772 /* [CP] Embed Pods Frameworks */,
+				1E66DEFC340BF702264588FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -534,8 +487,8 @@
 				EC755EF020A1B03600AE8EAE /* Sources */,
 				EC755EF120A1B03600AE8EAE /* Frameworks */,
 				EC755EF220A1B03600AE8EAE /* Resources */,
-				EAEFBE3F20A4287E000770BB /* Carthage copy-frameworks Script */,
-				0D6441DCB15643DB68B1D6BD /* [CP] Embed Pods Frameworks */,
+				1F4827100D250990E7D90F97 /* [CP] Embed Pods Frameworks */,
+				66215A23CD98837364F50103 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -600,14 +553,14 @@
 				EC755ED320A1899B00AE8EAE /* Main.storyboard in Resources */,
 				EA22B71720A9D9DD000A35CF /* DSHorizontalTableViewCell.xib in Resources */,
 				EA2D4AE920AC52B60018A025 /* category.storyboard in Resources */,
-				EA2D4B0720AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.xib in Resources */,
+				EA2D4B0720AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.xib in Resources */,
 				EA22B71C20AABA6D000A35CF /* DSGenericCollectionViewCell.xib in Resources */,
 				EA22B71720A9D9DD000A35CF /* DSHorizontalTableViewCell.xib in Resources */,
 				6C62D62F20A36DB1008C06E3 /* browse.storyboard in Resources */,
 				6C7E120D20A34CBF00A7BE1C /* splash.storyboard in Resources */,
-				EA2D4B0320AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.xib in Resources */,
+				EA2D4B0320AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.xib in Resources */,
 				EA2D4B1120AD9B290018A025 /* DSIVPVideosSectionHeaderView.xib in Resources */,
-				EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.xib in Resources */,
+				EA2D4B0B20AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.xib in Resources */,
 				6C4C19FE20AA8B5A002F5AB6 /* DSFeaturedHorizontalTableViewCell.xib in Resources */,
 				EA2D4AFE20AD5BB70018A025 /* ivp.storyboard in Resources */,
 				6CAEFE0020BD732000481D51 /* search.storyboard in Resources */,
@@ -634,38 +587,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D6441DCB15643DB68B1D6BD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS-frameworks.sh",
-				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/Alamofire.framework",
-				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/Alamofire.framework.dSYM",
-				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/DotstudioAPI.framework",
-				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/DotstudioAPI.framework.dSYM",
-				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/DotstudioUI.framework",
-				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/DotstudioUI.framework.dSYM",
-				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/Haneke.framework",
-				"${PODS_ROOT}/DotstudioTVOSVastPlayer/Carthage/Build/tvOS/Haneke.framework.dSYM",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Alamofire.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioAPI.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/DotstudioAPI.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioUI.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/DotstudioUI.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Haneke.framework.dSYM",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		13B32A89D223B316C33C1A6D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -684,56 +605,116 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7796664499A4628834896B7D /* [CP] Embed Pods Frameworks */ = {
+		1E66DEFC340BF702264588FD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioAPI.framework",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioAPI.framework.dSYM",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/DotstudioUI.framework.dSYM",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework",
-				"${PODS_ROOT}/DotstudioIMAPlayer/Carthage/Build/iOS/Haneke.framework.dSYM",
-				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioAPI.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/DotstudioAPI.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DotstudioUI.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/DotstudioUI.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Haneke.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C3F10B0FC7AA29AD893F572E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-resources.sh",
-				"${PODS_ROOT}/DotstudioIMAPlayer/DotstudioIMAPlayer/DotstudioIMAPlayerViewController.storyboard",
-				"${PODS_ROOT}/DotstudioIMAPlayer/DotstudioIMAPlayer/DotstudioIMAPlayer.xcassets",
-				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk/CastFrameworkAssets.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-resources.sh",
+				"${PODS_ROOT}/DotstudioPRO/source/common/ui/thirdparty/FontAwesome/FontAwesome.ttf",
+				"${PODS_ROOT}/DotstudioPRO/source/player/ios/DSPPlayerViewController.storyboard",
+				"${PODS_ROOT}/DotstudioPRO/source/player/ios/DSPPlayerViewController.xcassets",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.4.5_static/GoogleCast.framework/GoogleCastCoreResources.bundle",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.4.5_static/GoogleCast.framework/GoogleCastUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DotstudioIMAPlayerViewController.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DSPPlayerViewController.storyboardc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastCoreResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F4827100D250990E7D90F97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage-tvOS/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Auth0-tvOS/Auth0.framework",
+				"${PODS_ROOT}/DotstudioPRO/source/player/tvos/framework/GoogleInteractiveMediaAds.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleKeychain-tvOS/SimpleKeychain.framework",
+				"${BUILT_PRODUCTS_DIR}/YouboraAVPlayerAdapter-tvOS/YouboraAVPlayerAdapter.framework",
+				"${BUILT_PRODUCTS_DIR}/YouboraLib-tvOS/YouboraLib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Auth0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleKeychain.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraAVPlayerAdapter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraLib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66215A23CD98837364F50103 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS-resources.sh",
+				"${PODS_ROOT}/DotstudioPRO/source/common/ui/thirdparty/FontAwesome/FontAwesome.ttf",
+				"${PODS_ROOT}/DotstudioPRO/source/player/tvos/DSPPlayerViewController.storyboard",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DSPPlayerViewController.storyboardc",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotstudioSampleApp-tvOS/Pods-DotstudioSampleApp-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7769F084AA14519D4FA63772 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage-iOS/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Auth0-iOS/Auth0.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit.Swift/FontAwesomeKit_Swift.framework",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+				"${BUILT_PRODUCTS_DIR}/Lock/Lock.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleKeychain-iOS/SimpleKeychain.framework",
+				"${BUILT_PRODUCTS_DIR}/YouboraAVPlayerAdapter-iOS/YouboraAVPlayerAdapter.framework",
+				"${BUILT_PRODUCTS_DIR}/YouboraLib-iOS/YouboraLib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Auth0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleKeychain.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraAVPlayerAdapter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraLib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotstudioSampleApp-iOS/Pods-DotstudioSampleApp-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D22142FBB6C4769BAE96AC33 /* [CP] Check Pods Manifest.lock */ = {
@@ -754,59 +735,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EAEFBE3F20A4287E000770BB /* Carthage copy-frameworks Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/DotstudioAPI.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/DotstudioUI.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/FBSDKLoginKit.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/FBSDKCoreKit.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/FBSDKShareKit.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/SimpleKeychain.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/Bolts.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/Auth0.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/FBSDKTVOSKit.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/Haneke.framework",
-			);
-			name = "Carthage copy-frameworks Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		EC755EE620A190D400AE8EAE /* Carthage copy-frameworks Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/DotstudioAPI.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/DotstudioUI.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FBSDKLoginKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FacebookLogin.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FacebookCore.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FBSDKPlacesKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FBSDKCoreKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FBSDKShareKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FacebookShare.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SimpleKeychain.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Auth0.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Haneke.framework",
-			);
-			name = "Carthage copy-frameworks Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -817,6 +745,7 @@
 				EC755ED020A1899B00AE8EAE /* ViewController.swift in Sources */,
 				6C2A840320BD5D8F00BBA36E /* DSSearchViewController.swift in Sources */,
 				EA2D4B0F20AD9B0B0018A025 /* DSIVPVideosSectionHeaderView.swift in Sources */,
+				D8CA54A123894168009DB190 /* DSHorizontalCategoryChannelVideoCollectionViewCell.swift in Sources */,
 				EA22B71120A9CADE000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */,
 				EA2D4B1420ADAAEE0018A025 /* DSIVPVideosSectionHeaderCell.swift in Sources */,
 				6CB8FC4620A9E776009A70B5 /* DSConfig.swift in Sources */,
@@ -826,9 +755,9 @@
 				6C62D63820A3E2A6008C06E3 /* DSTabBarBaseNavigationViewController.swift in Sources */,
 				EA22B71B20AABA6D000A35CF /* DSGenericCollectionViewCell.swift in Sources */,
 				EA2D4AE620AC43DC0018A025 /* DSCategoryViewController.swift in Sources */,
-				EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailTableViewCell.swift in Sources */,
-				EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailTableViewCell.swift in Sources */,
-				EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailTableViewCell.swift in Sources */,
+				EA2D4B0620AD604E0018A025 /* DSIVPCurrentVideoDetailCollectionViewCell.swift in Sources */,
+				EA2D4B0220AD5FCE0018A025 /* DSIVPVideoDetailCollectionViewCell.swift in Sources */,
+				EA2D4B0A20AD60860018A025 /* DSIVPRecommendedVideoDetailCollectionViewCell.swift in Sources */,
 				EC755ECE20A1899B00AE8EAE /* AppDelegate.swift in Sources */,
 				6C7E121120A34D6000A7BE1C /* DSSplashViewController.swift in Sources */,
 				6C4C1A0120AA8DAD002F5AB6 /* DSFeaturedHorizontalCollectionViewCell.swift in Sources */,
@@ -851,6 +780,7 @@
 				EC755EF720A1B03600AE8EAE /* AppDelegate.swift in Sources */,
 				6CB8FC4720A9E776009A70B5 /* DSConfig.swift in Sources */,
 				EAAAFEFD20A45D1B0071ADD4 /* DSHomeTabBarController.swift in Sources */,
+				D8CA54A223894168009DB190 /* DSHorizontalCategoryChannelVideoCollectionViewCell.swift in Sources */,
 				EA22B71320A9CB59000A35CF /* DSHorizontalCollectionViewCell.swift in Sources */,
 				EAAAFEFF20A45D270071ADD4 /* DSTabBarBaseNavigationViewController.swift in Sources */,
 				EA8AC94020B3E0870023FB7D /* DSCategoriesViewController.swift in Sources */,
@@ -1010,7 +940,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "DotstudioSampleApp-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dotstudioz.UI.DotstudioSampleApp;
 				PRODUCT_NAME = DotstudioSampleApp;
@@ -1032,7 +962,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "DotstudioSampleApp-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dotstudioz.UI.DotstudioSampleApp;
 				PRODUCT_NAME = DotstudioSampleApp;
@@ -1060,7 +990,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -1083,7 +1013,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};

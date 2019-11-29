@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import DotstudioUI
-import DotstudioAPI
+import DotstudioPRO 
 
 @IBDesignable
 class ViewController: SPLTSplashViewController {

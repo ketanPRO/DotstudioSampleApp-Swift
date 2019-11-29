@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import DotstudioUI
+import DotstudioPRO
 
 open class DSTabBarBaseNavigationViewController: SPLTBaseNavigationViewController {
     

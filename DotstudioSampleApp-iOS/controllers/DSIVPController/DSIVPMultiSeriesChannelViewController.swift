@@ -5,11 +5,8 @@
 //  Created by Anwer on 5/17/18.
 //  Copyright © 2018 Dotstudioz. All rights reserved.
 //
-
 import UIKit
-import DotstudioUI
-import DotstudioAPI
-import DotstudioIMAPlayer
+import DotstudioPRO
 
 ////TODO We will remove this once we get the real apis
 //extension SPLTVideo {
@@ -25,7 +22,6 @@ import DotstudioIMAPlayer
 //        return video
 //    }
 //}
-
 public protocol DSIVPMultiSeriesChannelViewControllerDelegate {
     func didClickCloseButton(_ dsIVPMultiSeriesChannelViewController: DSIVPMultiSeriesChannelViewController)
 }
@@ -43,17 +39,17 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
     }
     var isCurrentVideoExpanded:Bool = false
     @IBOutlet weak open var viewDotstudioIMAPlayer: UIView!
-    var dotstudioIMAPlayerViewController: DotstudioIMAPlayerViewController?
+    var dspPlayerViewController: DSPPlayerViewController?
     var offscreenCells: [String: Any] = [:]
 
     override open func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        if let dotstudioIMAPlayerViewController = DotstudioIMAPlayerViewController.getSPLTViewController() as? DotstudioIMAPlayerViewController {
-            dotstudioIMAPlayerViewController.delegate = self
-            self.dotstudioIMAPlayerViewController = dotstudioIMAPlayerViewController
-            self.splt_configureChildViewController(childController: dotstudioIMAPlayerViewController, onView: self.viewDotstudioIMAPlayer)
+        if let dspPlayerViewController = DSPPlayerViewController.getViewController(theme: nil)as? DSPPlayerViewController{
+            dspPlayerViewController.delegate = self
+            self.dspPlayerViewController = dspPlayerViewController
+            self.splt_configureChildViewController(childController: dspPlayerViewController, onView: self.viewDotstudioIMAPlayer)
         }
         
         self.collectionView?.register(UINib(nibName: "DSIVPCurrentVideoDetailTableViewCell", bundle: nil), forCellWithReuseIdentifier: "DSIVPCurrentVideoDetailTableViewCell")
@@ -93,11 +89,10 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
 //            }
 //        }
 //    }
-
     //MARK: - Set Video methods.
     open override func setCurrentVideo(curVideo: SPLTVideo) {
         super.setCurrentVideo(curVideo: curVideo)
-        self.dotstudioIMAPlayerViewController?.setCurrentVideo(curVideo: curVideo)
+        self.dspPlayerViewController?.setCurrentVideo(curVideo: curVideo)
     }
     
     
@@ -174,74 +169,139 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
 //
     }
     
-    open func getCurrentVideoDetailsCellSizeAt(_ indexPath: IndexPath) -> CGSize {
-        var dsIVPCurrentVideoDetailTableViewCell_: DSIVPCurrentVideoDetailTableViewCell?
-        if let dsIVPCurrentVideoDetailTableViewCell = self.offscreenCells["DSIVPCurrentVideoDetailTableViewCell"] as? DSIVPCurrentVideoDetailTableViewCell {
-            dsIVPCurrentVideoDetailTableViewCell_ = dsIVPCurrentVideoDetailTableViewCell
-        } else if let dsIVPCurrentVideoDetailTableViewCell = Bundle.main.loadNibNamed("DSIVPCurrentVideoDetailTableViewCell", owner: self, options: nil)?[0] as? DSIVPCurrentVideoDetailTableViewCell {
-            dsIVPCurrentVideoDetailTableViewCell_ = dsIVPCurrentVideoDetailTableViewCell
-            self.offscreenCells["DSIVPCurrentVideoDetailTableViewCell"] = dsIVPCurrentVideoDetailTableViewCell
-        }
-        
-        let requiredWidth = self.view.frame.size.width
-        let targetSize = CGSize(width: requiredWidth, height: 0)
-        
-        if let dsIVPCurrentVideoDetailTableViewCell = dsIVPCurrentVideoDetailTableViewCell_ {
-            if let curVideo = self.curVideo {
-                dsIVPCurrentVideoDetailTableViewCell.setCellData(curVideo,isExpanded: self.isCurrentVideoExpanded)
-                
-                let adequateSize = dsIVPCurrentVideoDetailTableViewCell.systemLayoutSizeFitting(targetSize)
-                return adequateSize
-            }
-        }
-        return CGSize(width: 375.0, height: 100.0)
-    }
-    
-    func getVideoDetailsCellSizeAt(_ indexPath: IndexPath) -> CGSize {
-        var dsIVPVideoDetailTableViewCell_: DSIVPVideoDetailTableViewCell?
-        if let dsIVPVideoDetailTableViewCell = self.offscreenCells["DSIVPVideoDetailTableViewCell"] as? DSIVPVideoDetailTableViewCell {
-            dsIVPVideoDetailTableViewCell_ = dsIVPVideoDetailTableViewCell
-        } else if let dsIVPVideoDetailTableViewCell = Bundle.main.loadNibNamed("DSIVPVideoDetailTableViewCell", owner: self, options: nil)?[0] as? DSIVPVideoDetailTableViewCell {
-            dsIVPVideoDetailTableViewCell_ = dsIVPVideoDetailTableViewCell
-            self.offscreenCells["DSIVPVideoDetailTableViewCell"] = dsIVPVideoDetailTableViewCell
-        }
-        let requiredWidth = self.view.frame.size.width
-        let targetSize = CGSize(width: requiredWidth, height: 0)
-        if let dsIVPVideoDetailTableViewCell = dsIVPVideoDetailTableViewCell_ {
-            if let spltPlaylistChannel = self.channel as? SPLTPlaylistChannel {
-                if indexPath.row < spltPlaylistChannel.playlistVideos.count {
-                    let video = spltPlaylistChannel.playlistVideos[indexPath.row]
-                    dsIVPVideoDetailTableViewCell.setCellData(video)
-                    let adequateSize = dsIVPVideoDetailTableViewCell.systemLayoutSizeFitting(targetSize)
-                    return adequateSize
+    open func getVideoAtIndexPath(_ indexPath: IndexPath) -> SPLTVideo? {
+        if let spltMultiLevelChannel = self.channel as? SPLTMultiLevelChannel {
+            if !self.isMoreEpisodesListHidden {
+                if let curChildChannel = spltMultiLevelChannel.childChannels[self.iCurPlayingVideoSeasonIndex] as? SPLTVideoChannel {
+                    if let video = curChildChannel.video {
+                        return video
+                    }
                 }
             }
         }
-        return CGSize(width: 375.0, height: 100.0)
-    }
-
-    func getRecommendedVideoDetailsCellSizeAt(_ indexPath: IndexPath) -> CGSize {
-        var dsIVPRecommendedVideoDetailTableViewCell_: DSIVPRecommendedVideoDetailTableViewCell?
-        if let dsIVPRecommendedVideoDetailTableViewCell = self.offscreenCells["DSIVPRecommendedVideoDetailTableViewCell"] as? DSIVPRecommendedVideoDetailTableViewCell {
-            dsIVPRecommendedVideoDetailTableViewCell_ = dsIVPRecommendedVideoDetailTableViewCell
-        } else if let dsIVPRecommendedVideoDetailTableViewCell = Bundle.main.loadNibNamed("DSIVPRecommendedVideoDetailTableViewCell", owner: self, options: nil)?[0] as? DSIVPRecommendedVideoDetailTableViewCell {
-            dsIVPRecommendedVideoDetailTableViewCell_ = dsIVPRecommendedVideoDetailTableViewCell
-            self.offscreenCells["DSIVPRecommendedVideoDetailTableViewCell"] = dsIVPRecommendedVideoDetailTableViewCell
-        }
-        if let dsIVPRecommendedVideoDetailTableViewCell = dsIVPRecommendedVideoDetailTableViewCell_ {
-            if indexPath.row < self.recommendationVideos.count {
-                let video = self.recommendationVideos[indexPath.row]
-                dsIVPRecommendedVideoDetailTableViewCell.setCellData(video)
-                
-                var collectionViewItemWidth = self.view.frame.width - (CGFloat(3) * CGFloat(10))
-                collectionViewItemWidth = collectionViewItemWidth / CGFloat(2)
-                let targetSize = CGSize(width: collectionViewItemWidth, height: 0)
-                let adequateSize = dsIVPRecommendedVideoDetailTableViewCell.systemLayoutSizeFitting(targetSize)
-                return adequateSize
-
+        if let spltPlaylistChannel = self.channel as? SPLTPlaylistChannel {
+            if indexPath.row < spltPlaylistChannel.playlistVideos.count {
+                let video = spltPlaylistChannel.playlistVideos[indexPath.row]
+                return video
             }
         }
-        return CGSize(width: 375.0, height: 100.0)
+        if let spltVideoChannel = self.channel as? SPLTVideoChannel {
+            if let video = spltVideoChannel.video {
+                return video
+            }
+        }
+        return nil
+    }
+    
+    open func getCurrentVideoDetailsCellSizeAt(_ indexPath: IndexPath) -> CGSize {
+    //        var dsIVPCurrentVideoDetailCollectionViewCell_: DSIVPCurrentVideoDetailCollectionViewCell?
+    //        if let dsIVPCurrentVideoDetailCollectionViewCell = self.offscreenCells["DSIVPCurrentVideoDetailCollectionViewCell"] as? DSIVPCurrentVideoDetailCollectionViewCell {
+    //            dsIVPCurrentVideoDetailCollectionViewCell_ = dsIVPCurrentVideoDetailCollectionViewCell
+    //        } else if let dsIVPCurrentVideoDetailCollectionViewCell = Bundle.main.loadNibNamed("DSIVPCurrentVideoDetailCollectionViewCell", owner: self, options: nil)?[0] as? DSIVPCurrentVideoDetailCollectionViewCell {
+    //            dsIVPCurrentVideoDetailCollectionViewCell_ = dsIVPCurrentVideoDetailCollectionViewCell
+    //            self.offscreenCells["DSIVPCurrentVideoDetailCollectionViewCell"] = dsIVPCurrentVideoDetailCollectionViewCell
+    //        }
+            
+            let requiredWidth = self.view.frame.size.width
+    //        let targetSize = CGSize(width: requiredWidth, height: 0)
+            
+    //        if let dsIVPCurrentVideoDetailCollectionViewCell = dsIVPCurrentVideoDetailCollectionViewCell_ {
+    //            dsIVPCurrentVideoDetailCollectionViewCell.frame.size.width = requiredWidth
+    //            dsIVPCurrentVideoDetailCollectionViewCell.constraintCellWidth?.constant = requiredWidth
+    //            if let curVideo = self.curVideo {
+    //                dsIVPCurrentVideoDetailCollectionViewCell.setCellData(curVideo,isExpanded: self.isCurrentVideoExpanded)
+    //                dsIVPCurrentVideoDetailCollectionViewCell.setNeedsLayout()
+    //                dsIVPCurrentVideoDetailCollectionViewCell.layoutIfNeeded()
+    //                let adequateSize = dsIVPCurrentVideoDetailCollectionViewCell.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+    //                return adequateSize
+    //            }
+    //        }
+            
+            if let video = self.getVideoAtIndexPath(indexPath) {
+                var fontFuturaDescription = UIFont(name: "Arial", size: 14.0)!
+    //            var iImageHeight: CGFloat = 64.0
+                var topOffset: CGFloat = 100.0
+                var extraOffset: CGFloat = 20.0
+                var labelDescriptionWidth = self.view.frame.size.width - 50
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    fontFuturaDescription = UIFont(name: "Arial", size: 21.0)!
+                    topOffset = 150.0
+                    extraOffset = 40.0
+                    labelDescriptionWidth = self.view.frame.size.width - 100
+                }
+                let attributes = [NSAttributedString.Key.font: fontFuturaDescription]
+                // 15.0 for iPHone , 30.0 for iPad  gap 5px top of image, bottom of image, bottom of description
+                // 20 offset
+                if self.isCurrentVideoExpanded {
+                    var adequateSize = CGSize(width: requiredWidth, height: topOffset + 30.0 + extraOffset)
+                    if let strDescription = video.strDescription {
+                        let labelDescriptionMaxSize = CGSize(width: labelDescriptionWidth, height: 1000)
+                        let estimatedFrame = NSString(string: strDescription).boundingRect(with: labelDescriptionMaxSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+                        if self.isCurrentVideoExpanded { //video.isExpandedUI {
+                            adequateSize = CGSize(width: requiredWidth, height: estimatedFrame.height + topOffset + 20 ) //+ extraOffset) // 50 extra offset
+                        }
+                    }
+                    return adequateSize
+                } else {
+                    let adequateSize = CGSize(width: requiredWidth, height: topOffset + 15.0 + extraOffset)
+                    return adequateSize
+                }
+    //            return adequateSize
+            }
+            
+            
+            
+            return CGSize(width: 375.0, height: 100.0)
+        }
+    
+    func getVideoDetailsCellSizeAt(_ indexPath: IndexPath) -> CGSize {
+            let requiredWidth = self.view.frame.size.width
+    //        if let spltPlaylistChannel = self.channel as? SPLTPlaylistChannel {
+    //            if indexPath.row < spltPlaylistChannel.playlistVideos.count {
+    //                let video = spltPlaylistChannel.playlistVideos[indexPath.row]
+            if let video = self.getVideoAtIndexPath(indexPath) {
+                    var fontFuturaDescription = UIFont(name: "HelveticaNeue", size: 12.0)!
+                    var iImageHeight: CGFloat = 64.0
+                    var extraOffset: CGFloat = 10.0
+                    var labelDescriptionWidth = self.view.frame.size.width - 150
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        fontFuturaDescription = UIFont(name: "HelveticaNeue", size: 18.0)!
+                        iImageHeight = 128.0
+                        extraOffset = 20.0
+                        labelDescriptionWidth = self.view.frame.size.width - 200
+                    }
+                let attributes = [NSAttributedString.Key.font: fontFuturaDescription]
+                    // 15.0 for iPHone , 30.0 for iPad  gap 5px top of image, bottom of image, bottom of description
+                    // 20 offset
+                    var adequateSize = CGSize(width: requiredWidth, height: iImageHeight + 15.0 + extraOffset)
+                    if let strDescription = video.strDescription {
+                        let labelDescriptionMaxSize = CGSize(width: labelDescriptionWidth, height: 1000)
+
+
+                        let estimatedFrame = NSString(string: strDescription).boundingRect(with: labelDescriptionMaxSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+                        if video.isExpandedUI {
+                            adequateSize = CGSize(width: requiredWidth, height: estimatedFrame.height + iImageHeight + extraOffset)//+ 30.0 + extraOffset) // 50 extra offset
+                        }
+                    }
+
+                    return adequateSize
+            }
+    //            }
+    //        }
+            return CGSize(width: 375.0, height: 100.0)
+        }
+
+    func getRecommendedVideoDetailsCellSizeAt(_ indexPath: IndexPath) -> CGSize {
+        let collectionViewNumberOfColumns = 2
+        let collectionViewItemSpacing = 10.0
+        var collectionViewItemWidth = self.view.frame.width - (CGFloat(collectionViewNumberOfColumns + 1) * CGFloat(collectionViewItemSpacing))
+        collectionViewItemWidth = collectionViewItemWidth / CGFloat(collectionViewNumberOfColumns)
+        collectionViewItemWidth = floor(collectionViewItemWidth)
+        var collectionViewItemHeight = collectionViewItemWidth * 9 / 16
+        collectionViewItemHeight = ceil(collectionViewItemHeight)
+        let size = CGSize(width: collectionViewItemWidth, height: collectionViewItemHeight)
+        return size
+        
     }
     
     //TODO We will remove this once we get the real apis
@@ -252,41 +312,60 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
             case 2: return self.getRecommendedVideoDetailsCell(collectionView, cellForItemAt: indexPath)
             default: return UICollectionViewCell()
         }
-        return UICollectionViewCell()
     }
     
     open func getCurrentVideoDetailsCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let dsIVPCurrentVideoDetailTableViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPCurrentVideoDetailTableViewCell", for: indexPath) as? DSIVPCurrentVideoDetailTableViewCell {
+        
+        if let dsIVPCurrentVideoDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPCurrentVideoDetailCollectionViewCell", for: indexPath) as? DSIVPCurrentVideoDetailCollectionViewCell {
+            dsIVPCurrentVideoDetailCollectionViewCell.delegate = self
             if let curVideo = self.curVideo {
-                dsIVPCurrentVideoDetailTableViewCell.setCellData(curVideo,isExpanded: self.isCurrentVideoExpanded)
+                dsIVPCurrentVideoDetailCollectionViewCell.setCellData(curVideo,isExpanded: self.isCurrentVideoExpanded)
             }
-            return dsIVPCurrentVideoDetailTableViewCell
+            return dsIVPCurrentVideoDetailCollectionViewCell
         }
         return UICollectionViewCell()
     }
+    
     func getVideoDetailsCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let dsIVPVideoDetailTableViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPVideoDetailTableViewCell", for: indexPath) as? DSIVPVideoDetailTableViewCell {
+        if let dsIVPVideoDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPVideoDetailCollectionViewCell", for: indexPath) as? DSIVPVideoDetailCollectionViewCell {
+            dsIVPVideoDetailCollectionViewCell.delegate = self
+
+            if let spltMultiLevelChannel = self.channel as? SPLTMultiLevelChannel {
+                if !self.isMoreEpisodesListHidden {
+                    if let curChildChannel = spltMultiLevelChannel.childChannels[self.iCurPlayingVideoSeasonIndex] as? SPLTVideoChannel {
+                        if let video = curChildChannel.video {
+                            dsIVPVideoDetailCollectionViewCell.setCellData(video, isCurVideoPlaying: true)
+                            return dsIVPVideoDetailCollectionViewCell
+                        }
+                    }
+                }
+            }
+            
             if let spltPlaylistChannel = self.channel as? SPLTPlaylistChannel {
                 if indexPath.row < spltPlaylistChannel.playlistVideos.count {
                     let video = spltPlaylistChannel.playlistVideos[indexPath.row]
-                    dsIVPVideoDetailTableViewCell.setCellData(video)
+                    if self.iCurVideoIndex == indexPath.row {
+                        dsIVPVideoDetailCollectionViewCell.setCellData(video, isCurVideoPlaying: true)
+                    } else {
+                        dsIVPVideoDetailCollectionViewCell.setCellData(video, isCurVideoPlaying: false)
+                    }
+//                    dsIVPVideoDetailCollectionViewCell.setCellData(video)
                 }
             }
-            dsIVPVideoDetailTableViewCell.delegate = self
-            return dsIVPVideoDetailTableViewCell
+            return dsIVPVideoDetailCollectionViewCell
         }
         return UICollectionViewCell()
     }
+    
     func getRecommendedVideoDetailsCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let dsIVPRecommendedVideoDetailTableViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPRecommendedVideoDetailTableViewCell", for: indexPath) as? DSIVPRecommendedVideoDetailTableViewCell {
-            
-            if indexPath.row < self.recommendationVideos.count {
-                let video = self.recommendationVideos[indexPath.row]
-                dsIVPRecommendedVideoDetailTableViewCell.setCellData(video)
+        if let dsIVPRecommendedVideoDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DSIVPRecommendedVideoDetailCollectionViewCell", for: indexPath) as? DSIVPRecommendedVideoDetailCollectionViewCell {
+            dsIVPRecommendedVideoDetailCollectionViewCell.imageKey = "poster"
+            if indexPath.row < self.recommendationChannels.count {
+                let channel = self.recommendationChannels[indexPath.row]
+                let size = self.getRecommendedVideoDetailsCellSizeAt(indexPath)
+                dsIVPRecommendedVideoDetailCollectionViewCell.setCellChannelData(channel, collectionViewImageSize: size)
             }
-            var collectionViewItemWidth = self.view.frame.width - (CGFloat(3) * CGFloat(10))
-            collectionViewItemWidth = collectionViewItemWidth / CGFloat(2)
-            return dsIVPRecommendedVideoDetailTableViewCell
+            return dsIVPRecommendedVideoDetailCollectionViewCell
         }
         return UICollectionViewCell()
     }
@@ -302,8 +381,8 @@ open class DSIVPMultiSeriesChannelViewController: SPLTIVPMultiSeriesChannelViewC
 }
 
 //MARK: - DSIVPVideoDetailTableViewCellDelegate methods
-extension DSIVPMultiSeriesChannelViewController: DSIVPVideoDetailTableViewCellDelegate {
-    public func didClickExpandButton(_ dsIVPVideoDetailTableViewCell: DSIVPVideoDetailTableViewCell) {
+extension DSIVPMultiSeriesChannelViewController: DSIVPVideoDetailCollectionViewCellDelegate {
+    public func didClickExpandButton(_ dsIVPVideoDetailTableViewCell: DSIVPVideoDetailCollectionViewCell) {
         if let indexPath = self.collectionView?.indexPath(for: dsIVPVideoDetailTableViewCell) {
             if indexPath.section == 1 {
                 if let spltPlaylistChannel = self.channel as? SPLTPlaylistChannel {
@@ -320,7 +399,40 @@ extension DSIVPMultiSeriesChannelViewController: DSIVPVideoDetailTableViewCellDe
 }
 
 //MARK: - DotstudioIMAPlayerViewControllerDelegate methods
-extension DSIVPMultiSeriesChannelViewController: DotstudioIMAPlayerViewControllerDelegate {
+extension DSIVPMultiSeriesChannelViewController: DSPPlayerViewControllerDelegate, DSIVPCurrentVideoDetailCollectionViewCellDelegate {
+    public func didClickShareButton(_ dsIVPCurrentVideoDetailCollectionViewCell: DSIVPCurrentVideoDetailCollectionViewCell, sender: UIButton) {
+        
+    }
+    
+    public func didClickCastButton(_ dsIVPCurrentVideoDetailCollectionViewCell: DSIVPCurrentVideoDetailCollectionViewCell, sender: UIButton) {
+        
+    }
+    
+    
+    public func didClickCloseButton(_ dspPlayerViewController: DSPPlayerViewController) {
+        self.delegate?.didClickCloseButton(self)
+    }
+    
+    public func didClickCastButton(_ dspPlayerViewController: DSPPlayerViewController) {
+        
+    }
+    
+    public func didClickShareButton(_ dspPlayerViewController: DSPPlayerViewController) {
+        
+    }
+    
+    public func didClickShareButtonWithSender(_ dspPlayerViewController: DSPPlayerViewController, sender: UIButton) {
+        
+    }
+    
+    public func didFinishPlayingVideo(_ dspPlayerViewController: DSPPlayerViewController) {
+        
+    }
+    
+    public func didClickViewSchedule(curVideo: SPLTVideo) {
+        
+    }
+    
     public func didClickCloseButton(sender: Any) {
         self.delegate?.didClickCloseButton(self)
     }
@@ -331,6 +443,3 @@ extension DSIVPMultiSeriesChannelViewController: DotstudioIMAPlayerViewControlle
         
     }
 }
-
-
-

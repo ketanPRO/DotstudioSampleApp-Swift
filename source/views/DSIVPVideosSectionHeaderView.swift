@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DotstudioAPI
+import DotstudioPRO
 
 protocol DSIVPVideosSectionHeaderViewDelegate {
     func didClickExpandButtonInHeaderView(_ dsIVPVideosSectionHeaderView :DSIVPVideosSectionHeaderView)

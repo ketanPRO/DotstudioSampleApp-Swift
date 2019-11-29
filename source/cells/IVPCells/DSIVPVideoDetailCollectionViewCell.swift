@@ -7,14 +7,17 @@
 //
 
 import UIKit
-import DotstudioAPI
-import DotstudioUI
+import DotstudioPRO
 
-public protocol DSIVPVideoDetailTableViewCellDelegate {
-    func didClickExpandButton(_ dsIVPVideoDetailTableViewCell :DSIVPVideoDetailTableViewCell)
+import UIKit
+ 
+import DotstudioPRO
+
+public protocol DSIVPVideoDetailCollectionViewCellDelegate {
+    func didClickExpandButton(_ dsIVPVideoDetailTableViewCell :DSIVPVideoDetailCollectionViewCell)
 }
 
-open class DSIVPVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
+open class DSIVPVideoDetailCollectionViewCell: SPLTIVPVideoDetailCollectionViewCell {
     @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
         get {
             return super.imageViewCell
@@ -55,15 +58,24 @@ open class DSIVPVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
             super.labelDescription = newValue
         }
     }
-    
+    @IBOutlet open weak override var baseVideoProgressView: SPLTBaseVideoProgressView? {
+        get {
+            return super.baseVideoProgressView
+        }
+        set {
+            super.baseVideoProgressView = newValue
+        }
+    }
+    @IBOutlet weak var constraintCellWidth: NSLayoutConstraint?
+    open var isCurVideoPlaying: Bool = false
+
     var videoImageSize: CGSize = CGSize(width: 112.0, height: 63.0)
     @IBOutlet weak var buttonExpand: UIButton?
-    @IBOutlet weak var constraintCellWidth: NSLayoutConstraint?
     var isInitialSetup: Bool = true
     let imageIconDefaultSize = CGSize(width: 44, height: 44)
 
     var isExpanded: Bool = false
-    var delegate: DSIVPVideoDetailTableViewCellDelegate?
+    var delegate: DSIVPVideoDetailCollectionViewCellDelegate?
     
     open override func prepareForReuse() {
         super.prepareForReuse()
@@ -74,12 +86,13 @@ open class DSIVPVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
         // Initialization code
     }
     
-    open override func setCellData(_ video: SPLTVideo) {
+    open func setCellData(_ video: SPLTVideo, isCurVideoPlaying: Bool) {
 //        if video.strId == self.video?.strId {
 //            // Video is already set & UI, so just update expanded state.
 //            self.updateExpandedState()
 //        } else {
             // Else setup all data...
+        self.isCurVideoPlaying = isCurVideoPlaying
             self.video = video
             self.setupButtonIcons()
             super.setCellData(video)
@@ -89,14 +102,25 @@ open class DSIVPVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
     
     open func setupButtonIcons() {
         if self.isInitialSetup {
-            let imageExpand = UIImage(icon: .FAEllipsisV, size: self.imageIconDefaultSize, textColor: .black, backgroundColor: .clear)
+            let imageExpand = UIImage(icon: .FAEllipsisV, size: self.imageIconDefaultSize, textColor: .white, backgroundColor: .clear)
             self.buttonExpand?.setImage(imageExpand, for: .normal)
         }
     }
     
     open override func updateUI() {
         super.updateUI()
+        
+        if let strTitle = self.video?.strTitle, strTitle == "" {
+            if let iEpisodeNo = self.video?.iEpisodeNo {
+                self.labelTitle?.text = "Episode \(iEpisodeNo)"
+            }
+        }
+        
+        if self.video != nil {
+            self.labelInfo?.text = "" //video.getVideoInfo()
+        }
         self.updateExpandedState()
+        self.updateTheme()
     }
     
     func updateExpandedState() {
@@ -105,16 +129,26 @@ open class DSIVPVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
             if video.isExpandedUI {
                 self.labelDescription?.numberOfLines = 0
             } else {
-                self.labelDescription?.numberOfLines = 2
+                self.labelDescription?.numberOfLines = 3
             }
+            
+            if let strDescription = video.strDescription {
+                self.labelDescription?.text = strDescription
+            }
+        }
+    }
+    
+    func updateTheme() {
+        if self.isCurVideoPlaying {
+            self.labelTitle?.textColor = UIColor(hex6: 0xFFFFFF)
+            self.buttonExpand?.tintColor = UIColor(hex6: 0xFF0101)
+        } else {
+            self.labelTitle?.textColor = UIColor.white
+            self.buttonExpand?.tintColor = UIColor.white
         }
     }
     
     @IBAction func didClickExpandButton(sender: UIButton) {
         self.delegate?.didClickExpandButton(self)
     }
-    
-    
-    
-
 }

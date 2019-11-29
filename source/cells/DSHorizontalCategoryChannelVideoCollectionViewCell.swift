@@ -1,24 +1,16 @@
 //
-//  DSHorizontalBaseCollectionViewCell.swift
+//  DSHorizontalCategoryChannelVideoCollectionViewCell.swift
 //  DotstudioSampleApp-iOS
 //
-//  Created by Anwer on 5/14/18.
+//  Created by Ketan Sakariya on 30/05/18.
 //  Copyright © 2018 Dotstudioz. All rights reserved.
 //
 
 import UIKit
 import DotstudioPRO
 
-public protocol DSHorizontalCollectionViewCellDelegate {
-    func didClickMylistButton(_ dsHorizontalCollectionViewCell:DSHorizontalCollectionViewCell, channel: SPLTChannel)
-}
+class DSHorizontalCategoryChannelVideoCollectionViewCell: SPLTHorizontalBaseCollectionViewCell {
 
-open class DSHorizontalCollectionViewCell: SPLTHorizontalBaseCollectionViewCell  {
-    
-    open var delegateDSHorizontalCollectionViewCellDelegate :DSHorizontalCollectionViewCellDelegate?
-    
-    @IBOutlet weak var progressViewVideoProgress: UIProgressView!
-    
     @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
         get {
             return super.imageViewCell
@@ -43,12 +35,22 @@ open class DSHorizontalCollectionViewCell: SPLTHorizontalBaseCollectionViewCell 
             super.labelSecondaryTitle = newValue
         }
     }
+    @IBOutlet weak open override var baseVideoProgressView: SPLTBaseVideoProgressView? {
+        get {
+            return super.baseVideoProgressView
+        }
+        set {
+            super.baseVideoProgressView = newValue
+        }
+    }
     
     open override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.labelPrimaryTitle?.textColor = UIColor.white
+        self.labelSecondaryTitle?.textColor = UIColor.white
     }
-
+    
     open override func setChannel(channel: SPLTChannel, collectionViewImageSize: CGSize) {
         self.channel = channel
         self.collectionViewImageSize = collectionViewImageSize
@@ -67,5 +69,4 @@ open class DSHorizontalCollectionViewCell: SPLTHorizontalBaseCollectionViewCell 
         }
         self.labelSecondaryTitle?.text = ""
     }
-
 }

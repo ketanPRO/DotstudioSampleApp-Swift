@@ -7,10 +7,14 @@
 //
 
 import UIKit
-import DotstudioAPI
-import DotstudioUI
+import DotstudioPRO
 
-open class DSIVPCurrentVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell {
+public protocol DSIVPCurrentVideoDetailCollectionViewCellDelegate {
+    func didClickShareButton(_ dsIVPCurrentVideoDetailCollectionViewCell :DSIVPCurrentVideoDetailCollectionViewCell, sender: UIButton)
+    func didClickCastButton(_ dsIVPCurrentVideoDetailCollectionViewCell :DSIVPCurrentVideoDetailCollectionViewCell, sender: UIButton)
+}
+
+open class DSIVPCurrentVideoDetailCollectionViewCell: SPLTIVPVideoDetailCollectionViewCell {
     @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
         get {
             return super.imageViewCell
@@ -52,6 +56,7 @@ open class DSIVPCurrentVideoDetailTableViewCell: SPLTIVPVideoDetailTableViewCell
         }
     }
     
+    var delegate: DSIVPCurrentVideoDetailCollectionViewCellDelegate?
     @IBOutlet weak var constraintCellWidth: NSLayoutConstraint?
   
     var isExpanded:Bool = false

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DotstudioUI
+import DotstudioPRO
 
 class DSGenericCollectionViewCell: SPLTGenericCollectionViewCell {
     @IBOutlet open override var imageViewCell: SPLTBaseImageView? {
